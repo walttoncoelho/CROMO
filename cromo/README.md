@@ -77,3 +77,4 @@ Consulte a seção sobre [implantação](https://facebook.github.io/create-react
 | react-ga4    | [^1.4.1]    
 | react-router-dom    | [^6.0.2] 
 | styled-components    | [^5.3.6] 
+| signup    | [^0.0.4] 
