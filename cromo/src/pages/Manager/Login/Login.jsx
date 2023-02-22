@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import ResetPassword from './ResetPassword';
+import PopupSenha from './PopUpSenha';
+
 import { Form } from './Style';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [errors, setErrors] = useState({});
   const [password, setPassword] = useState('');
-  const [showResetPassword, setShowResetPassword] = useState(false);
-   
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -30,18 +29,7 @@ export default function Login() {
       console.log(errors);
     }
   };
-
-  const handleResetPasswordClick = (event) => {
-    event.preventDefault();
-    setShowResetPassword(true);
-  };
-
-  if (showResetPassword) {
-    return <ResetPassword />;
-  }
-;
-
-
+  ;
 
   function validateForm() {
     let errors = {};
@@ -58,7 +46,7 @@ export default function Login() {
       let lastAtPos = email.lastIndexOf('@');
       let lastDotPos = email.lastIndexOf('.');
   
-      if (!(lastAtPos < lastDotPos && lastAtPos > 0 && email.indexOf('@@') == -1 && lastDotPos > 2 && (email.length - lastDotPos) > 2)) {
+      if (!(lastAtPos < lastDotPos && lastAtPos > 0 && email.indexOf('@@') === -1 && lastDotPos > 2 && (email.length - lastDotPos) > 2)) {
         formIsValid = false;
         errors["email"] = "Por favor, insira um email válido.";
       }
@@ -95,13 +83,9 @@ export default function Login() {
         {errors.password && <span>{errors.password}</span>}
       </label>
      
-      <div>
-        <a href="##" onClick={handleResetPasswordClick}>Esqueceu sua senha?</a>
-      </div>
-      <button type="submit">Login</button>
-    
+
+      <PopupSenha/>      
+      <button type="submit">Login</button>    
     </Form>
   );
 }
-
-
