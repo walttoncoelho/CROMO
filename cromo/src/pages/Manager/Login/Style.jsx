@@ -120,3 +120,54 @@ export const ResetPasswordPopup = styled.div`
   }
 `;
 
+export const PopupForm = styled.form`
+margin: auto;
+display: flex;
+flex-direction: column;
+padding: 20px;
+width: 370px;
+height: 370px;
+background-color: #3b3b3b;
+border-radius: 4px;
+
+div{
+  margin: auto;
+  width: 100%;
+  max-height: 200px;
+  color: #ffffff;
+
+  h3{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+    
+  }
+  p{
+    margin: auto;
+    justify-content: center;
+    line-height: 1.5;
+  }
+
+
+label{
+  display: flex;
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button{
+  display: flex;
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+`;
+
+
