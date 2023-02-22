@@ -5,6 +5,7 @@ import Sobre from '../pages/Sobre/Sobre';
 import Admin from '../pages/Manager/Admin';
 import FaleConosco from '../pages/FaleConosco/FaleConosco';
 import Empreendimentos from '../pages/Empreendimentos/Empreendimentos';
+import Login from '../pages/Manager/Login/Login';
 
 
 
@@ -19,6 +20,7 @@ export function AppRoutes() {
         <Route path='/sobre' element={<Sobre />} />
         <Route path='/faleconosco' element={<FaleConosco /> } />   
         <Route path='/empreendimentos' element={<Empreendimentos />  } /> 
+        <Route path="/login" element={ < Login /> }/>
 {/* Páginas auxiliares */}
 
 {/* Páginas privadas */}
