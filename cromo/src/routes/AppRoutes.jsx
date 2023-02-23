@@ -20,7 +20,7 @@ export function AppRoutes() {
         <Route path='/sobre' element={<Sobre />} />
         <Route path='/faleconosco' element={<FaleConosco /> } />   
         <Route path='/empreendimentos' element={<Empreendimentos />  } /> 
-        <Route path="/login" element={ < Login /> }/>
+        <Route path="/manager" element={ < Login /> }/>
 {/* Páginas auxiliares */}
 
 {/* Páginas privadas */}

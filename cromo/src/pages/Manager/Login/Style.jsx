@@ -1,19 +1,63 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+display: flex;
+background-color: #EEF0F8;
+width: 100vw;
+height: 100vw;
+max-height: 800px;
+
+.row__div{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-items: flex-end;
+margin-left:auto;
+margin-right: 28px;
+
+a{
+  color: #EEF0F8;
+  font-size: 0.7em;
+  margin-right: 10px;
+}
+}
+`;
+
+
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
+  height: 400px;
+  margin: auto;
+  padding: 20px; 
   border-radius: 5px;
+  background-color: #1C2128;
 
+  h2{
+    color: #f5f5f5;
+    line-height: 0.5;
+    margin-bottom: -2px;
+  }
+
+  h5{
+  color: #c2c2c2;
+  font-size: 0.7em;
+  margin-right: 10px;
+  }
+
+
+ 
   label {
     display: flex;
+    width: 85%;
+    min-width: 85%;
     flex-direction: column;
     margin-bottom: 10px;
+   
 
     input {
       height: 30px;
@@ -24,101 +68,20 @@ export const Form = styled.form`
     }
 
     span {
-      color: red;
+      color: #ff8181;
       font-size: 14px;
       margin-top: 5px;
     }
   }
-
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #0069d9;
-    }
-  }
-
+  
   div {
     margin-top: 10px;
   }
 
-  a {
-    color: #007bff;
-    text-decoration: none;
 
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 `;
 
-export const ResetPasswordPopup = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  .popup {
-    width: 400px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-
-    h2 {
-      margin-top: 0;
-    }
-
-    label {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 10px;
-
-      input {
-        height: 30px;
-        padding: 5px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-size: 16px;
-      }
-
-      span {
-        color: red;
-        font-size: 14px;
-        margin-top: 5px;
-      }
-    }
-
-    button {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      height: 40px;
-      padding: 0 20px;
-      font-size: 16px;
-      margin-top: 10px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: #0069d9;
-      }
-    }
-  }
-`;
 
 export const PopupForm = styled.form`
 margin: auto;
@@ -127,8 +90,10 @@ flex-direction: column;
 padding: 20px;
 width: 370px;
 height: 370px;
-background-color: #3b3b3b;
+background-color: #1C2128;
 border-radius: 4px;
+
+;
 
 div{
   margin: auto;
@@ -169,5 +134,8 @@ button{
   align-items: center;
 }
 `;
+
+
+
 
 

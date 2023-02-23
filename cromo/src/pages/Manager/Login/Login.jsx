@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { ButtonSucess } from '../../../components/Bottons/Bottons';
 import PopupSenha from './PopUpSenha';
-
-import { Form } from './Style';
+import { Container, Form } from './Style';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -70,22 +70,33 @@ export default function Login() {
   
 
   return (
+    <Container>
+
     <Form onSubmit={handleSubmit}>
+      <h2>
+        Painel administrativo
+      </h2>
+      <h5>
+        Insira os seus dados
+      </h5>
    
-      <label>
-        Email:
-        <input type="email" value={email} onChange={handleEmailChange} />
+      <label>       
+        <input type="email" placeholder="E-mail"  value={email} onChange={handleEmailChange} />
         {errors.email && <span>{errors.email}</span>}
       </label>
-      <label>
-        Password:
-        <input type="password" value={password} onChange={handlePasswordChange} />
+      <label>        
+        <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
         {errors.password && <span>{errors.password}</span>}
       </label>
-     
+<div className='row__div'>
+      <PopupSenha/>     
+      <ButtonSucess type="submit">
+        <p>Login</p>
+      </ButtonSucess>   
 
-      <PopupSenha/>      
-      <button type="submit">Login</button>    
+
+</div>
     </Form>
+    </Container>
   );
 }

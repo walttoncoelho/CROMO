@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ResetPassword from './ResetPassword';
+import ResetPassword from '../ResetPassword/ResetPassword';
 
 export default function PopupSenha() {
 
