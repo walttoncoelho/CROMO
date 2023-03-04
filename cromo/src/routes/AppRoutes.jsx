@@ -2,10 +2,10 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from '../pages/Home/Home';
 import Sobre from '../pages/Sobre/Sobre';
-import Admin from '../pages/Manager/Admin';
 import FaleConosco from '../pages/FaleConosco/FaleConosco';
 import Empreendimentos from '../pages/Empreendimentos/Empreendimentos';
 import Login from '../pages/Manager/Login/Login';
+import Painel from '../pages/Manager/Painel/Painel';
 
 
 
@@ -25,7 +25,7 @@ export function AppRoutes() {
 
 {/* Páginas privadas */}
           
-        <Route path="/manager" element={ <Admin /> }/>
+        <Route path="/painel" element={ <Painel /> }/>
 
       </Routes>
 

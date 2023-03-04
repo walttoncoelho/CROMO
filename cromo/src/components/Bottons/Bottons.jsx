@@ -22,3 +22,35 @@ p{
   background-color: #11922d; 
 }
 `;
+
+export const Button= styled.button`
+width: 100%;
+height: 56px;
+left: 32px;
+top: 185px;
+background-color: #22272E;
+color: #fff;
+
+border: 1px dashed #4d5055;
+border-radius: 5px;
+
+&:hover {
+  background-color: #11922d; 
+}
+`;
+
+export const SubMenu= styled.button`
+width: 100%;
+height: 56px;
+left: 32px;
+top: 185px;
+background-color: #393b3d;
+color: #fff;
+
+border: 1px dashed #4d5055;
+border-radius: 5px;
+
+&:hover {
+  background-color: #11922d; 
+}
+`;
