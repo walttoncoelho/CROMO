@@ -1,6 +1,13 @@
 import React from "react";
-import { Container, ContainerLogo, ContainerSair, ContainerSitePerfil, ContainerSitePreview } from "./Style";
+import {
+  Container,
+  ContainerLogo,
+  ContainerSair,
+  ContainerSitePerfil,
+  ContainerSitePreview
+} from "./Style";
 import logo from "./image/logo.png";
+import { ButtonSair, ButtonSite } from "../Bottons/Bottons";
 
 export default function NavbarManager() {
   return (
@@ -10,15 +17,20 @@ export default function NavbarManager() {
           <img src={logo} alt="Logo" />
         </ContainerLogo>
         <ContainerSitePreview>
-        <button>Ir para o Site</button>
+          <ButtonSite className="Colorgreen">          
+
+            Ir para o Site
+           
+          </ButtonSite>
         </ContainerSitePreview>
         <ContainerSitePerfil>
-        <p>
-          Olá <strong>Nome do usuário</strong>
-        </p>
+          <p>
+            Olá <strong>Nome do usuário</strong>
+          </p>
         </ContainerSitePerfil>
-        <ContainerSair>
-        <button>Sair</button>
+        <ContainerSair>  
+        
+         <ButtonSair>Sair</ButtonSair>
         </ContainerSair>
       </Container>
     </>

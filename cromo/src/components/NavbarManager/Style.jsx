@@ -37,12 +37,19 @@ export const ContainerSitePerfil = styled.div`
   margin: auto;
   width: 20%;
   height: 100%;
-  background-color: #d3ad66;
+  align-items: center;
+  justify-content: center;
+
+  p{
+    color: #fff;
+  }
 `;
 
 export const ContainerSair = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   width: 20%;
   height: 100%;
-  background-color: #91d366;
-`;
+ `;

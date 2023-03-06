@@ -11,7 +11,6 @@ align-items: center;
 justify-content: center;
 cursor: pointer;
 border-style: none;
-
 background-color: #20B941;
 p{
   color: #ffffff ;   
@@ -30,9 +29,9 @@ left: 32px;
 top: 185px;
 background-color: #22272E;
 color: #fff;
-
 border: 1px dashed #4d5055;
 border-radius: 5px;
+cursor: pointer;
 
 &:hover {
   background-color: #11922d; 
@@ -46,11 +45,44 @@ left: 32px;
 top: 185px;
 background-color: #393b3d;
 color: #fff;
-
 border: 1px dashed #4d5055;
 border-radius: 5px;
+cursor: pointer;
 
 &:hover {
   background-color: #11922d; 
 }
 `;
+
+export const ButtonSite= styled.button`
+box-sizing: border-box;
+width: 183px;
+height: 56px;
+border-radius: 5px;
+color: #fff;
+background-color: #22272e;
+border: 1px dashed #20B941;
+cursor: pointer;
+
+&:hover {
+  background-color: #11922d; 
+}
+
+`;
+
+export const ButtonSair= styled.button`
+box-sizing: border-box;
+width: 183px;
+height: 56px;
+border-radius: 5px;
+color: #fff;
+background-color: #22272e;
+border: 1px dashed #cecece;
+cursor: pointer;
+
+&:hover {
+  border: 1px dashed #20B941;
+}
+
+`;
+
