@@ -20,7 +20,7 @@ export const StyledButton = styled.button`
 `;
 
 export const StyleMenu = styled.div`
-background-color: #122;
+background-color: #22272E;
 width: 300px;
 height: 100%;
 min-height: 100vw;
