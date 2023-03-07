@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MenuButton, MenuList, CloseButton } from './styles';
+import { MenuButton, MenuList } from './styles';
 
 function MenuMobile() {
  const [expanded, setExpanded] = useState(false);
@@ -8,9 +8,7 @@ function MenuMobile() {
     setExpanded(!expanded);
   }
 
-  function closeMenu() {
-    setExpanded(false);
-  }
+
 
   return (
     <div className="menu">
@@ -21,7 +19,7 @@ function MenuMobile() {
       </MenuButton>
       {expanded && (
         <MenuList>
-          <CloseButton onClick={closeMenu}>X</CloseButton>
+
           <ul>
             <li><a href="home">Home</a></li>
             <li><a href="sobre">Sobre</a></li>

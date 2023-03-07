@@ -54,25 +54,30 @@ export  const MenuList = styled.nav`
     list-style: none;
     margin: 0;
     padding: 0;
+    width:100%;
+   
 
     li {
       margin: 0;
-      padding: 0;
       background-color: #d8d8d8;
       padding: 5px;
       margin-bottom: 2px;
+      height: 40px;
+      
+      
+      &:hover {
+        color: #333;        
+          background-color: #949494;
+               
+      }
 
       a {
+        display: flex;
         color: #333;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 500;
         padding: 10px;
         text-decoration: none;
-
-        &:hover {
-          background-color: #eee;
-          color: #333;
-        }
       }
     }
   }
