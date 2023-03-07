@@ -5,9 +5,9 @@ import {
   ContainerSair,
   ContainerSitePerfil,
   ContainerSitePreview
-} from "./Style";
-import logo from "./image/logo.png";
-import { ButtonSair, ButtonSite } from "../Bottons/Bottons";
+} from "../Style";
+import logo from "../image/logo.png";
+import { ButtonSair, ButtonSite } from "../../Bottons/Bottons";
 
 export default function NavbarManager() {
   return (
