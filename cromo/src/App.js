@@ -1,14 +1,22 @@
-import './App.css';
-import CookiePopup from './components/PopUps/Cookies/CookiePopup';
-import { AppRoutes } from './routes/AppRoutes';
+import "./App.css";
+import CookiePopup from "./components/PopUps/Cookies/CookiePopup";
+import { AppRoutes } from "./routes/AppRoutes";
 
+import { ThemeProvider } from "styled-components";
+
+const theme = {
+  colors: {
+    primary: "#0077FF",
+    secondary: "#FF7F00"
+  }
+};
 export function App() {
   return (
-<>
-<CookiePopup />
-<AppRoutes />
-</>
+    <>
+      <ThemeProvider theme={theme}>
+        <CookiePopup />
+        <AppRoutes />
+      </ThemeProvider>
+    </>
   );
 }
-
-

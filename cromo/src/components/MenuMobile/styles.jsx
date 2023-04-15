@@ -1,7 +1,14 @@
 
 import styled from 'styled-components';
 
+
+
 export const MenuButton = styled.button`
+  @media screen and (min-width: 550px) {
+    display: none;
+  }
+
+
   display: block;
   height: 20px;
   position: relative;

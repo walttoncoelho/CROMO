@@ -1,28 +1,42 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import MenuMobile from "../MenuMobile/MenuMobile";
-import { Nav, NavItem } from "./Style";
+import { Container, Nav, NavItem, NavLinkStyled } from "./Style";
+import logoImg from "./img/logo.svg";
 
 export default function Navbar() {
   return (
     <>
-      <Nav>
-    <MenuMobile />
-        <ul>
-          <NavItem>
-            <Link to="/">Home</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/sobre">Sobre</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/empreendimentos">Empreendimentos</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/fale-conosco">Fale conosco</Link>
-          </NavItem>
-        </ul>
-      </Nav>
+      <Container>
+        <Nav>
+          <a href="/">
+            <img src={logoImg} alt="logo" />
+          </a>
+          <ul>
+            <NavItem>
+              <NavLinkStyled exact to="/" activeClassName="active">
+                Home
+              </NavLinkStyled>
+            </NavItem>
+            <NavItem>
+              <NavLinkStyled to="/empreendimentos" activeClassName="active">
+                Empreendimentos
+              </NavLinkStyled>
+            </NavItem>
+            <NavItem>
+              <NavLinkStyled to="/sobre" activeClassName="active">
+                Sobre
+              </NavLinkStyled>
+            </NavItem>
+            <NavItem>
+              <NavLinkStyled to="/faleconosco" activeClassName="active">
+                Fale conosco
+              </NavLinkStyled>
+            </NavItem>
+          </ul>
+        </Nav>
+
+        <MenuMobile />
+      </Container>
     </>
   );
 }
