@@ -19,7 +19,7 @@ export const Nav = styled.nav`
 export const NavItem = styled.li`
   display: inline-block;
   margin-right: 20px;
-  font-size: 18px;
+  font-size: 14px;
 
   &:last-child {
     margin-right: 0;
