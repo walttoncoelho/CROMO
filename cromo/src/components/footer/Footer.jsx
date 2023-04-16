@@ -9,6 +9,7 @@ import {
   Grid4
 } from "./style";
 import Formulario from "../Formulario/Formulário";
+
 /* import logoImg from "../../assets/logo/logo.png"; */
 /* import instagram from "../../assets/instagram.svg"; */
 
@@ -20,6 +21,7 @@ export default function Footer() {
         <Colum>
           <Grid1>
            {/*  <img src={logoImg} alt="Logo" /> */}
+      
            <h2>
             Fale conosco
            </h2>

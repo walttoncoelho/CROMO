@@ -9,6 +9,16 @@ export const Container = styled.div`
   margin: 0 auto;
   background-color: #007F9B;
 `;
+export const FaleConosco = styled.div`
+h2{
+  margin-bottom: -10px;
+  color: #7855;
+}
+p{}
+
+
+
+`;
 
 export const Colum = styled.div`
 
@@ -31,6 +41,10 @@ export const Grid1 = styled.div`
   width: 50%;
   margin: 0 50px;
 
+  h2 {
+    margin-bottom: -2px;
+  }
+
   img {
     width: 30%;
     margin: auto;
@@ -41,6 +55,8 @@ export const Grid1 = styled.div`
     width: 80%;
     margin: auto;
   }
+
+
 `;
 
 export const Grid2 = styled.div`
