@@ -17,8 +17,7 @@ export function AppRoutes() {
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/empreendimentos" element={<Empreendimentos />} />
       <Route path="/faleconosco" element={<FaleConosco />} />
-      <Route path="/manager" element={<Login />} />
-
+      <Route path="/manager" element={<Login />} />      
       <Route path="/templates" element={<Templates />} />
 
       {/* Páginas auxiliares */}
