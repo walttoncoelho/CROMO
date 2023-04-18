@@ -17,11 +17,13 @@ export default function CookiePopup() {
   }
 
   return (
-    <div className={`cookie-popup ${isVisible ? "visible" : ""}`}>
-    <p>
+    <div className={`cookie-popup  ${isVisible ? "visible" : ""}`}>
+      <div className="style-barra"></div>
+    <p className="paragraf">
       Nós usamos cookies para garantir que você tenha a melhor experiência em nosso site. Ao continuar a navegar, você concorda com o uso de cookies.
     </p>
-    <button onClick={handleAcceptClick}>Aceitar</button>
+    <button className="button-active" onClick={handleAcceptClick}>Aceitar</button>
+    <button className="button-cancelar" onClick={handleAcceptClick}>Cancelar</button>
   </div>
   )
 }

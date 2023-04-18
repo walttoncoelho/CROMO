@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  BarraButtonFooter,
   ByGoodApp,
   Colum,
   Container,
@@ -9,7 +8,7 @@ import {
   IconSocial
 } from "./style";
 import Formulario from "../Formulario/Formulário";
-import Whats from "../ButtonWhats/ButtonWhats";
+
 import Instagram from "./img/instagram.svg";
 import Facebook from "./img/facebook.svg";
 
@@ -65,9 +64,6 @@ export default function Footer() {
             </a>
           </p>
         </ByGoodApp>
-        <BarraButtonFooter>
-          <Whats />
-        </BarraButtonFooter>
       </Container>
     </>
   );

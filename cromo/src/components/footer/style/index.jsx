@@ -23,16 +23,6 @@ max-width: 65px;
 
 `;
 
-export const BarraButtonFooter = styled.div`
-display: flex;
-width: 100%;
-height: 80px;
-background-color: #ffffff;
-justify-content: flex-end;
-
-
-`;
-
 export const Colum = styled.div`
 
   color: #fff;

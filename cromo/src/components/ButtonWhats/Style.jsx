@@ -1,15 +1,23 @@
 import styled from "styled-components";
 
-export const ButtonWhats = styled.button`
-display: flex;
-margin: auto;
-width: 60px;
-height:60px;
-border-radius: 100px;
-border-style: none;
-margin-top: -30px;
-margin-right: 30px;
-align-items: center;
-justify-content: center;
+  export const BtnContact = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transform: translateY(50%);
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border-style: none;
 
+  transition: all 0.3s ease-in-out;
+
+  &.scrolled {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    transform: translateY(0%);
+  }
 `;
+
