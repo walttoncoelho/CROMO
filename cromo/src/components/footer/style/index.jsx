@@ -3,19 +3,32 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  max-width: 100%;
-  align-items: center;
+  max-width: 100%; 
   justify-content: center;
-  margin: 0 auto;
   background-color: #007F9B;
+  align-items: flex-start;
 `;
-export const FaleConosco = styled.div`
-h2{
-  margin-bottom: -10px;
-  color: #7855;
-}
-p{}
 
+export const FaleConosco = styled.div`
+
+`;
+
+
+export const IconSocial = styled.div`
+margin-top: 10px;
+display: flex;
+justify-content: space-between;
+max-width: 65px;
+
+
+`;
+
+export const BarraButtonFooter = styled.div`
+display: flex;
+width: 100%;
+height: 80px;
+background-color: #ffffff;
+justify-content: flex-end;
 
 
 `;
@@ -24,30 +37,22 @@ export const Colum = styled.div`
 
   color: #fff;
   display: flex;
-  width: 1440px;
   max-width: 1200px;
-  flex-direction: row;
-  padding: 10px;
+  flex-direction: row; 
+
 
   p {
     margin-bottom: 8px;
   }
 `;
 
-export const Grid1 = styled.div`
-
-  display: flex;
+export const Grid1 = styled.div`   
   flex-direction: column;
-  width: 50%;
-  margin: 0 50px;
+  width: 50%; 
+  height: 230px;  
 
   h2 {
     margin-bottom: -2px;
-  }
-
-  img {
-    width: 30%;
-    margin: auto;
   }
 
   @media screen {
@@ -55,7 +60,6 @@ export const Grid1 = styled.div`
     width: 80%;
     margin: auto;
   }
-
 
 `;
 
@@ -124,35 +128,6 @@ export const Grid3 = styled.div`
   }
 `;
 
-export const Grid4 = styled.div`
-  display: flex;
-  margin: auto;
-
-  img {
-    width: 35px;
-    height: 35px;
-    margin: auto;
-    margin: 0 15px;
-  }
-
-
-
-  a {
-
- 
-    svg{
-      width: 30px;
-      height: 30px;
-      fill: #ffffff;
-      margin-left: 10px;
-    }
-  }
-
-  @media (max-width: 500px) {
-flex-direction :column ;
-margin: auto;
-    }
-`;
 
 export const ByGoodApp = styled.div`
   margin: auto;
