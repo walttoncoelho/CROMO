@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-  export const BtnContact = styled.button`
+  export const BtnContact = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
