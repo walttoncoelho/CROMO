@@ -83,7 +83,8 @@ export const CardDescription = styled.div`
   width: 380px;
   height: 107px;
   max-width: 400px;
-  background-color: #2942525e;
+  background: linear-gradient(to bottom, #aeaeae48 50%, #131a1fcb 100%);
+
   backdrop-filter: blur(20px);
   flex-direction: column;
   color: #fff;

@@ -92,9 +92,11 @@ box-sizing: border-box;
 width: 101px;
 height: 41px;
 border-radius: 10px;
-color: #0A0A0A;
+
 background-color: #ffffff;
+
 border: 2px solid #0A0A0A;
+
 
 p{
   margin: auto;
@@ -102,12 +104,22 @@ p{
   font-size: 14px;
   line-height: 120%;
   letter-spacing: 0.05em;
+
+   a{
+    text-decoration: none;
+    color: #0A0A0A;  
+   }
 }
 
 &:hover {
   background-color: #118FAA;
   color: #fff;
   border-style: none;
+
+     a{
+ 
+    color: #ffffff;  
+   }
 }
 
 `;
