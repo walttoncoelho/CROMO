@@ -92,9 +92,7 @@ box-sizing: border-box;
 width: 101px;
 height: 41px;
 border-radius: 10px;
-
 background-color: #ffffff;
-
 border: 2px solid #0A0A0A;
 
 
@@ -123,4 +121,33 @@ p{
 }
 
 `;
+
+
+export const ButtonSaibaMais= styled.button`
+box-sizing: border-box;
+width: 101px;
+height: 41px;
+border-radius: 10px;
+background-color: #0A0A0A;
+border-style: none;
+text-decoration: none;
+color: #fff;
+cursor: pointer;
+
+a{ 
+  color: #ffffff;  
+  text-decoration: none;
+  font-weight: 600;  
+  font-size: 14;
+ }
+
+&:hover {
+  background-color: #118FAA;
+  color: #fff;
+  border-style: none;
+
+}
+
+`;
+
 

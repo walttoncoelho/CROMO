@@ -3,10 +3,11 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Sobre from "../pages/Sobre/Sobre";
 import FaleConosco from "../pages/FaleConosco/FaleConosco";
-import Empreendimentos from "../pages/Empreendimentos/Empreendimentos";
+
 import Login from "../pages/Manager/Login/Login";
 import Painel from "../pages/Manager/Painel/Painel";
 import Templates from "../pages/Templates/Templates";
+import Empreendimentos from "../pages/Empreendimentos/SectionEmpreend";
 
 export function AppRoutes() {
   return (
@@ -15,7 +16,7 @@ export function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/sobre" element={<Sobre />} />
-      <Route path="/empreendimentos" element={<Empreendimentos />} />
+      <Route path="/empreendimentos" element={<Empreendimentos/>} />
       <Route path="/faleconosco" element={<FaleConosco />} />
       <Route path="/manager" element={<Login />} />      
       <Route path="/templates" element={<Templates />} />
