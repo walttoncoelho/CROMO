@@ -15,28 +15,28 @@ export default function SectionNumeros() {
           ))}
         </BlocoDesc>
 
-        <BlocoNumbers>
+    
           {data.map((item) => (
-            <div key={item.id}>
+            <BlocoNumbers key={item.id}>
               <StyleNumbers>
-              <h2>{item.lotes}</h2>
+              <h1>{item.lotes}</h1>
               <p>lotes vendidos</p>
               </StyleNumbers>
               <StyleNumbers>
-              <h2>{item.asfalto}</h2>
+              <h1>{item.asfalto}</h1>
               <p>de asfalto</p>
               </StyleNumbers>
               <StyleNumbers>
-              <h2>{item.rua}</h2>
+              <h1>{item.rua}</h1>
               <p>Opções de ruas</p>
               </StyleNumbers>
               <StyleNumbers>
-              <h2>{item.familias}</h2>
+              <h1>{item.familias}</h1>
               <p>Famílias instaladas</p>
               </StyleNumbers>
-            </div>
+            </BlocoNumbers>
           ))}
-        </BlocoNumbers>
+       
       </ContainerNumeros>
     </>
   );

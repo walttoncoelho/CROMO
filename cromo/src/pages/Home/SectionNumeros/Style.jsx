@@ -4,15 +4,15 @@ export const ContainerNumeros = styled.div`
 display: flex;
 margin: auto;
 width:100%;
-max-width: 1440px;
+max-width: 1200px;
+
+
 ;
 `
 
 export const BlocoDesc = styled.div`
 display: flex;
 width: 50%;
-height: 400px;
-background-color: #c8eb5f;
 padding: 5px;
 
 ;
@@ -20,26 +20,27 @@ padding: 5px;
 
 export const BlocoNumbers = styled.div`
 display: flex;
+flex-wrap: wrap;
 
-margin: auto;
-width: 50%;
-height: 400px;
-background-color: #eb6b5f;
-padding: 5px;
 
+flex-direction: row;
+width: 100%;
+gap: 10px;
 ;
 `
 
 export const StyleNumbers = styled.div`
 display: flex;
 flex-direction: column;
-width: 150px;
-height: 80px;
-background-color: #5febac;
 padding: 5px;
+margin: auto;
+width: 300px;
+height: 100px;
+margin-right: -30px;
 
-h2{
+h1{
     margin-bottom: -10px;  
+    color:#118FAA;
 }
 
 ;
