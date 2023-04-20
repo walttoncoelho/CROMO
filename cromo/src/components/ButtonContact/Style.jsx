@@ -10,8 +10,7 @@ import styled from "styled-components";
   height: 60px;
   border-radius: 100px;
   border-style: none;
-
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; 
 
   &.scrolled {
     position: absolute;

@@ -2,25 +2,31 @@ import React from "react";
 import Footer from "../../components/footer/Footer";
 
 import Navbar from "../../components/Navbar/Navbar";
-import Banner from "./Banner/Banner";
+
 
 import ButtonContact from "../../components/ButtonContact/ButtonContact";
 import { ContainerBanner } from "./Banner/Style";
 import SectionEmpreend from "./Empreendimentos/SectionEmpreend";
 
+import BannerPrincipal from "./Banner/BannerPrincipal";
+import BannerSecundario from "./BannerSecundario/BannerSecundario";
+import SectionNumeros from "./SectionNumeros/SectionNumeros";
+
 export default function Home() {
   return (
     <>
       <Navbar />
-      <ContainerBanner></ContainerBanner>
+      <ContainerBanner>
+        <BannerPrincipal/>
+      </ContainerBanner>
       <SectionEmpreend></SectionEmpreend>
+      <BannerSecundario />
+    <SectionNumeros />
+
       <ButtonContact/>
       
-      <>
-      
-        {" "}
-        <Banner />
-       
+      <>      
+        {" "}           
      
       </>
 
