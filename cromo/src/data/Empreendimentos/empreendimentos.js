@@ -4,8 +4,8 @@ const empreendimentos = [
     tipo: "Lotes comerciais & residenciais",
     slug: "exemplo-de-titulo-casa",
     status: "Em construção",
-    logo:"/empreendimento.png",
-    plantaBaixa: "https://exemplo.com/planta-baixa.jpg",
+    logo:"../images/empreendimentosId/LogoFlorenca.png",
+    plantaBaixa: "../images/empreendimentosId/mapa1.png",
     descricao:
       "Localizado em uma área estratégico do município, o Residencial Florença oferece lotes com infraestrutura completa de energia elétrica, rede de água, iluminação pública, galerias pluviais, além de contar com ruas com asfalto e meio-fio.",
     loteInicio: "686",
@@ -13,23 +13,23 @@ const empreendimentos = [
     infra: [
       {
         nome: "Asfalto e Meio-fio",
-        url: "https://exemplo.com/infra/asfalto-meio-fio"
+        url: "../images/empreendimentosId/icons/iconMeioFio.png"
       },
       {
         nome: "Rede de Água",
-        url: "https://exemplo.com/infra/rede-agua"
+        url: "../images/empreendimentosId/icons/iconMeioFio.png"
       },
       {
         nome: "Energia Elétrica",
-        url: "https://exemplo.com/infra/energia-eletrica"
+        url: "../images/empreendimentosId/icons/iconMeioFio.png"
       },
       {
         nome: "Iluninação Pública",
-        url: "https://exemplo.com/infra/iluminacao-publica"
+        url: "../images/empreendimentosId/icons/iconMeioFio.png"
       },
       {
         nome: "Galerias Pluviais",
-        url: "https://exemplo.com/infra/galerias-pluviais"
+        url: "../images/empreendimentosId/icons/iconMeioFio.png"
       }
     ],
     localizacao: {
@@ -43,17 +43,41 @@ const empreendimentos = [
     },
     galeria: [
       {
-        url: "https://exemplo.com/imagem1.jpg",
+        url: "../images/empreendimentosId/galeria/Destaque-1.png",
         legenda: "Legenda da imagem 1"
       },
       {
-        url: "https://exemplo.com/imagem2.jpg",
+        url: "../images/empreendimentosId/galeria/Destaque-2.png",
         legenda: "Legenda da imagem 2"
       },
       {
-        url: "https://exemplo.com/imagem3.jpg",
+        url: "../images/empreendimentosId/galeria/Destaque-3.png",
         legenda: "Legenda da imagem 3"
-      }
+      },
+         {
+        url: "../images/empreendimentosId/galeria/Destaque-3.png",
+        legenda: "Legenda da imagem 3"
+      },
+         {
+        url: "../images/empreendimentosId/galeria/Destaque-3.png",
+        legenda: "Legenda da imagem 3"
+      },
+         {
+        url: "../images/empreendimentosId/galeria/Destaque-3.png",
+        legenda: "Legenda da imagem 3"
+      },
+              {
+        url: "../images/empreendimentosId/galeria/Destaque-3.png",
+        legenda: "Legenda da imagem 3"
+      },
+              {
+        url: "../images/empreendimentosId/galeria/Destaque-3.png",
+        legenda: "Legenda da imagem 3"
+      },
+              {
+        url: "../images/empreendimentosId/galeria/Destaque-3.png",
+        legenda: "Legenda da imagem 3"
+      },
     ]
   }
 ];

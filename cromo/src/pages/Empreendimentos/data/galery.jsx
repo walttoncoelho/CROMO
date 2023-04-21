@@ -37,7 +37,7 @@ export function CardEmpreend() {
                 </p>
                 <ButtonSaibaMais>
                   <a
-                    href="/empreendimentos"
+                    href="/empreendimentoId"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
