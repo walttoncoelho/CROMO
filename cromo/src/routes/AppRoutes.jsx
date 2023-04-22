@@ -8,6 +8,7 @@ import Login from "../pages/Manager/Login/Login";
 import Painel from "../pages/Manager/Painel/Painel";
 import Templates from "../pages/Templates/Templates";
 import Empreendimentos from "../pages/Empreendimentos/SectionEmpreend";
+import EmpreendimentoId from "../pages/EmpreendimentosInterna/EmpreendimentoId";
 
 export function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ export function AppRoutes() {
       <Route path="/faleconosco" element={<FaleConosco />} />
       <Route path="/manager" element={<Login />} />      
       <Route path="/templates" element={<Templates />} />
+       <Route path="/empreendimentoId" element={<EmpreendimentoId/>} />
 
       {/* Páginas auxiliares */}
 
