@@ -84,10 +84,31 @@ export const ContainerIcons = styled.div`
   display: flex;
   margin: auto;
   width: 100%;
-  height: 100px;
-  background-color: #007a97;
-  max-width: 718
-  px;
+  height: 100px; 
+  max-width: 718px;  
+  
+  img{
+    margin-top: 10px;
+    max-width:69px ;
+    margin-bottom: 5px;
+  }
+  
+
+  .styleIcons{
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 69px;
+
+  p{            
+    margin: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222222;      
+  }  
+    
+  }
 `;
 
 export const SectionGalery = styled.div`

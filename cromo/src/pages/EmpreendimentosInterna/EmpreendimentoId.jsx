@@ -51,28 +51,30 @@ export default function EmpreendimentoId() {
               ))}
             </SobreStyleText>
           </ContainerSobre>
-          <ContainerIcons>
-            {data.map((item) => (
-              <div key={item.id}>
-                <p>{item.infra.nome}</p>
-              </div>
-            ))}
-          </ContainerIcons>
+
+          {data.map((item) => (
+            <ContainerIcons>
+              {item.infra.map((imagem) => (
+                <div className="styleIcons" key={imagem.url}>
+                  <img src={imagem.url} alt={imagem.legenda} />
+                  <p>{imagem.nome}</p>
+                </div>
+              ))}
+            </ContainerIcons>
+          ))}
         </ContainerDescription>
       </SectionDescription>
-     
-{data.map((item) => (
-  <SectionGalery key={item.id}>
-    {item.galeria.map((imagem) => (
-      <div key={imagem.url}>
-        <img src={imagem.url} alt={imagem.legenda} />
-   
-      </div>
-    ))}
-  </SectionGalery>
-))}
 
-     
+      {data.map((item) => (
+        <SectionGalery key={item.id}>
+          {item.galeria.map((imagem) => (
+            <div key={imagem.url}>
+              <img src={imagem.url} alt={imagem.legenda} />
+            </div>
+          ))}
+        </SectionGalery>
+      ))}
+
       <Footer />
     </>
   );

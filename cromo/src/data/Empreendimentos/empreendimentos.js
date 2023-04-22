@@ -13,23 +13,23 @@ const empreendimentos = [
     infra: [
       {
         nome: "Asfalto e Meio-fio",
-        url: "../images/empreendimentosId/icons/iconMeioFio.png"
+        url: "../images/empreendimentosId/icons/IconMeioFio.png"
       },
       {
         nome: "Rede de Água",
-        url: "../images/empreendimentosId/icons/iconMeioFio.png"
+        url: "../images/empreendimentosId/icons/IconMeioFio.png"
       },
       {
         nome: "Energia Elétrica",
-        url: "../images/empreendimentosId/icons/iconMeioFio.png"
+        url: "../images/empreendimentosId/icons/IconMeioFio.png"
       },
       {
         nome: "Iluninação Pública",
-        url: "../images/empreendimentosId/icons/iconMeioFio.png"
+        url: "../images/empreendimentosId/icons/IconMeioFio.png"
       },
       {
         nome: "Galerias Pluviais",
-        url: "../images/empreendimentosId/icons/iconMeioFio.png"
+        url: "../images/empreendimentosId/icons/IconMeioFio.png"
       }
     ],
     localizacao: {
