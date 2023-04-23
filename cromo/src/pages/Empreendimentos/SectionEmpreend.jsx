@@ -9,7 +9,7 @@ export default function Empreendimentos() {
   return (
     <>
     <Navbar/>
-      <ContainerEmpreend>
+      <ContainerEmpreend >  
         <CardEmpreend />
       </ContainerEmpreend>
       <SectionNumeros/>
