@@ -6,18 +6,19 @@ export const Form = styled.form`
 export const Radio = styled.div`
 margin-top: 5px;
 margin-bottom: 10px;
+
 `;
 
 
 export const Input = styled.input`  
-    width:694px;
-    min-width: 370px;
+    width: 694px;   
     height: 48px;
     border-radius: 8px;
     padding: 
     8px, 16px, 8px, 16px;
     margin-bottom: 10px;
     border-style: none;
+    background-color: #ffffff;
 
     `;
 
