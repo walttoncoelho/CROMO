@@ -20,10 +20,11 @@ display: flex;
 width: 60%;
 padding: 5px;
 
+
 @media ( max-width: 1024px){  
     padding: 20px;
     }
-    
+
 @media ( max-width: 500px){ 
     display: flex;
     width: 100%;
@@ -59,9 +60,10 @@ export const StyleNumbers = styled.div`
 }
 
 @media (max-width: 500px) {
+
     padding: 10px;
     width: 160px;
-    margin-left: 40px;
+    margin-left: 9px;
     
 }
 
