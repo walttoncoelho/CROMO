@@ -81,7 +81,7 @@ export const CardGalery = styled.div`
   }
     @media (max-width: 500px) {
  
-    width: 350px;
+    width: 360px;
     padding: 5px;   
     margin-bottom: 24px;
     max-width: 800px;
@@ -95,6 +95,14 @@ export const CardGalery = styled.div`
       max-height: 300px;
     }
   }
+
+    @media (max-width: 500px) {
+          img {
+      width: 400px;
+      height: auto;
+    
+    }
+    }
 `;
 
 
@@ -118,17 +126,6 @@ export const CardContainer = styled.div`
 `;
 
 export const CardDescription = styled.div`
-  @media (max-width: 1024px) {
-    width: 85%;
-    height: 100px;
-    display: flex;
-    margin-top: 130px;
-    flex-direction: column;
- /*    background-color: #27c52f; */
-
-  }
-
-
 
   display: flex;
   margin-top: 174px;
