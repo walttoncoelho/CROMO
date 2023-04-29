@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const ContainerEmpreend = styled.div`
   display: flex;
   margin: auto;
-  max-width: 1300px;
-  height: 400px;
-  
+  max-width: 1248px;
+  margin-bottom: 50px;
+  width: 100%;
+/*   background-color: #9c2690; */
+
 
 `;
 
@@ -25,22 +27,17 @@ export const ContainerStatus = styled.div`
   width: 118px;
   height: 29px;
   gap: 8px;
-  padding: 6px, 12px, 6px, 12px ;
+  padding: 6px, 12px, 6px, 12px;
   border-bottom-right-radius: 8px;
   border-top-left-radius: 8px;
 
-
-  p{
+  p {
     font-size: 12px;
     margin: auto;
     font-weight: 600;
     line-height: 18.8px;
-
   }
-
 `;
-
-
 
 export const StatusStyle = styled.div`
   display: flex;
@@ -48,11 +45,11 @@ export const StatusStyle = styled.div`
   justify-content: center;
   max-width: 1440px;
   height: 90px;
-  background-color: #39c7c77f;
+  
+
 `;
 
 export const CardGalery = styled.div`
-  display: flex;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -60,12 +57,46 @@ export const CardGalery = styled.div`
   max-width: 400px;
   height: 300px;
   border-radius: 8px;
+  /* background-color: #0042f6; */
+
   img {
-    max-width: 400px;
-    height: 300px;
     border-radius: 8px;
   }
+
+  @media (max-width: 1024px) {
+    
+ 
+    width: 700px;
+    padding: 5px;   
+    margin-bottom: 24px;
+    max-width: 800px;
+   
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 838px;
+      max-height: 300px;
+    }
+  }
+    @media (max-width: 500px) {
+ 
+    width: 330px;
+    padding: 5px;   
+    margin-bottom: 24px;
+    max-width: 800px;
+    margin-left: 10px;
+   
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 838px;
+      max-height: 300px;
+    }
+  }
 `;
+
 
 export const CardContainer = styled.div`
   display: flex;
@@ -74,9 +105,20 @@ export const CardContainer = styled.div`
   width: 100%;
   max-width: 1440px;
   padding: 5px;
+/*   background-color: #d60c0ce3; */
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+ /*    background-color: #27c52f; */
+
+  }
 `;
 
 export const CardDescription = styled.div`
+
   display: flex;
   margin-top: 174px;
   position: absolute;
@@ -114,4 +156,6 @@ export const CardDescription = styled.div`
       height: 20px;
     }
   }
+
+
 `;

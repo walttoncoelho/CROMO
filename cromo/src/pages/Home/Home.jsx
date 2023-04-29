@@ -3,7 +3,6 @@ import Footer from "../../components/footer/Footer";
 
 import Navbar from "../../components/Navbar/Navbar";
 
-
 import ButtonContact from "../../components/ButtonContact/ButtonContact";
 import { ContainerBanner } from "./Banner/Style";
 import SectionEmpreend from "./Empreendimentos/SectionEmpreend";
@@ -14,23 +13,17 @@ import SectionNumeros from "./SectionNumeros/SectionNumeros";
 
 export default function Home() {
   return (
-    <>
+    <>    
       <Navbar />
       <ContainerBanner>
-        <BannerPrincipal/>
+        <BannerPrincipal />
       </ContainerBanner>
-      <SectionEmpreend></SectionEmpreend>
+      <SectionEmpreend />
       <BannerSecundario />
-    <SectionNumeros />
-
-      <ButtonContact/>
-      
-      <>      
-        {" "}           
-     
-      </>
-
+      <SectionNumeros />
+      <ButtonContact />     
       <Footer />
     </>
+    
   );
 }
