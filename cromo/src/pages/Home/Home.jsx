@@ -10,20 +10,21 @@ import SectionEmpreend from "./Empreendimentos/SectionEmpreend";
 import BannerPrincipal from "./Banner/BannerPrincipal";
 import BannerSecundario from "./BannerSecundario/BannerSecundario";
 import SectionNumeros from "./SectionNumeros/SectionNumeros";
+import BannerSecundarioMobile from "./BannerSecundario/BannerSecundarioMobile";
 
 export default function Home() {
   return (
-    <>    
+    <>
       <Navbar />
       <ContainerBanner>
         <BannerPrincipal />
       </ContainerBanner>
       <SectionEmpreend />
       <BannerSecundario />
+      <BannerSecundarioMobile />
       <SectionNumeros />
-      <ButtonContact />     
+      <ButtonContact />
       <Footer />
     </>
-    
   );
 }
