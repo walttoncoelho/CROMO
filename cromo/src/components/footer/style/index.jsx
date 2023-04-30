@@ -14,34 +14,71 @@ export const FaleConosco = styled.div`
 `;
 
 
-export const IconSocial = styled.div`
-margin-top: 10px;
-display: flex;
-justify-content: space-between;
-max-width: 65px;
-
-
-`;
+// export const IconSocial = styled.div`
+// margin-top: 10px;
+// display: flex;
+// justify-content: space-between;
+// max-width: 65px;
+// `;
 
 export const Colum = styled.div`
+
+@media (max-width:900px) {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+@media (max-width:500px) {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;  
+}
+
 
   color: #fff;
   display: flex;
   max-width: 1200px;
   flex-direction: row; 
 
-
   p {
     margin-bottom: 8px;
+  
   }
 `;
 
-export const Grid1 = styled.div`   
+export const Grid1 = styled.div`  
+
+@media (max-width: 900px){
+margin-top: 30px;
+}
+
+@media (max-width: 550px){
+margin-top: 50px;
+align-items: center;
+justify-content: center;
+h2{
+display: flex;
+justify-content: center;
+text-align: center;
+margin: auto;
+}
+p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  
+}
+
+}
+
   flex-direction: column;
   width: 50%; 
   height: 230px;  
 
   h2 {
+
     margin-bottom: -2px;
   }
 

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const ContainerNumeros = styled.div`
 display: flex;
 margin: auto;
@@ -10,8 +9,6 @@ max-width: 1200px;
     flex-direction: column;
     
 }
-
-
 ;
 `
 
@@ -19,7 +16,6 @@ export const BlocoDesc = styled.div`
 display: flex;
 width: 60%;
 padding: 5px;
-
 
 @media ( max-width: 1024px){  
     padding: 20px;
@@ -33,15 +29,13 @@ padding: 5px;
     padding: 20px;
     
 }
-
 ;
 `
 
 export const BlocoNumbers = styled.div`
 @media ( max-width: 1024px){ 
     padding: 5px;
-    gap:10px;
-    
+    gap:10px;    
 }
 
 display: flex;
@@ -60,7 +54,6 @@ export const StyleNumbers = styled.div`
 }
 
 @media (max-width: 500px) {
-
     padding: 10px;
     width: 160px;
     margin-left: 9px;
