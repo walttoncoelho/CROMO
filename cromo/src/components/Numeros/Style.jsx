@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 export const ContainerNumeros = styled.div`
+
+@media (max-width: 550px) {
+   
+    h2{
+
+    }
+  }
+
 display: flex;
 margin: auto;
 width:100%;
@@ -28,11 +36,17 @@ flex-wrap: wrap;
 `
 
 export const StyleNumbers = styled.div`
+
+@media (max-width: 550px){
+    width: 150px;
+}
 display: flex;
 flex-direction: column;
 padding: 5px;
 margin: auto;
 width: 200px;
+
+gap: 10px;
 
 
 
