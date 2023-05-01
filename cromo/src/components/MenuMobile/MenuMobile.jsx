@@ -12,7 +12,6 @@ function MenuMobile() {
     <>
 
       <MenuBox>
-
         <MenuButton open={expanded} onClick={toggleMenu}>
           <span></span>
           <span></span>
@@ -20,11 +19,11 @@ function MenuMobile() {
         </MenuButton>
         {expanded && (
           <MenuList>
-
             <ul>
               <li><a href="home">Home</a></li>
+              <li><a href="empreendimentos">Empreendimento</a></li>
               <li><a href="sobre">Sobre</a></li>
-              <li><a href="contato">Contato</a></li>
+              <li><a href="faleconosco">Fale conosco</a></li>
             </ul>
           </MenuList>
         )}
