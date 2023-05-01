@@ -5,11 +5,8 @@ display: flex;
 flex-direction: column;
 margin: auto;
 @media (max-width: 500px) {
-  margin-top: -160px;
-
- 
+  margin-top: -160px; 
 }
-
 `;
 
 export const Radio = styled.div`
@@ -19,9 +16,7 @@ margin-bottom: 10px;
 
 
 export const Input = styled.input`  
-
 @media (max-width: 500px) {
-
   width: 300px;  
 }
 

@@ -12,7 +12,6 @@ export const Container = styled.div`
   flex-wrap: wrap;
   max-width: 100%; 
   justify-content: center;
-  background-color: #279b00;
   align-items: flex-start;
 `;
 
@@ -20,6 +19,11 @@ export const Container = styled.div`
 
 
 export const IconSocial = styled.div`
+@media (max-width: 550px) {
+  display: none;
+  
+}
+
 display: flex;
 height: 33%;
 width: 65px;
@@ -42,7 +46,14 @@ export const ColumContato = styled.div`
 
 `;
 
-export const ContatinerContato = styled.div`  
+export const ContainerContato = styled.div`  
+
+@media (max-width: 550px) {
+
+  max-height: 300px;
+  
+}
+
 margin-top:35px ;
 max-width: 294px; 
 height: 512px;

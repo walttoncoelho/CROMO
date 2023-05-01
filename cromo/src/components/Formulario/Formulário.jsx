@@ -19,35 +19,33 @@ function Formulario() {
 
   return (
     <Form onSubmit={handleSubmit}>
-         
       <label htmlFor="name" title=" Digite seu nome completo">
-       
       </label>
-      <Input      
+      <Input
         type="text"
         id="name"
         name="name"
-        placeholder=" Qual o seu nome" 
+        placeholder=" Qual o seu nome"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
       <br />
 
       <label htmlFor="email" title=" Digite seu e-mail">
-       
+
       </label>
       <Input
         type="email"
         id="email"
         name="email"
-        placeholder=" Digite seu e-mail" 
+        placeholder=" Digite seu e-mail"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <br />
 
       <label htmlFor="phone" title=" Digite seu número de telefone com DDD">
-        
+
       </label>
       <Input
         type="tel"
@@ -59,27 +57,23 @@ function Formulario() {
       />
       <br />
 
-<Radio>
-
-
-      <input
-        type="radio"
-        id="content"
-        name="subscription"
-        value="yes"
-        checked={subscription}
-        onChange={(e) => setSubscription(true)}
+      <Radio>
+        <input
+          type="radio"
+          id="content"
+          name="subscription"
+          value="yes"
+          checked={subscription}
+          onChange={(e) => setSubscription(true)}
         />
-      <label htmlFor="content"> Quero receber conteúdos</label>
-      <br />
-        </Radio>
-
-      <Button type="submit" value="Enviar">      
-      Enviar
-      </Button> 
-
+        <label htmlFor="content"> Quero receber conteúdos</label>
+        <br />
+      </Radio>
+      <Button type="submit" value="Enviar">
+        Enviar
+      </Button>
     </Form>
-    
+
   );
 }
 

@@ -9,6 +9,7 @@ export const Container = styled.div`
   justify-content: center;
   background-color: #007F9B;
   align-items: flex-start;
+  height: 100%;
 `;
 
 

@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.form`
+
+@media (max-width: 550px) {
+  height: 600px;
+  position: relative;
+  
+}
+
 width: 400px;
 height: 412px;
 border-radius: 16px;
@@ -33,7 +40,7 @@ export const Input = styled.input`
 
     `;
 
-    export const InputArea = styled.input`  
+export const InputArea = styled.input`  
     width: 100%;   
     min-width: 336px;
     height: 148px;
