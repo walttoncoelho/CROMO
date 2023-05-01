@@ -3,27 +3,32 @@ import styled from 'styled-components';
 
 
 
-export const MenuButton = styled.button`
-  @media screen and (min-width: 550px) {
+export const MenuButton = styled.div`
+  @media screen and (min-width: 800px) {
     display: none;
   }
-
-
+  
   display: block;
+  cursor: pointer;
   height: 20px;
-  position: relative;
+  position: absolute;
   width: 20px;
+  margin-top: 25px;
+  gap:10px;
+  margin-right: 100px;
+
+
 
   span {
-    background-color: #333;
-    display: block;
-    height: 2px;
-    left: 0;
+    background-color: #007f9bdc;
+    display: block;    
+    right: 20;
     position: absolute;
     transform-origin: center;
     transition-duration: 0.15s;
     transition-property: transform, opacity, left;
     width: 100%;
+    height: 13%;
 
     &:nth-child(1) {
       top: ${props => props.open ? '50%' : '0'};
@@ -36,23 +41,23 @@ export const MenuButton = styled.button`
     }
 
     &:nth-child(3) {
-      bottom: ${props => props.open ? '50%' : '0'};
+      bottom: ${props => props.open ? '40%' : '0'};
       transform: ${props => props.open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
 `;
 
-export  const MenuList = styled.nav`
-  background-color: #f1f0f0;
+export const MenuList = styled.nav`
+  background-color: #007f9bdc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 10px;
   position: absolute;
-  top: 70px;
-  left: 0;
+  top: 80px;
+  right: 0px;
   width: 100%;
   z-index: 1;
-  height: 100%;
+  height: 100vh;
   width: 200px;
 
   ul {
@@ -66,21 +71,21 @@ export  const MenuList = styled.nav`
 
     li {
       margin: 0;
-      background-color: #d8d8d8;
       padding: 5px;
       margin-bottom: 2px;
       height: 40px;
+      border-radius: 8px;
       
       
       &:hover {
-        color: #333;        
-          background-color: #949494;
+        color: #ffffff;        
+          background-color: #04667c;
                
       }
 
       a {
         display: flex;
-        color: #333;
+        color: #ffffff;
         font-size: 16px;
         font-weight: 500;
         padding: 10px;

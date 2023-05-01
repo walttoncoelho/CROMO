@@ -6,14 +6,29 @@ export const Container = styled.nav`
   border-bottom: 1px solid #cccccc;
   justify-content: center;
 `;
+export const MenuContainer = styled.div` 
+  color: red;
+@media (max-width: 750px) {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+`;
 
 export const Nav = styled.nav`
-  justify-content: space-between;
-  height: 80px;
   display: flex;
   align-items: center;
+
+  justify-content: space-between;
+  height: 80px;
   width: 100%;
   max-width: 1440px;
+
+  img{
+   
+    margin-left: 20px;
+
+  }
 `;
 
 export const NavItem = styled.li`

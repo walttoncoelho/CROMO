@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-  export const BtnContact = styled.div`
+export const BtnContact = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -19,4 +19,10 @@ import styled from "styled-components";
     transform: translateY(0%);
   }
 `;
+
+
+
+
+
+
 
