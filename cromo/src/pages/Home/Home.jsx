@@ -11,6 +11,7 @@ import BannerPrincipal from "./Banner/BannerPrincipal";
 import BannerSecundario from "./BannerSecundario/BannerSecundario";
 import SectionNumeros from "./SectionNumeros/SectionNumeros";
 import BannerSecundarioMobile from "./BannerSecundario/BannerSecundarioMobile";
+import BannerTopoMobile from "./Banner/BannerTopoMobile";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <ContainerBanner>
         <BannerPrincipal />
       </ContainerBanner>
+      <BannerTopoMobile />
       <SectionEmpreend />
       <BannerSecundario />
       <BannerSecundarioMobile />
