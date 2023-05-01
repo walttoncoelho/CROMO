@@ -118,6 +118,7 @@ export const SectionGalery = styled.div`
   margin: auto;
   max-width: 1440px;
   padding: 5px;
+  background-color: #f02828;
   
 
   img{

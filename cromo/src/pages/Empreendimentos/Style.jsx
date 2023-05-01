@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
+
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -14,6 +15,9 @@ export const CardContainer = styled.div`
     justify-content: center;
     font-size: 40px;
     color: #0A0A0A;
+  @media (max-width: 550px){
+  font-size: 30px;
+}
   }
 
 `;
@@ -67,6 +71,12 @@ export const StatusStyle = styled.div`
 `;
 
 export const CardGalery = styled.div`
+
+@media (max-width: 550px){
+  display: flex;
+  flex-direction: column;  
+}
+
   display: flex;
   flex-direction: row;
   margin: auto;
@@ -81,35 +91,69 @@ export const CardGalery = styled.div`
 `;
 
 export const CardImg = styled.div`
+
+@media (max-width: 550px){
+  display: flex; 
+
+  
+}
+
 display: flex;
 width: 60%;
 height: 100%;
 img{
-  width: 100%;
-  height: 100%;
- border-bottom-left-radius: 8px;
+
+  @media (max-width: 550px){
+    width:350px;
+    justify-content: center;
+ 
+    padding: 5px;  
+}
+width: 100%;
+height: 100%;
+border-bottom-left-radius: 8px;
 border-top-left-radius: 8px;
 }
 `;
 
-
-
-
-
 export const CardDescription = styled.div`
+
+@media (max-width: 550px){
+  display: flex;
+  margin: auto;
+  justify-content: center;
+
+
+  
+}
+
 display: flex;
 flex-direction: column;
 margin: auto;
 max-width: 350px;
 
 h2{
+  @media (max-width: 550px){
+    text-align: center;
+
+  }
   color: #007F9B;
-  font-size: 32px;
+  font-size: 25px;
 }
 
 `;
 
 export const ContainerLoteButton = styled.div`
+
+@media (max-width: 550px){
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 25px;
+  
+}
+
 display: flex;
 flex-direction: row;
 margin: auto;

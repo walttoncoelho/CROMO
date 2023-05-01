@@ -20,12 +20,12 @@ export function CardEmpreend() {
           <CardGalery key={item.id}>
             <CardImg>
               <img src={item.imageUrl} alt={item.linkUrl} />
+              <ContainerStatus
+                className={item.status === "Obra entregue" ? "orange" : "green"}
+              >
+                <p>{item.status}</p>
+              </ContainerStatus>
             </CardImg>
-            <ContainerStatus
-              className={item.status === "Obra entregue" ? "orange" : "green"}
-            >
-              <p>{item.status}</p>
-            </ContainerStatus>
             <CardDescription>
               <h2>{item.title}</h2>
               <p>{item.sobre}</p>
