@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const ContainerBanner = styled.div`
 
 @media (max-width: 900px) {
-    display: none;
-    
+    display: none;    
 }
+
 display: flex;
 margin: auto;
 width:100%;
