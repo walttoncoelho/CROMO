@@ -17,6 +17,7 @@ export const CardContainer = styled.div`
     color: #0A0A0A;
   @media (max-width: 550px){
   font-size: 30px;
+  font-weight: 700;
 }
   }
 
@@ -104,9 +105,9 @@ height: 100%;
 img{
 
   @media (max-width: 550px){
-    width:350px;
-    justify-content: center;
- 
+    width:100%;   
+    min-width: 375px;
+    justify-content: center; 
     padding: 5px;  
 }
 width: 100%;
