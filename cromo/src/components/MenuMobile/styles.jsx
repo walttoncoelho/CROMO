@@ -105,3 +105,21 @@ export const CloseButton = styled.button`
   top: 5px;
   right: 10px;
 `;
+
+export const MenuBox = styled.div`
+
+
+@media (min-width: 800px){
+  display: none;
+  margin: auto;
+}
+
+
+display: flex;
+margin: auto;
+justify-content: center;
+width: 10px;
+height: 50px;
+margin-top: 5px;
+
+`;

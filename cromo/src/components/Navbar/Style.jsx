@@ -18,7 +18,6 @@ export const MenuContainer = styled.div`
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
-
   justify-content: space-between;
   height: 80px;
   width: 100%;
