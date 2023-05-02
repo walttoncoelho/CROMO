@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Button, FormContainer, Input, Radio, InputArea } from "./Style";
+import { Button, FormContainer, Input, Radio, InputArea, TitleContato } from "./Style";
 
 export function FooterFormulario() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-   const [mensagem, setMensagem] = useState("");
+  const [mensagem, setMensagem] = useState("");
   const [subscription, setSubscription] = useState(true);
 
   function handleSubmit(e) {
@@ -20,35 +20,38 @@ export function FooterFormulario() {
 
   return (
     <FormContainer onSubmit={handleSubmit}>
-         
-      <label htmlFor="name" title=" Digite seu nome completo">
-       
+      <TitleContato>
+        <h2>Entre em contato</h2>
+      </TitleContato>
+
+      <label htmlFor="name" title=" Ente em contato">
+
       </label>
-      <Input      
+      <Input
         type="text"
         id="name"
         name="name"
-        placeholder=" Qual o seu nome" 
+        placeholder=" Qual o seu nome"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
       <br />
 
       <label htmlFor="email" title=" Digite seu e-mail">
-       
+
       </label>
       <Input
         type="email"
         id="email"
         name="email"
-        placeholder=" Digite seu e-mail" 
+        placeholder=" Digite seu e-mail"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <br />
 
       <label htmlFor="phone" title=" Digite seu número de telefone com DDD">
-        
+
       </label>
       <Input
         type="tel"
@@ -60,7 +63,7 @@ export function FooterFormulario() {
       />
 
       <br />
-        <InputArea
+      <InputArea
         type="textarea"
         id="mensagem"
         name="mensagem"
@@ -69,26 +72,26 @@ export function FooterFormulario() {
         onChange={(e) => setMensagem(e.target.mensagem)}
       />
 
-<Radio>
+      <Radio>
 
 
-      <input
-        type="radio"
-        id="content"
-        name="subscription"
-        value="yes"
-        checked={subscription}
-        onChange={(e) => setSubscription(true)}
+        <input
+          type="radio"
+          id="content"
+          name="subscription"
+          value="yes"
+          checked={subscription}
+          onChange={(e) => setSubscription(true)}
         />
-      <label htmlFor="content"> Quero receber conteúdos</label>
-      <br />
-        </Radio>
+        <label htmlFor="content"> Quero receber conteúdos</label>
+        <br />
+      </Radio>
 
-      <Button type="submit" value="Enviar">      
-      Enviar
-      </Button> 
+      <Button type="submit" value="Enviar">
+        Enviar
+      </Button>
     </FormContainer>
-    
+
   );
 }
 
