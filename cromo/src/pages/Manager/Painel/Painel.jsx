@@ -1,15 +1,13 @@
 import React from 'react'
-import NavbarManager from '../../../components/NavbarManager/Pages/NavbarManager'
-import SidebarMenu from '../../../components/SidebarMenu/SidebarMenu'
+import NavBar from '../components/NavBar/NavBar'
+import AdministrativePanel from '../components/AdministrativePanel/AdministrativePanel'
+
 
 export default function Painel() {
   return (
 <>
-<NavbarManager />
-<h1>
-    Painel de controle
-</h1>
-<SidebarMenu />
+<NavBar/>
+<AdministrativePanel/>
 </>
   )
 }
