@@ -7,7 +7,9 @@ import {
 
 import Instagram from "./img/instagram.svg";
 import Facebook from "./img/facebook.svg";
-import { ButtonFaleConosco } from "../../Bottons/Bottons";
+import { ButtonFaleConosco, RowImput } from "../../Bottons/Bottons";
+import Phone from "./img/Phone.svg";
+import Email from "./img/mail.svg";
 
 export default function Contatos() {
   return (
@@ -21,11 +23,17 @@ export default function Contatos() {
           </p>
 
           <ButtonFaleConosco>
-            <p>+55 98 9 9999-9999</p>
+            <RowImput>
+              <img src={Phone} alt="Phone" />
+              <p>+55 98 9 9999-9999</p>
+            </RowImput>
           </ButtonFaleConosco>
 
           <ButtonFaleConosco>
-            <p>contato@cromo.com.br</p>
+            <RowImput>
+              <img src={Email} alt="Email" />
+              <p>contato@cromo.com.br</p>
+            </RowImput>
           </ButtonFaleConosco>
 
           <a href="##" target="_blank" rel="noopener noreferrer">

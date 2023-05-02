@@ -150,6 +150,7 @@ export const ButtonFaleConosco = styled.button`
   margin-bottom: 20px;
   align-items: center;
   transition: background-color 0.4s ease-out, color 0.3s ease-out, border-style 0.2s ease-out;
+
   
 
   p {
@@ -171,6 +172,34 @@ export const ButtonFaleConosco = styled.button`
 
     p {
       color: #118faa;
+    }
+
+    fill{
+      color: #118faa;
+
+    }
+  }
+`;
+export const RowImput = styled.div`
+display: flex;
+flex-direction: row;
+gap: 10px;
+justify-content: center;
+img{
+      fill: #aa1b11;      
+      stroke: #aa1b11;
+      color: #aa1b11;
+
+    }
+
+
+&:hover {
+    img{
+      fill: #aa1b11;      
+      stroke: #aa1b11;
+      color: #aa1b11;
+
+
     }
   }
 `;

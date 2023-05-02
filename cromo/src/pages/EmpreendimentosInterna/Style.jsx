@@ -113,17 +113,21 @@ export const ContainerIcons = styled.div`
 
 export const SectionGalery = styled.div`
   display: flex;
+  margin: auto;
+  justify-content: center;
   flex-wrap: wrap;  
   flex-direction: row;
   margin: auto;
   max-width: 1440px;
   padding: 5px;
-  background-color: #f02828;
+gap:10px;
+
   
 
   img{
     display:flex;
     margin: auto;  
     padding: 2px;
+    max-width: 400px;
   }
 `;

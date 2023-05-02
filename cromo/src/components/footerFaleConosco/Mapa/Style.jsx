@@ -43,7 +43,7 @@ export const MapaDescription = styled.div`
   background: linear-gradient(to bottom, #dad9d985 50%, #1e3949dc 100%);
   backdrop-filter: blur(20px);
   flex-direction: column;
-  color: #006caa;
+  color: #2384bd;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   padding: 10px;
