@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FormContainer = styled.form`
 background-color: #ffffff;
 height: 100%;
-height: 550px;
+height: 480px;
 
 @media (max-width: 550px) {
   height: 620px;
@@ -13,7 +13,6 @@ height: 550px;
 width: 400px;
 border-radius: 16px;
 padding: 32px;
-gap: 18px;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 `;
 
@@ -25,7 +24,6 @@ justify-content: center;
 `;
 
 export const Radio = styled.div`
-
 @media (max-width: 550px) {
   display: flex;
   margin: 30px;
@@ -41,7 +39,6 @@ font-weight: 400px;
 
 
 export const Input = styled.input`  
-
 @media (max-width: 550px) {
   display: flex;
   align-items: center;
@@ -49,12 +46,11 @@ export const Input = styled.input`
   margin: auto;
   max-width: 300px;  
 }
-
     width: 100%;   
     min-width: 300px;
     height: 48px;
     border-radius: 8px;
-    padding: 10px;
+    padding: 2px;
     margin-bottom: 10px;
     border-style: none;
     background-color: #F1F1F1;
@@ -82,7 +78,7 @@ export const InputArea = styled.input`
 
 height: 148px;
 border-radius: 8px;
-padding: 10px;
+padding: 2px;
 min-width: 400px;
 margin-bottom: 10px;
 border-style: none;
@@ -92,8 +88,6 @@ font-weight: 500;
     &:focus {
     outline: 2px solid #06aacf;
   }
-
-
     `;
 
 export const Button = styled.button`
