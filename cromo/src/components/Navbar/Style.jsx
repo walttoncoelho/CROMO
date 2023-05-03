@@ -24,9 +24,7 @@ export const Nav = styled.nav`
   max-width: 1440px;
 
   img{
-   
-    margin-left: 20px;
-
+  margin-left: 20px;
   }
 `;
 
@@ -52,6 +50,7 @@ export const NavItem = styled.li`
 
     &.active {
       color: #007f9b;
+      background-color: #ffffff;
     }
   }
 `;
