@@ -19,15 +19,14 @@ export function AppRoutes() {
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/empreendimentos" element={<Empreendimentos/>} />
       <Route path="/faleconosco" element={<FaleConosco />} />
-      <Route path="/manager" element={<Login />} />      
       <Route path="/templates" element={<Templates />} />
-       <Route path="/empreendimentoId" element={<EmpreendimentoId/>} />
+      <Route path="/empreendimentoId" element={<EmpreendimentoId/>} />
 
-      {/* Páginas auxiliares */}
+      {/* Página Login */}
+      <Route path="/manager" element={<Login />} />      
 
       {/* Páginas privadas */}
-
-      <Route path="/painel" element={<Painel />} />
+      <Route path="/manager/painel" element={<Painel />} />
     </Routes>
   );
 }

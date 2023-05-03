@@ -34,7 +34,7 @@ export const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #11922d;
+  background-color: #11922d;
   }
 `;
 
@@ -50,7 +50,7 @@ export const SubMenu = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #11922d;
+  background-color: #11922d;
   }
 `;
 
@@ -65,7 +65,7 @@ export const ButtonSite = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #11922d;
+  background-color: #11922d;
   }
 `;
 
@@ -80,7 +80,7 @@ export const ButtonSair = styled.button`
   cursor: pointer;
 
   &:hover {
-    border: 1px dashed #20b941;
+  border: 1px dashed #20b941;
   }
 `;
 
@@ -100,8 +100,8 @@ export const ButtonVerMais = styled.button`
     letter-spacing: 0.05em;
 
     a {
-      text-decoration: none;
-      color: #0a0a0a;
+    text-decoration: none;
+    color: #0a0a0a;
     }
   }
 
@@ -111,7 +111,7 @@ export const ButtonVerMais = styled.button`
     border-style: none;
 
     a {
-      color: #ffffff;
+    color: #ffffff;
     }
   }
 `;
