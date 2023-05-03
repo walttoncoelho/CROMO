@@ -1,25 +1,41 @@
 import React, { useState } from "react";
-import { Button, Form, Input, Radio } from "./Style";
+import axios from "axios";
+import { Button, Form, Input, InputArea, Popup, Radio } from "./Style";
 
-function Formulario() {
+export default function Formulario() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [mensagem, setMensagem] = useState("");
   const [subscription, setSubscription] = useState(true);
+  const [statusMessage, setStatusMessage] = useState("");
+  const [error, setError] = useState("");
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log({
-      name,
-      email,
-      phone,
-      subscription,
-    });
+
+    try {
+      await axios.post("http://localhost:5000/send-email", {
+        name,
+        email,
+        phone,
+        mensagem,
+        subscription,
+      });
+      setStatusMessage("E-mail enviado com sucesso!");
+      setError("");
+    } catch (error) {
+      console.log("Error sending email:", error);
+      setError("Houve um erro ao enviar o seu fomulário, tente novamente mais tarde.");
+      setStatusMessage("");
+    }
   }
 
   return (
     <Form onSubmit={handleSubmit}>
-      <label htmlFor="name" title=" Digite seu nome completo">
+      {statusMessage && <Popup>{statusMessage}<button onClick={() => {setStatusMessage(""); setError("");}}>Fechar</button></Popup>}
+      {error && <Popup>{error}<button onClick={() => {setStatusMessage(""); setError("");}}>Fechar</button></Popup>}
+      <label htmlFor="name" title="Digite seu nome completo">
       </label>
       <Input
         type="text"
@@ -30,51 +46,56 @@ function Formulario() {
         onChange={(e) => setName(e.target.value)}
       />
       <br />
-
-      <label htmlFor="email" title=" Digite seu e-mail">
-
+      <label htmlFor="email" title="Digite seu e-mail">
+        
       </label>
       <Input
         type="email"
         id="email"
         name="email"
-        placeholder=" Digite seu e-mail"
+        placeholder="   Digite seu e-mail"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <br />
 
-      <label htmlFor="phone" title=" Digite seu número de telefone com DDD">
-
+      <label htmlFor="phone" title="Digite seu número de telefone com DDD">
+        
       </label>
       <Input
         type="tel"
         id="phone"
         name="phone"
-        placeholder="Digite seu melhor telefone"
+        placeholder="   Digite seu melhor telefone"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
       />
       <br />
+      <InputArea
+        type="textarea"
+        id="mensagem"
+        name="mensagem"
+        placeholder="  Quer deixar aqui uma mensagem?"
+        value={mensagem}
+        onChange={(e) => setMensagem(e.target.value)}
+      />
 
-      <Radio>
-        <input
-          type="radio"
-          id="content"
-          name="subscription"
-          value="yes"
-          checked={subscription}
-          onChange={(e) => setSubscription(true)}
-        />
-        <label htmlFor="content"> Quero receber conteúdos</label>
-        <br />
-      </Radio>
+<Radio>
+  <input
+    type="radio"
+    id="content"
+    name="subscription"
+    value="yes"
+    checked={subscription}
+    onChange={(e) => setSubscription(e.target.value === 'yes')}
+  />
+  <label htmlFor="content">Quero receber conteúdos</label>
+  <span className="checkmark"></span>
+</Radio>
+
       <Button type="submit" value="Enviar">
         Enviar
       </Button>
     </Form>
-
   );
 }
-
-export default Formulario;
