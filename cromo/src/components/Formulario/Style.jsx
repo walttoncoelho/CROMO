@@ -79,11 +79,11 @@ export const Popup = styled.div`
   top: 50%;
   left: 70%;
   transform: translate(-50%, -50%);
-  background-color: #fafafaf6;
+  background-color: #fafafa;
   padding: 20px;
   margin: auto;
   position: fixed;
-  max-width: 370px;
+  max-width: 300px;
   height: 270px;
   text-align: center;
   justify-content: center;
@@ -92,22 +92,50 @@ export const Popup = styled.div`
   color: #ca1e1e;
   font-weight: 700;
   flex-direction: column;
-  border: solid 2px #0076ac83;
-button{
-  margin-top: 10px;
-  width: 150px;
-  height: 45px;
-  border-radius: 8px;
-  border-style: none;
-  color: #0075ac;
-  font-weight: 500;
-  border: solid 2px #0075ac;
-cursor: pointer;
 
-  &:hover{
-  background-color: #0075ac;
+  p {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  font-weight: 7000;
+  font-size: 30px;
+  height: 10px;
+  width: 10px;
+  border: solid 2px #098ba8;
+  background-color: #0d92bb;
   color: #fff;
-  font-weight: 700;
+  border-radius: 150px;
+  animation: size-animation 1s ease forwards;
+}
+
+@keyframes size-animation {
+  from {
+    height: 40px;
+    width: 40px;
+  }
+  to {
+    height: 60px;
+    width: 60px;
   }
 }
+
+
+  button {
+    margin-top: 10px;
+    width: 150px;
+    height: 45px;
+    border-radius: 8px;
+    border-style: none;
+    color: #0075ac;
+    font-weight: 500;
+    border: solid 2px #0075ac;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0075ac;
+      color: #fff;
+      font-weight: 700;
+    }
+  }
 `;

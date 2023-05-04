@@ -33,8 +33,25 @@ export default function Formulario() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      {statusMessage && <Popup>{statusMessage}<button onClick={() => {setStatusMessage(""); setError("");}}>Fechar</button></Popup>}
-      {error && <Popup>{error}<button onClick={() => {setStatusMessage(""); setError("");}}>Fechar</button></Popup>}
+    {statusMessage && (
+  <Popup className="show">
+    <p>SUCESSO!</p>
+    {statusMessage}
+    <button onClick={() => {setStatusMessage(""); setError("");}}>
+      Fechar
+    </button>
+  </Popup>
+)}
+{error && (
+  <Popup className="show">
+    <p>X</p>
+    {error}
+    <button onClick={() => {setStatusMessage(""); setError("");}}>
+      Fechar
+    </button>
+  </Popup>
+)}
+
       <label htmlFor="name" title="Digite seu nome completo">
       </label>
       <Input
