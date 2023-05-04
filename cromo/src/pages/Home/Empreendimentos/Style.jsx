@@ -53,41 +53,50 @@ export const CardGalery = styled.div`
   max-width: 400px;
   height: 300px;
   border-radius: 8px;
-  /* background-color: #0042f6; */
+  overflow: hidden; /* adiciona overflow para esconder o conteúdo fora do tamanho definido */
+  
+  /* Adiciona um contêiner adicional para a imagem */
+  .image-container {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  /* Aplica o efeito de zoom na imagem */
+  .image-container:hover img {
+    transform: scale(1.1);
+  }
+
   img {
     border-radius: 8px;
     height: 300px;
-   
+    max-height: 100%; /* Define a altura máxima para a altura do contêiner */
+    object-fit: cover; /* Escolhe a forma como a imagem é redimensionada para caber no contêiner */
   }
+
   @media (max-width: 1024px) {
-    
- 
     width: 700px;
     padding: 5px;   
     margin-bottom: 24px;
     max-width: 800px;
-   
-    img {
-      width: 100%;
-      height: 100%;
+
+    /* Define a largura máxima para o contêiner da imagem */
+    .image-container {
       max-width: 838px;
-      max-height: 300px;
     }
   }
-    @media (max-width: 500px) {  
+
+  @media (max-width: 500px) {  
     padding: 5px;   
     margin-bottom: 24px;
     width: 340px;
-    
     margin-left: 10px;
-   
-    img {    
-
-      width: 340px;
     
+    /* Define a largura máxima para o contêiner da imagem */
+    .image-container {
+      max-width: 340px;
     }
   }
-
 `;
 
 
