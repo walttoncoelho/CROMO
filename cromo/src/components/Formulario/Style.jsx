@@ -27,6 +27,9 @@ export const Input = styled.input`
     margin-bottom: 10px;
     border-style: none;
     background-color: #ffffff;
+    &:focus {
+    outline: 2px solid #06aacf;
+  }
     `;
 
 export const InputArea = styled.input`  
