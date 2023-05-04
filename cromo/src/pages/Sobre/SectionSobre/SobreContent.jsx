@@ -8,7 +8,7 @@ import {
   ContainerQualidade,
   ContainerSobre
 } from "./Style.jsx";
-import Numeros from "../../../components/Numeros/Numeros";
+import Numeros from "../../../components/Numeros/NumerosBloco";
 
 export default function SobreContent() {
   return (

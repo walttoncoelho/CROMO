@@ -5,17 +5,21 @@ margin: auto;
 width:100%;
 max-width: 1200px;
 
+
 @media (max-width: 500px) {
-    flex-direction: column;
-    
+    flex-direction: column;    
 }
 ;
 `
 
 export const BlocoDesc = styled.div`
 display: flex;
-width: 60%;
+width: 100%;
 padding: 5px;
+p{
+    max-width: 510px;
+}
+
 
 @media ( max-width: 1024px){  
     padding: 20px;
@@ -33,7 +37,16 @@ padding: 5px;
 `
 
 export const BlocoNumbers = styled.div`
+@media ( max-width: 550px){ 
+    display: flex;
+    margin: auto;
+    padding: 5px;
+    gap:10px;    
+    max-width: 450px;
+}
+
 @media ( max-width: 1024px){ 
+    min-width: 450px;
     padding: 5px;
     gap:10px;    
 }
