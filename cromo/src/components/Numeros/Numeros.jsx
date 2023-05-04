@@ -1,32 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import numeros from "../../../src/data/componentNumeros/numeros";
-import {  BlocoNumbers, ContainerNumeros, StyleNumbers } from "./Style";
+import { BlocoNumbers, ContainerNumeros, StyleNumbers } from "./Style";
 
 export default function Numeros() {
+  const [valoresAtuais, setValoresAtuais] = useState([]);
+
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setValoresAtuais((valoresAtuaisAnteriores) =>
+        valoresAtuaisAnteriores.map((item) => ({
+          ...item,
+          valorAtual: item.valorAtual + Math.floor(Math.random() * 10) + 1,
+        }))
+      );
+    }, 3500);
+
+    return () => clearInterval(intervalo);
+  }, []);
+
+  useEffect(() => {
+    // Define os valores iniciais dos números
+    setValoresAtuais(
+      numeros.map((item) => ({ ...item, valorAtual: item.valorInicial }))
+    );
+  }, []);
+
   return (
     <>
-    <ContainerNumeros>
-
-      {numeros.map((item) => (
+      <ContainerNumeros>
+        {valoresAtuais.map((item) => (
           <BlocoNumbers key={item.id}>
-              <StyleNumbers>
-              <h1>{item.lotes}</h1>
-              <p>lotes vendidos</p>
-              </StyleNumbers>
-              <StyleNumbers>
-              <h1>{item.asfalto}</h1>
-              <p>de asfalto</p>
-              </StyleNumbers>
-              <StyleNumbers>
-              <h1>{item.rua}</h1>
-              <p>Opções de ruas</p>
-              </StyleNumbers>
-              <StyleNumbers>
-              <h1>{item.familias}</h1>
-              <p>Famílias instaladas</p>
-              </StyleNumbers>
-            </BlocoNumbers>
-      ))}
+            <StyleNumbers>
+              <h1>{item.valorAtual}</h1>
+              <p>{item.texto}</p>
+            </StyleNumbers>
+          </BlocoNumbers>
+        ))}
       </ContainerNumeros>
     </>
   );
