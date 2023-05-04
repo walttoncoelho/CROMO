@@ -92,6 +92,7 @@ export const Popup = styled.div`
   color: #ca1e1e;
   font-weight: 700;
   flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 
   p {
   display: flex;
