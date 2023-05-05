@@ -15,7 +15,7 @@ export default function Formulario() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/send-email", {
+      await axios.post("http://olamundotec.com/send-email", {
         name,
         email,
         phone,

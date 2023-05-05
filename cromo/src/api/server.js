@@ -4,6 +4,9 @@ const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 
+
+
+
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -13,29 +16,30 @@ app.post('/send-email', async (req, res) => {
         const { name, email, phone, mensagem, subscription } = req.body;
 
         const transporter = nodemailer.createTransport({
-            host: 'smtp.umbler.com',
-            port: 587,
+            host: process.env.EMAIL_HOST,
+            port: process.env.EMAIL_PORT,
             secure: false,
             auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASSWORD
             },
             tls: {
-            rejectUnauthorized: false
+                rejectUnauthorized: false
             }
         });
+        
 
         const message = {
-            from: 'your-email-address@gmail.com',
-            to: 'recipient-email-address@example.com',
-            subject: 'New message from your website',
+            from: 'site@homolog.tec.br',
+            to: 'site@homolog.tec.br',
+            subject: 'Nova mensagem por meio do Site',
             html: `
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong> ${mensagem}</p>
-        <p><strong>Subscription:</strong> ${subscription ? 'Yes' : 'No'}</p>
-`,
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone}</p>
+            <p><strong>Message:</strong> ${mensagem}</p>
+            <p><strong>Subscription:</strong> ${subscription ? 'Yes' : 'No'}</p>
+            `,
         };
 
         await transporter.sendMail(message);
@@ -47,4 +51,4 @@ app.post('/send-email', async (req, res) => {
     }
 });
 
-app.listen(5000, () => console.log('Server started on port 5000'));
+app.listen(8080, () => console.log('Server started on port 8080'));
