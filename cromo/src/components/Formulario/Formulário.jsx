@@ -15,7 +15,7 @@ export default function Formulario() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/send-email", {
+      await axios.post("https://walrus-app-4twgg.ondigitalocean.app/", {
         name,
         email,
         phone,

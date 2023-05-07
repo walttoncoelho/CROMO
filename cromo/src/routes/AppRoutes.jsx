@@ -9,6 +9,7 @@ import Painel from "../pages/Manager/Painel/Painel";
 import Templates from "../pages/Templates/Templates";
 import Empreendimentos from "../pages/Empreendimentos/SectionEmpreend";
 import EmpreendimentoId from "../pages/EmpreendimentosInterna/EmpreendimentoId";
+import FormularioTeste from "../components/Formulario/FormTest";
 
 export function AppRoutes() {
   return (
@@ -21,6 +22,8 @@ export function AppRoutes() {
       <Route path="/faleconosco" element={<FaleConosco />} />
       <Route path="/templates" element={<Templates />} />
       <Route path="/empreendimentoId" element={<EmpreendimentoId/>} />
+
+      <Route path="/form" element={<FormularioTeste/>}/>
 
       {/* Página Login */}
       <Route path="/manager" element={<Login />} />      
