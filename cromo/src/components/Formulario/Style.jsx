@@ -27,8 +27,17 @@ export const Input = styled.input`
     margin-bottom: 10px;
     border-style: none;
     background-color: #ffffff;
+    color: #616161;
+    padding-left: 10px;
     &:focus {
     outline: 2px solid #06aacf;
+    
+  }
+
+  ::placeholder{
+  color: #666768;
+  font-size: 14px;
+  margin-left: 10px;
   }
     `;
 
@@ -43,16 +52,22 @@ export const InputArea = styled.input`
 
 }
 
-
+::placeholder{
+  color: #666768;
+  font-size: 14px;
+  margin-left: 10px;
+  }
+  padding-left: 10px;
 height: 148px;
 border-radius: 8px;
-padding: 2px;
+
 min-width: 400px;
 margin-bottom: 10px;
 border-style: none;
-background-color: #F1F1F1;
+background-color: #ffffff;
 font-size: 14px;
-font-weight: 500;
+color: #616161;
+
     &:focus {
     outline: 2px solid #06aacf;
   }

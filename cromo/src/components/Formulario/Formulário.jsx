@@ -25,6 +25,12 @@ export default function Formulario() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
+    // Validar campos vazios
+    if (state.name === '' || state.email === '' || state.phone === '' || state.mensagem === '') {
+      setError("Por favor, preencha todos os campos.");
+      return;
+    }
+    
     try {
       await axios.post('https://walrus-app-4twgg.ondigitalocean.app/send-email', state);
       setState((prevState) => ({ ...prevState, status: 'success' }));
@@ -35,7 +41,7 @@ export default function Formulario() {
       setError("Ocorreu um erro ao enviar o e-mail.");
     }
   };
-
+  
   return (
     <Form onSubmit={handleSubmit}>
       {statusMessage && (
@@ -56,67 +62,65 @@ export default function Formulario() {
           </button>
         </Popup>
       )}
-
-      <label htmlFor="name" title="Digite seu nome completo">
-        Nome:
+  
+      <label htmlFor="name" title="Digite seu nome completo">  
       </label>
       <Input
         type="text"
         id="name"
         name="name"
-        placeholder="Qual o seu nome"
+        placeholder="  Qual o seu nome"
         value={state.name}
         onChange={handleChange} 
       />
       <br />
-
-      <label htmlFor="email" title="Digite seu e-mail">
-        E-mail:
+  
+      <label htmlFor="email" title="Digite seu e-mail">   
       </label>
       <Input
         type="email"
         id="email"
         name="email"
-        placeholder="Digite seu e-mail"
+        placeholder="  Digite seu e-mail"
         value={state.email}
         onChange={handleChange} 
       />
       <br />
-
-      <label htmlFor="phone" title="Digite seu número de telefone com DDD">
-        Telefone:
+  
+      <label htmlFor="phone" title="  Digite seu número de telefone com DDD">
       </label>
       <Input
         type="tel"
         id="phone"
         name="phone"
-        placeholder="Digite seu melhor telefone"
+        placeholder="  Digite seu melhor telefone"
         value={state.phone}
         onChange={handleChange} 
       />
       <br />
-
+  
       <label htmlFor="mensagem" title="Digite sua mensagem">
-        Mensagem:
       </label>
       <InputArea
         id="mensagem"
         name="mensagem"
-        placeholder="Quer deixar aqui uma mensagem?"
+        placeholder="  Quer deixar aqui uma mensagem?"
         value={state.mensagem}
         onChange={handleChange} 
       />
-
+  
       <Radio>
         <label style={{ margin: '10px 0', fontWeight: 'bold' }}>
           <input type="checkbox" name="subscription" checked={state.subscription} onChange={handleChange} style={{ marginRight: '5px' }} />
           Quero receber conteúdo.
         </label>
       </Radio>
-
-      <Button type="submit">
+  
+      <Button type="submit" disabled={state.name === '' || state.email === '' || state.phone === '' || state.mensagem === ''}>
         Enviar
       </Button>
+   
+  
     </Form>
   );
 }
