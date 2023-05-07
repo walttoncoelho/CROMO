@@ -10,7 +10,7 @@ flex-direction: column;
 
 export const ColunaMapa = styled.form`
 
-@media (max-width: 550px) {
+@media (max-width: 1024px) {
     display: none;    
 }
 margin-top: 35px;

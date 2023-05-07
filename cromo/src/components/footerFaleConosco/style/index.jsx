@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -23,47 +21,32 @@ flex-direction: row;
 align-items: center;
 `;
 
-
-
-
-
-
-
-
-
 export const ColunaFormulario = styled.div`
-  display: flex;
-  padding: 10px;
-  margin-top: 64px;
-  border-radius: 8px;  
-  ul {  
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin: 20px;    
-    padding: 0;
-    overflow: hidden;
-    flex-wrap: wrap;
-    max-width: 150px;
-    min-width: 150px;
-  }
+margin-left:20px;
+margin-top: 86px;
 
-  li a {
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    width: 150px;
-    margin: 20px;
-  }
-  li a:hover {
-    border-radius: 5px;
-    color: #ffd000; 
-    font-weight: bold;
-    transition-delay: 1.1;
-    border-bottom: #ffd000 1px solid;
-    
-  }
+@media (max-width: 550px) { 
+margin-top: 10px;
+display: flex;
+align-items: center;
+justify-content: center; 
+max-width: 350px;
+position: relative;
+}
+
+flex-direction: column;
+width: 100%;
+justify-content: center; 
+
+background-color: #ffffff;
+width: 400px;
+border-radius: 16px;
+padding: 32px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+h2{
+  display:flex;
+}
 `;
 
 

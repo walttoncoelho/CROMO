@@ -1,19 +1,24 @@
 import React from "react";
-import { ByGoodApp, SectionFaleconosco, Container, ColunaFormulario } from "./style";
+import { ByGoodApp, SectionFaleconosco, Container, ColunaFormulario} from "./style";
 
-import { FooterFormulario } from "./Formulario/Formulário";
+import FooterFormulario  from "./Formulario/FooterFormulário";
 import { ColunaMapa } from "./Mapa/Style";
 import Contatos from "./Contatos/Contatos";
 import MapaFooter from "./Mapa/MapaFooter";
 
+
 export default function FooterFaleConosco() {
   return (
     <>
+    
       <Container>
         <SectionFaleconosco>
         <Contatos/>
-          <ColunaFormulario>
-            <FooterFormulario />
+          <ColunaFormulario>   
+          <h2>
+            Ente em contato            
+          </h2>        
+            <FooterFormulario />         
           </ColunaFormulario>
           <ColunaMapa>
           <MapaFooter/>
