@@ -6,7 +6,7 @@ const FormularioTeste = () => {
     name: '',
     email: '',
     phone: '',
-    message: '',
+    mensagem: '',
     subscription: false,
     status: null
   });
@@ -46,7 +46,7 @@ const FormularioTeste = () => {
       </label>
       <label style={{ margin: '10px 0', fontWeight: 'bold' }}>
         Message:
-        <textarea name="message" value={state.message} onChange={handleChange} style={{ marginLeft: '10px', padding: '5px', borderRadius: '5px', border: '1px solid gray' }}></textarea>
+        <textarea name="mensagem" value={state.mensagem} onChange={handleChange} style={{ marginLeft: '10px', padding: '5px', borderRadius: '5px', border: '1px solid gray' }}></textarea>
       </label>
       <label style={{ margin: '10px 0', fontWeight: 'bold' }}>
         <input type="checkbox" name="subscription" checked={state.subscription} onChange={handleChange} style={{ marginRight: '5px' }} />
