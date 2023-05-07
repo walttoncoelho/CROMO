@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../../../components/NavBar/NavBar'
 import AdministrativePanel from '../../../components/AdministrativePanel/AdministrativePanel'
 import { Container, ContainerSidebar, ContainerStage } from './Style/Style'
+import PageBanner from './PageBanner/PageBanner'
 
 
 export default function ListaBanners() {
@@ -18,6 +19,7 @@ export default function ListaBanners() {
         <br />
         <hr />
         <br />
+        <PageBanner/>
     
       </ContainerStage>
     </Container>
