@@ -1,98 +1,132 @@
 import React, { useState } from "react";
-import { Button, FormContainer, Input, Radio, InputArea, TitleContato } from "./Style";
+import axios from "axios";
+import { Button, Form,  FormContainer,  Input, InputArea, Popup, Radio, TitleContato } from "./Style";
 
 export function FooterFormulario() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [mensagem, setMensagem] = useState("");
-  const [subscription, setSubscription] = useState(true);
+  const [state, setState] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    mensagem: '',
+    subscription: false,
+    status: null
+  });
 
-  function handleSubmit(e) {
+  const [statusMessage, setStatusMessage] = useState("");
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value, checked } = e.target;
+    const newValue = name === 'subscription' ? checked : value;
+
+    setState((prevState) => ({ ...prevState, [name]: newValue }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({
-      name,
-      email,
-      phone,
-      subscription,
-    });
-  }
-
+    
+    // Validar campos vazios
+    if (state.name === '' || state.email === '' || state.phone === '' || state.mensagem === '') {
+      setError("Por favor, preencha todos os campos.");
+      return;
+    }
+    
+    try {
+      await axios.post('https://walrus-app-4twgg.ondigitalocean.app/send-email', state);
+      setState((prevState) => ({ ...prevState, status: 'success' }));
+      setStatusMessage("E-mail enviado com sucesso!");
+    } catch (error) {
+      console.log(error);
+      setState((prevState) => ({ ...prevState, status: 'error' }));
+      setError("Ocorreu um erro ao enviar o e-mail.");
+    }
+  };
+  
   return (
-    <FormContainer onSubmit={handleSubmit}>
-      <TitleContato>
+    
+    <FormContainer>
+          <TitleContato>
         <h2>Entre em contato</h2>
       </TitleContato>
-
-      <label htmlFor="name" title=" Ente em contato">
-
+    <Form onSubmit={handleSubmit}>
+      {statusMessage && (
+        <Popup className="show">
+          <p>SUCESSO!</p>
+          {statusMessage}
+          <button onClick={() => {setStatusMessage(""); setError("");}}>
+            Fechar
+          </button>
+        </Popup>
+      )}
+      {error && (
+        <Popup className="show">
+          <p>X</p>
+          {error}
+          <button onClick={() => {setStatusMessage(""); setError("");}}>
+            Fechar
+          </button>
+        </Popup>
+      )}
+  
+      <label htmlFor="name" title="Digite seu nome completo">  
       </label>
       <Input
         type="text"
         id="name"
         name="name"
-        placeholder=" Qual o seu nome"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        placeholder="  Qual o seu nome"
+        value={state.name}
+        onChange={handleChange} 
       />
       <br />
-
-      <label htmlFor="email" title=" Digite seu e-mail">
-
+  
+      <label htmlFor="email" title="Digite seu e-mail">   
       </label>
       <Input
         type="email"
         id="email"
         name="email"
-        placeholder=" Digite seu e-mail"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        placeholder="  Digite seu e-mail"
+        value={state.email}
+        onChange={handleChange} 
       />
       <br />
-
-      <label htmlFor="phone" title=" Digite seu número de telefone com DDD">
-
+  
+      <label htmlFor="phone" title="  Digite seu número de telefone com DDD">
       </label>
       <Input
         type="tel"
         id="phone"
         name="phone"
-        placeholder="Digite seu melhor telefone"
-        value={phone}
-        onChange={(e) => setPhone(e.target.value)}
-      />
-
+        placeholder="  Digite seu melhor telefone"
+        value={state.phone}
+        onChange={handleChange} 
+        />
       <br />
+  
+      <label htmlFor="mensagem" title="Digite sua mensagem">
+      </label>
       <InputArea
-        type="textarea"
         id="mensagem"
         name="mensagem"
-        placeholder="Quer deixar aqui uma mensagem?"
-        value={mensagem}
-        onChange={(e) => setMensagem(e.target.mensagem)}
+        placeholder="  Quer deixar aqui uma mensagem?"
+        value={state.mensagem}
+        onChange={handleChange} 
       />
-
+  
       <Radio>
-
-
-        <input
-          type="radio"
-          id="content"
-          name="subscription"
-          value="yes"
-          checked={subscription}
-          onChange={(e) => setSubscription(true)}
-        />
-        <label htmlFor="content"> Quero receber conteúdos</label>
-        <br />
+        <label style={{ margin: '10px 0', fontWeight: 'bold' }}>
+          <input type="checkbox" name="subscription" checked={state.subscription} onChange={handleChange} style={{ marginRight: '5px' }} />
+          Quero receber conteúdo.
+        </label>
       </Radio>
-
-      <Button type="submit" value="Enviar">
+  
+      <Button type="submit" disabled={state.name === '' || state.email === '' || state.phone === '' || state.mensagem === ''}>
         Enviar
       </Button>
-    </FormContainer>
-
+   
+  
+    </Form>
+        </FormContainer>
   );
 }
-
-

@@ -7,5 +7,5 @@ export default function PrivateRoutes() {
 
   const {signed} = useContext(Authlogin)
   return signed? <Outlet/> : <Navigate to="/manager"/>
- 
+
 }
