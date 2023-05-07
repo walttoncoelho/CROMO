@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Button, Form,  FormContainer,  Input, InputArea, Popup, Radio, TitleContato } from "./Style";
+import { Button, Form,   Input, InputArea, Popup, Radio } from "./Style";
 
-export function FooterFormulario() {
+export default function FooterFormulario() {
   const [state, setState] = useState({
     name: '',
     email: '',
@@ -41,13 +41,8 @@ export function FooterFormulario() {
       setError("Ocorreu um erro ao enviar o e-mail.");
     }
   };
-  
   return (
     
-    <FormContainer>
-          <TitleContato>
-        <h2>Entre em contato</h2>
-      </TitleContato>
     <Form onSubmit={handleSubmit}>
       {statusMessage && (
         <Popup className="show">
@@ -123,10 +118,9 @@ export function FooterFormulario() {
   
       <Button type="submit" disabled={state.name === '' || state.email === '' || state.phone === '' || state.mensagem === ''}>
         Enviar
-      </Button>
-   
+      </Button>   
   
     </Form>
-        </FormContainer>
+
   );
 }

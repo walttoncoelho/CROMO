@@ -118,8 +118,7 @@ export default function Formulario() {
   
       <Button type="submit" disabled={state.name === '' || state.email === '' || state.phone === '' || state.mensagem === ''}>
         Enviar
-      </Button>
-   
+      </Button> 
   
     </Form>
   );
