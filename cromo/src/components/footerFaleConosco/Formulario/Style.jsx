@@ -5,13 +5,14 @@ display: flex;
 flex-direction: column;
 width: 100%;
 
+padding-left: -10px;
 @media (max-width: 550px) {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center; 
   background-color: #ffffff;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 background-color: #ffffff;
@@ -35,6 +36,7 @@ flex-direction: column;
 margin: auto;
 @media (max-width: 500px) {
   max-width: 320px;
+
 
 }
 `;
@@ -109,14 +111,23 @@ color: #616161;
     `;
 
 export const Button = styled.button`
-    width: 81px;
+
+@media (max-width: 550px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 300px;  
+}
+
+    width: 100%;
     height: 41px;
     border-radius: 8px;
     background-color: #000;
-    color: #fff;
+    color: #ffffffd8;
     border-style: none;
 
-      &:hover {
+        &:hover {
       color: #000000;
       background-color: #06aacf;
       cursor: pointer;     
