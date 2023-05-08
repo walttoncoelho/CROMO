@@ -3,6 +3,7 @@ import { ButtonSucess } from '../../../components/Bottons/Bottons';
 import api from '../../../services/api';
 import PopupSenha from './PopUpSenha';
 import { Container, Form } from './Style';
+import { Navigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -35,7 +36,7 @@ export default function Login() {
       localStorage.setItem("token", token);
     };
     let redirectToManager = () => {
-      // to-do
+      return <Navigate to="/manager/painel" />;
     };
     let responseErrors = (response) => {
       let { response: { data: { message } } } = response;
