@@ -140,15 +140,16 @@ export const CardDescription = styled.div`
   border-bottom-right-radius: 8px;
   padding: 10px;
   h3 {
-    margin-bottom: -13px;
     font-weight: 700;
+  
   }
   h4 {
     font-weight: 500;
     font-size: 14px;
-    margin-bottom: 8px;
+    margin-bottom: 30px;
   }
   a {
+    margin-top: 5px;
     display: flex;
     flex-direction: row;
     text-decoration: none;
@@ -158,6 +159,10 @@ export const CardDescription = styled.div`
     img {
       width: 30px;
       height: 20px;
+    }
+    &:hover{
+      font-weight: 700;
+      font-size: 15px;          
     }
   }
 `;
