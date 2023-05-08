@@ -2,18 +2,13 @@ import styled from "styled-components";
 
 export const ContainerNumeros = styled.div`
 
-
 @media (max-width: 550px) {
     margin-left: 3px;
-
-  
- 
     max-width: 350px;
-   
     h2{
 
     }
-  }
+}
 
 display: flex;
 margin: auto;
@@ -25,9 +20,6 @@ max-width: 1200px;
 `
 
 export const BlocoDesc = styled.div`
- 
-
-
 display: flex;
 width: 50%;
 padding: 5px;
@@ -36,7 +28,6 @@ padding: 5px;
 `
 
 export const BlocoNumbers = styled.div`
-
 @media (max-width: 550px){
     width: 350px;
 }
@@ -49,8 +40,6 @@ flex-wrap: wrap;
 `
 
 export const StyleNumbers = styled.div`
-
-
 @media (max-width: 550px){
     width: 150px;
 }

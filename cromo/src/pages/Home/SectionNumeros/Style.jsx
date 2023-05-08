@@ -5,9 +5,12 @@ margin: auto;
 width:100%;
 max-width: 1200px;
 
-
-@media (max-width: 500px) {
+@media (max-width: 1012px) {
     flex-direction: column;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 ;
 `
@@ -22,12 +25,13 @@ p{
 
 
 @media ( max-width: 1024px){  
+
     padding: 20px;
     }
 
 @media ( max-width: 500px){ 
     display: flex;
-    width: 100%;
+    width: 600px;
     margin: auto;
     max-width: 350px;
     padding: 20px;
@@ -37,16 +41,14 @@ p{
 `
 
 export const BlocoNumbers = styled.div`
-@media ( max-width: 550px){ 
-    display: flex;
-    margin: auto;
+@media ( max-width: 1012px){ 
+    width: 500px;
     padding: 5px;
     gap:10px;    
-    max-width: 450px;
 }
 
-@media ( max-width: 1024px){ 
-    min-width: 450px;
+@media ( max-width: 550px){ 
+    width: 350px;
     padding: 5px;
     gap:10px;    
 }
@@ -54,7 +56,7 @@ export const BlocoNumbers = styled.div`
 display: flex;
 flex-wrap: wrap;
 flex-direction: row;
-width: 100%;
+width: 800px;
 gap: 10px;
 ;
 `
@@ -72,7 +74,6 @@ export const StyleNumbers = styled.div`
     margin-left: 9px;
     
 }
-
 
 
 display: flex;
