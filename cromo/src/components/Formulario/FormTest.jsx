@@ -22,7 +22,7 @@ const FormularioTeste = () => {
     e.preventDefault();
     
     try {
-      await axios.post('https://walrus-app-4twgg.ondigitalocean.app/send-email', state);
+      await axios.post('olamundotec.com:21039', state);
       setState((prevState) => ({ ...prevState, status: 'success' }));
     } catch (error) {
       console.log(error);
