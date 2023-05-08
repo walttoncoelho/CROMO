@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ContainerBanner = styled.div`
 
+background-color: #0872ce;
 @media (max-width: 900px) {
     display: none;    
 }
@@ -11,13 +12,16 @@ margin: auto;
 width:100%;
 max-width: 1920px;
 justify-content: center;
+
 img{
     width: 100%;
 }
+
 ;
 `
 
 export const ContainerChamada = styled.div`
+background-color: #0872ce;
 display: flex;
 margin-right: 50%;
 padding-left: 10px;
@@ -43,12 +47,15 @@ h1{
 export const ContainerBannerMobile = styled.div`
 @media (min-width: 900px) {
     display: none;
+
     
 }
 display: flex;
 flex-direction: column;
 margin: auto;
 width: 100%;
+
+
 
 ;
 `
@@ -61,10 +68,10 @@ margin: auto;
 
 export const BannerMobile = styled.div`
 display: flex;
-margin: auto;
+margin: 0;
 img{
     width: 100%;
-    height: 100%;
+    height: 10%;
 }
 ;
 `
