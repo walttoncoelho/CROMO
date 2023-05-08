@@ -5,6 +5,7 @@ import BannerTopo from './BannerTopo/BannerTopo'
 import SobreContent from './SectionSobre/SobreContent'
 import BannerFooter from './BannerFooter/BannerFooter'
 import BannerSobreMobile from './BannerTopo/BannerSobreMobile'
+import ButtonContact from '../../components/ButtonContact/ButtonContact'
 
 export default function Sobre() {
   return (
@@ -14,6 +15,7 @@ export default function Sobre() {
       <BannerSobreMobile />
       <SobreContent />
       <BannerFooter />
+      <ButtonContact/>
       <Footer />
     </>
   )

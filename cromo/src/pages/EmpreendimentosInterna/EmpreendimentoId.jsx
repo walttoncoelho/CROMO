@@ -14,6 +14,7 @@ import {
   ContainerDescription,
   SectionGalery
 } from "./Style";
+import ButtonContact from "../../components/ButtonContact/ButtonContact";
 
 export default function EmpreendimentoId() {
   const data = empreendimentos;
@@ -74,7 +75,8 @@ export default function EmpreendimentoId() {
           ))}
         </SectionGalery>
       ))}
-
+      
+            <ButtonContact/>
       <Footer />
     </>
   );
