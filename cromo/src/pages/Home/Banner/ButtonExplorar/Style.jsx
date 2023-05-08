@@ -48,27 +48,49 @@ export const BtnExplorarRetangulo = styled.div`
   border-bottom-right-radius: 20px;
   cursor: pointer;
 
-     
-    &:hover {
-
-      background-color: #ffffff37;
-    }
+  &:hover {
+    background-color: #ffffff37;
+  }
 
   .barra {
     display: flex;
     margin: auto;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.879);
+    background-color: rgba(245, 9, 9, 0.158);
     width: 3px;
     height: 30px;
     border-radius: 50px;
-    
-    &:hover.barra {
-      height: 20px;
-      width: 6px;
-      background-color: #ffffffb2;
+
+    animation: barra-animacao 2s ease-in-out infinite;
+    background-image: linear-gradient(to top, transparent 50%, rgba(255, 255, 255, 0.795) 50%);
+    background-size: 100% 200%;
+    background-position: top;
+  }
+
+  @keyframes barra-animacao {
+    0% {
+      transform: translateY(0);
     }
-}
+    50% {
+      transform: translateY(20px);
+      background-position: bottom;
+    }
+    100% {
+      transform: translateY(0);
+      background-position: top;
+    }
+  }
+
+  &:hover .barra {
+    height: 20px;
+    width: 6px;
+    background-color: #ffffffb2;
+  }
+
+
+
+
+
 
 
 `;

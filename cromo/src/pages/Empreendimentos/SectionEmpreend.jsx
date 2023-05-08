@@ -4,6 +4,7 @@ import { CardEmpreend } from "./data/galery";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import SectionNumeros from "../Home/SectionNumeros/SectionNumeros";
+import ButtonContact from "../../components/ButtonContact/ButtonContact";
 
 export default function Empreendimentos() {
   return (
@@ -13,6 +14,7 @@ export default function Empreendimentos() {
         <CardEmpreend />
       </ContainerEmpreend>
       <SectionNumeros/>
+      <ButtonContact/>
       <Footer />
 
     </>
