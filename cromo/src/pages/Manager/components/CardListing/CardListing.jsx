@@ -1,4 +1,3 @@
-export default CardListing
 import { TableList,
          Cabecalho,
          CabecalhoLabel,
@@ -12,78 +11,8 @@ import { TableList,
          TableRow } 
 from './style/CardListing'
 
-function CardListing() {
-    const dados = [
-                    { 
-                        Ticket: 368711 , 
-                        Assunto: 'E-mail', 
-                        Status: 'Aguardando sua resposta', 
-                        UltimaInteracao: '22/04/2023 11:07'
-                    },
-
-                    { 
-                        Ticket: 368711 , 
-                        Assunto: 'E-mail', 
-                        Status: 'Em tratamento', 
-                        UltimaInteracao: '22/04/2023 11:07'
-                    }, 
-
-                    { 
-                        Ticket: 368711 , 
-                        Assunto: 'E-mail', 
-                        Status: 'Em tratamento', 
-                        UltimaInteracao: '22/04/2023 11:07'
-                    },
-
-                    { 
-                        Ticket: 368711 , 
-                        Assunto: 'E-mail', 
-                        Status: 'Em tratamento', 
-                        UltimaInteracao: '22/04/2023 11:07'
-                    },
-
-                    { 
-                        Ticket: 368711 , 
-                        Assunto: 'E-mail', 
-                        Status: 'Em tratamento', 
-                        UltimaInteracao: '22/04/2023 11:07'
-                    },
-
-                    { 
-                        Ticket: 368711 , 
-                        Assunto: 'E-mail', 
-                        Status: 'Em tratamento', 
-                        UltimaInteracao: '22/04/2023 11:07'
-                    },
-
-                    { 
-                        Ticket: 368711 , 
-                        Assunto: 'E-mail', 
-                        Status: 'Em tratamento', 
-                        UltimaInteracao: '22/04/2023 11:07'
-                    },
-
-                    { 
-                        Ticket: 368711 , 
-                        Assunto: 'E-mail', 
-                        Status: 'Em tratamento', 
-                        UltimaInteracao: '22/04/2023 11:07'
-                    },  
-
-                    { 
-                        Ticket: 368711 , 
-                        Assunto: 'E-mail', 
-                        Status: 'Em tratamento', 
-                        UltimaInteracao: '22/04/2023 11:07'
-                    },
-
-                    { 
-                        Ticket: 368711 , 
-                        Assunto: 'E-mail', 
-                        Status: 'Em tratamento', 
-                        UltimaInteracao: '22/04/2023 11:07'
-                    },
-                ];
+export default CardListing
+function CardListing({ dados = [] }) {
     return(
         <>
         <TableList>
