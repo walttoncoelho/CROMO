@@ -10,6 +10,11 @@ export const BtnContact = styled.div`
   border-radius: 100px;
   border-style: none;
   transition: all 0.3s ease-in-out;
+
+  @media (max-width: 400px) {
+    right: auto;
+    left: 20px;
+  }
 `;
 
 
