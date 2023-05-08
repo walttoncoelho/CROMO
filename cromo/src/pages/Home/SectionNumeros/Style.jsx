@@ -31,7 +31,7 @@ p{
 
 @media ( max-width: 500px){ 
     display: flex;
-    width: 600px;
+    width: 332px;
     margin: auto;
     max-width: 350px;
     padding: 20px;

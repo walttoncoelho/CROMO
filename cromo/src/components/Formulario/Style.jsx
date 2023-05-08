@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
+
 display: flex;
 flex-direction: column;
 margin: auto;
@@ -10,12 +11,14 @@ margin: auto;
 `;
 
 export const Radio = styled.div`
+
 margin-top: 10px;
 margin-bottom: 12px;
 `;
 
 
 export const Input = styled.input`  
+
 @media (max-width: 500px) {
   width: 300px;  
 }
@@ -42,6 +45,7 @@ export const Input = styled.input`
     `;
 
 export const InputArea = styled.input`  
+background-color: #10dfdfdf;
 
 @media (max-width: 550px) {
   display: flex;
