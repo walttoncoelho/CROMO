@@ -23,6 +23,7 @@ export const FaleConosco = styled.div`
 
 export const Colum = styled.div`
 
+
 @media (max-width:900px) {
   display: flex;
   flex-direction: column;
@@ -48,6 +49,7 @@ export const Colum = styled.div`
 `;
 
 export const Grid1 = styled.div`  
+
 
 @media (max-width: 900px){
 margin-top: 30px;
@@ -91,6 +93,13 @@ p{
 `;
 
 export const Grid2 = styled.div`
+
+@media (max-width: 500px){
+  width: 100%;
+  max-width: 345px;
+
+}
+
   display: flex;
   width: 100%;
   padding: 10px;

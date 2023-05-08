@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ContainerNumeros = styled.div`
 
+
 @media (max-width: 550px) {
     margin-left: 3px;
     max-width: 350px;
@@ -24,10 +25,12 @@ display: flex;
 width: 50%;
 padding: 5px;
 
+
 ;
 `
 
 export const BlocoNumbers = styled.div`
+
 @media (max-width: 550px){
     width: 350px;
 }
