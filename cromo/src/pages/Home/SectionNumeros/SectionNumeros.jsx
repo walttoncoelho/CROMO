@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+import numeros from "../../../data/componentNumeros/numeros";
 import NumerosBloco from "../../../components/Numeros/NumerosBloco";
 import BigNumeros from "./BigNumeros";
 import { BlocoDesc, BlocoNumbers, ContainerNumeros } from "./Style";
@@ -14,7 +15,7 @@ export default function Numeros() {
       let { data: numeros } = await api.get("/numeros");
       setNumerosIniciais(numeros);
     };
-    obterNumerosIniciais();
+    obterNumerosIniciais().catch(error => setNumerosIniciais(numeros));
   }, []);
 
   return (
