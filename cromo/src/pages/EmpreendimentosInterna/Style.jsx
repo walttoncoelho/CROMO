@@ -32,6 +32,7 @@ export const SectionDescription = styled.div`
     margin: auto;
     max-width: 512px;
   }
+
 `;
 
 export const ContainerDescription = styled.div`
@@ -72,6 +73,7 @@ export const SobreStyleText = styled.div`
       font-weight: 700;
       font-size: 20px;
       color: #0a0a0a;
+      
     }
   }
 

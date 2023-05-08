@@ -43,13 +43,14 @@ export const MapaDescription = styled.div`
   background: linear-gradient(to bottom, #dad9d985 50%, #1e3949dc 100%);
   backdrop-filter: blur(20px);
   flex-direction: column;
-  color: #2384bd;
+  color: #117ea8;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   padding: 10px;
   margin-left: 20px;
  
   a {
+    margin-top: 35px;
     display: flex;
     flex-direction: row;
     text-decoration: none;
@@ -59,6 +60,11 @@ export const MapaDescription = styled.div`
     img {
       width: 30px;
       height: 20px;
+    }
+
+    &:hover{
+      font-weight: 700;
+      font-size: 15px;          
     }
   }
 `;
