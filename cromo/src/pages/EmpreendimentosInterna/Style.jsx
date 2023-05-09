@@ -62,6 +62,9 @@ export const ContainerDescription = styled.div`
 `;
 
 export const ContainerPlanta = styled.div`
+@media (max-width:550px) {
+order: 2;
+}
   display: flex;
   margin: auto;
 `;
@@ -71,6 +74,7 @@ export const ContainerSobre = styled.div`
 @media (max-width:550px) {
   flex-direction: column; 
   max-width: 330px;
+  order: 1;
 }
 
   display: flex;
@@ -115,6 +119,7 @@ export const ContainerIcons = styled.div`
   gap:20px;
   height: 250px;
   width: 300px;
+  order: 3;
   
 }
   display: flex;
@@ -180,4 +185,26 @@ gap:10px;
     padding: 2px;
     max-width: 400px;
   }
+`;
+
+
+export const SectionMap = styled.div`
+@media (max-width:550px) {  
+  height:300px;
+}
+
+background-color: #6a9dc9;
+iframe{
+width:100%;
+height:100%;
+
+}
+
+display: flex;
+margin: auto;
+border-style: none;
+width:100%;
+height:500px;
+
+
 `;

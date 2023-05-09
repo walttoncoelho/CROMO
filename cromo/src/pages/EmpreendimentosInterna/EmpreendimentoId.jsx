@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/footer/Footer";
@@ -5,7 +6,8 @@ import {
   SectionDescription,
   ContainerHeader,
   ContainerIcons,
-  ContainerPlanta
+  ContainerPlanta,
+  SectionMap
 } from "./Style";
 import empreendimentos from "../../data/Empreendimentos/empreendimentos";
 import {
@@ -76,6 +78,11 @@ export default function EmpreendimentoId() {
           ))}
         </SectionGalery>
       ))}
+      <SectionMap>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31644.068235954972!2d-46.07003674072497!3d-7.519376272806751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92d5ef9625fb9fa5%3A0x697ed5cde68bbfe7!2sBalsas%2C%20MA%2C%2065800-000!5e0!3m2!1spt-BR!2sbr!4v1683667879451!5m2!1spt-BR!2sbr" 
+    
+      ></iframe>
+      </SectionMap>
       
             <ButtonContact/>
       <Footer />
