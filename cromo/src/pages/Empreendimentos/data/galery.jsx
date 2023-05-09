@@ -30,11 +30,13 @@ export function CardEmpreend() {
               <h2>{item.title}</h2>
               <p>{item.sobre}</p>
               <ContainerLoteButton>
+                <br/>
                 <p>
                   {" "}
                   <strong>{item.loteInicio}</strong> Lote com até{" "}
                   <strong>{item.loteFim}</strong>
                 </p>
+                <br/>
                 <ButtonSaibaMais>
                   <a
                     href="/empreendimentoId"
