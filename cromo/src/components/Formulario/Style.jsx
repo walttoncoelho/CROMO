@@ -1,24 +1,24 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
-
 display: flex;
 flex-direction: column;
 margin: auto;
+
 @media (max-width: 500px) {
   margin-top: -160px; 
+  justify-content: center;
+  align-items: center;
 }
 `;
 
 export const Radio = styled.div`
-
 margin-top: 10px;
 margin-bottom: 12px;
 `;
 
 
 export const Input = styled.input`  
-
 @media (max-width: 500px) {
   width: 300px;  
 }
@@ -53,7 +53,6 @@ background-color: #10dfdfdf;
   justify-content: center;
   margin: auto;
   min-width: 300px;
-
 }
 
 ::placeholder{
@@ -78,6 +77,10 @@ color: #616161;
     `;
 
 export const Button = styled.button`
+
+@media (max-width: 500px) {
+  width: 300px;  
+}
     width: 81px;
     height: 41px;
     border-radius: 8px;

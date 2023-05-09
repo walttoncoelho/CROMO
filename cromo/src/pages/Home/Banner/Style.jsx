@@ -16,7 +16,6 @@ justify-content: center;
 img{
     width: 100%;
 }
-
 ;
 `
 
@@ -33,14 +32,12 @@ h2{
     font-size: 40px;  
     color: #1C76A8 ;
     margin-bottom: -90px;
-
 }
 
 h1{
     font-weight: 700;
     font-size: 118px;    
     color: #1C76A8 ;
-
 }
 ;
 `
@@ -54,9 +51,6 @@ display: flex;
 flex-direction: column;
 margin: auto;
 width: 100%;
-
-
-
 ;
 `
 

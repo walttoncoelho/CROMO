@@ -23,11 +23,9 @@ export const FaleConosco = styled.div`
 
 export const Colum = styled.div`
 
-
 @media (max-width:900px) {
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: column;  
 }
 
 @media (max-width:500px) {
@@ -43,8 +41,7 @@ export const Colum = styled.div`
   flex-direction: row; 
 
   p {
-    margin-bottom: 8px;
-  
+    margin-bottom: 8px;  
   }
 `;
 
@@ -78,7 +75,6 @@ p{
   flex-direction: column;
   width: 50%; 
   height: 230px;  
-
   h2 {
 
     margin-bottom: -2px;
@@ -93,11 +89,10 @@ p{
 `;
 
 export const Grid2 = styled.div`
-
 @media (max-width: 500px){
   width: 100%;
-  max-width: 345px;
-
+  max-width: 355px;
+  height: 320px;
 }
 
   display: flex;
