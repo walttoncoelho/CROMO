@@ -44,6 +44,7 @@ export default function EmpreendimentoId() {
                 <div key={item.id}>
                   <h2>{item.titulo}</h2>
                   <p>{item.descricao}</p>
+                  <br/>
                   <p className="numeros">
                     <strong>{item.loteInicio}</strong> lotes com até{" "}
                     <strong>{item.loteFim}</strong>

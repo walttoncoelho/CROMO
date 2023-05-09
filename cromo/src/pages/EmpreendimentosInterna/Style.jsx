@@ -2,6 +2,11 @@ import styled from "styled-components";
 import imagemDeFundo from "./img/florenca.png";
 
 export const ContainerHeader = styled.div`
+
+@media (max-width:550px) {
+  flex-direction: column; 
+  max-width: 100%;
+}
   display: flex;
   margin: auto;
   width: 100%;
@@ -20,6 +25,19 @@ export const ContainerHeader = styled.div`
 `;
 
 export const SectionDescription = styled.div`
+
+@media (max-width:550px) {
+  flex-direction: column;
+
+  img{
+    width: 85%;
+  }
+  
+}
+
+
+
+
   display: flex;
   margin: auto;
   max-width: 1420px;
@@ -49,6 +67,12 @@ export const ContainerPlanta = styled.div`
 `;
 
 export const ContainerSobre = styled.div`
+
+@media (max-width:550px) {
+  flex-direction: column; 
+  max-width: 330px;
+}
+
   display: flex;
   margin: auto;
   width: 100%;
@@ -83,6 +107,16 @@ export const SobreStyleText = styled.div`
 `;
 
 export const ContainerIcons = styled.div`
+
+
+@media (max-width:550px) {
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
+  height: 250px;
+  width: 300px;
+  
+}
   display: flex;
   margin: auto;
   width: 100%;
@@ -90,8 +124,9 @@ export const ContainerIcons = styled.div`
   max-width: 718px;  
   
   img{
+
     margin-top: 10px;
-    max-width:69px ;
+    width:59px ;
     margin-bottom: 5px;
   }
   
@@ -114,6 +149,19 @@ export const ContainerIcons = styled.div`
 `;
 
 export const SectionGalery = styled.div`
+@media (max-width:550px) {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  padding: 2px;
+
+  img{
+    width: 100px;
+    height: 96px;
+  }
+  
+}
   display: flex;
   margin: auto;
   justify-content: center;
