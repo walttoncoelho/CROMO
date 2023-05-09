@@ -17,19 +17,19 @@ const empreendimentos = [
       },
       {
         nome: "Rede de Água",
-        url: "../images/empreendimentosId/icons/IconMeioFio.png"
+        url: "../images/empreendimentosId/icons/IconAgua.png"
       },
       {
         nome: "Energia Elétrica",
-        url: "../images/empreendimentosId/icons/IconMeioFio.png"
+        url: "../images/empreendimentosId/icons/IconEnergia.png"
       },
       {
         nome: "Iluninação Pública",
-        url: "../images/empreendimentosId/icons/IconMeioFio.png"
+        url: "../images/empreendimentosId/icons/IconLuzPublica.png"
       },
       {
         nome: "Galerias Pluviais",
-        url: "../images/empreendimentosId/icons/IconMeioFio.png"
+        url: "../images/empreendimentosId/icons/IconGaleria.png"
       }
     ],
     localizacao: {
