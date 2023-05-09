@@ -17,6 +17,7 @@ import ListaBanners from "../pages/Manager/Conteudo/Banner/ListaBanner/ListaBann
 import CriaBanner from "../pages/Manager/Conteudo/Banner/CriaBanner/CriaBanner";
 import CriaEmpreendimentos from "../pages/Manager/Conteudo/Empreendimentos/CriaEmpreendimentos/CriaEmpreendimentos";
 import ListaEmpreendimentos from "../pages/Manager/Conteudo/Empreendimentos/ListaEmpreendimentos/ListaEmpreendimentos";
+import EmpreendimentoId2 from "../pages/EmpreendimentosInterna/EmpreendimentoId02";
 
 export function AppRoutes() {
   return (
@@ -29,6 +30,7 @@ export function AppRoutes() {
       <Route path="/faleconosco" element={<FaleConosco />} />
       <Route path="/templates" element={<Templates />} />
       <Route path="/empreendimentoId" element={<EmpreendimentoId />} />
+      <Route path="/empreendimentoId2" element={<EmpreendimentoId2 />} />
       <Route path="/form" element={<FormularioTeste />} />
 
       {/* Página Login */}

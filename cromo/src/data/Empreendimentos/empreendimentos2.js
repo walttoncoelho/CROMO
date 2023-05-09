@@ -1,13 +1,13 @@
 const empreendimentos = [
   {
-    titulo: "Residencial Florença 1ª Etapa",
+    titulo: "Residencial Florença 2ª Etapa",
     tipo: "Lotes comerciais & residenciais",
     slug: "exemplo-de-titulo-casa",
     status: "Em construção",
     logo:"../images/empreendimentosId/LogoFlorenca.png",
     plantaBaixa: "../images/empreendimentosId/mapa1.png",
     descricao:
-      "O primeiro loteamento a gente nunca esquece. E o Florença Primeira Etapa marcou o início de uma nova fase da história da Cromo e de Balsas. São 742 lotes de ate 255m², com infraestrutura completa para você construir sua casa ou ponto comercial. As obras estão avançando, com ruas já abertas e recebendo asfalto      e perfuração de poços.",
+      "Depois do sucesso na primeira etapa, o melhor loteamento de Balsas ganhou uma nova etapa, com 355 lotes de até 255m² com a mesma infraestrutura completa da primeira etapa. As primeiras etapas das obras já estão em andamento, com ruas sendo abertas para receber meio-fio e asfalto em breve.",
     loteInicio: "724",
     loteFim: "255m2",
     infra: [

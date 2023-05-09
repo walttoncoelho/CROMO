@@ -1,9 +1,9 @@
 const data = [
-    {
-  "id": 1,
-  "title": "Sobre a Cromo", 
-  "descricao": "A Cromo Construtora e Incorporadora é uma empresa com mais de 10 anos de mercado e uma parceira dos maranhenses na realização de seus maiores projetos de vida. Com uma equipe de profissionais experientes e comprometidos em oferecer o melhor serviço aos clientes, a Cromo se destaca pela qualidade de seus empreendimentos e pela preocupação em atender às necessidades do cliente. Ao investir em um loteamento, os clientes têm a liberdade de construir a casa ou o empreendimento que desejarem, personalizando o espaço de acordo com suas preferências e necessidades. A Cromo tem como missão ser uma parceira dos maranhenses na realização de seus maiores projetos e ajudar a construir um futuro melhor para a região. A empresa busca oferecer empreendimentos que atendam às necessidades e expectativas dos seus clientes, com qualidade, transparência e responsabilidade.", 
-},
-
+  {
+    "id": 1,
+    "title": "Sobre a Cromo", 
+    "descricao": "A Cromo Construtora é uma empresa do Grupo Honaiser, formado também pelas empresas: Lavronorte e Unibalsas.\nAtuamos desde 1989 como construtora e nos tornamos incorporadora em [ano], para ajudar ainda mais Balsas (e o Sul do Maranhão) a caminharem rumo a um futuro de oportunidades. Um de nossos primeiros empreendimentos foi o Residencial Veneza, pelo Minha Casa Minha Vida, entregue em 2015. Um marco na história do município. Agora, uma nova etapa está em andamento, na área de Balsas que mais cresce. Com os lançamentos dos Residenciais Florença Primeira e Segunda Etapa, começa um novo bairro na cidade, cheio de sonhos e oportunidades. E, em breve, mais novidades vão surgir, com a qualidade e a confiança que são a marca da Cromo Construtora."
+  },
 ];
+
 export default data;
