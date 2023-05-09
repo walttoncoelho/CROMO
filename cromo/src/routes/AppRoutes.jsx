@@ -26,7 +26,7 @@ export function AppRoutes() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/sobre" element={<Sobre />} />
+      <Route path="/sobrecromo" element={<Sobre />} />
       <Route path="/empreendimentos" element={<Empreendimentos/>} />
       <Route path="/faleconosco" element={<FaleConosco />} />
       <Route path="/templates" element={<Templates />} />
@@ -48,8 +48,7 @@ export function AppRoutes() {
           {/* Conteúdos*/}
           <Route path="/manager/bannerlist" element={<ListaBanners/>} />
           <Route path="/manager/bannercreate" element={<CriaBanner/>} />
-          <Route path="/manager/empreendimentolist" element={<ListaEmpreendimentos/>} />
-         
+          <Route path="/manager/empreendimentolist" element={<ListaEmpreendimentos/>} />         
           <Route path="/manager/empreendimentocreate" element={<CriaEmpreendimentos/>} />
 
     </Routes>
