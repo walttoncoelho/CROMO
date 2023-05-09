@@ -17,7 +17,8 @@ export default function FooterFaleConosco() {
           <ColunaFormulario>   
           <h2>
             Ente em contato            
-          </h2>        
+          </h2>    
+          <br/>    
             <FooterFormulario />         
           </ColunaFormulario>
           <ColunaMapa>
