@@ -190,7 +190,7 @@ gap:10px;
 
 export const SectionMap = styled.div`
 @media (max-width:550px) {  
-  height:300px;
+  height:375px;
 }
 
 background-color: #6a9dc9;
