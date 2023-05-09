@@ -152,6 +152,7 @@ export const ButtonFaleConosco = styled.button`
   transition: background-color 0.4s ease-out, color 0.3s ease-out, border-style 0.2s ease-out;
 
   
+  
 
   p {
     a {
@@ -172,6 +173,7 @@ export const ButtonFaleConosco = styled.button`
 
     p {
       color: #118faa;
+      
     }
 
     fill{
@@ -184,20 +186,33 @@ export const RowImput = styled.div`
 display: flex;
 flex-direction: row;
 gap: 10px;
-justify-content: center;
-img{
-      fill: #aa1b11;      
-      stroke: #aa1b11;
-      color: #aa1b11;
+margin-left: 35px;
+align-items: center;
+
+p{
+  display: flex;
+  margin: auto;
+  align-items: center;
+
+}
+
+
+svg{
+  width: 20px;
+  fill: #ffffff;      
+  height: 20px;
+
+
+
 
     }
 
 
+
 &:hover {
-    img{
-      fill: #aa1b11;      
-      stroke: #aa1b11;
-      color: #aa1b11;
+    svg{
+      fill: #118faa;   
+
 
 
     }

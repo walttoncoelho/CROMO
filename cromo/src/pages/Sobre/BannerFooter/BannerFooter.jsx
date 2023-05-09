@@ -1,7 +1,6 @@
 import React from 'react'
 import bannerFooter from "./img/bannerFundo.png";
 import { ContainerBanner } from './Style';
-
 import bannerFooterMobile from "./img/BannerFundoMobile.png";
 
 
