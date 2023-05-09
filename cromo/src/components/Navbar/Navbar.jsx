@@ -25,7 +25,7 @@ export default function Navbar() {
                 </NavLinkStyled>
               </NavItem>
               <NavItem>
-                <NavLinkStyled to="/sobrecromo" activeClassName="active">
+                <NavLinkStyled to="/sobre" activeClassName="active">
                   Sobre
                 </NavLinkStyled>
               </NavItem>
