@@ -51,7 +51,7 @@ export const ColunaFormulario = styled.div`
     align-items: center;
     justify-content: center; 
     width: 100%;
-    max-width: 320px;
+    max-width: 330px;
     margin: 0px;
   }
 `;
