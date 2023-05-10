@@ -33,8 +33,7 @@ export default function NumerosBloco() {
     }, 70);
   
     return () => clearInterval(interval);
-  }, []);
-  
+  }, []);  
 
   return (
     <>

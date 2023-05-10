@@ -9,6 +9,7 @@ const data = [
   "sobre":"Localizado em uma área estratégico do município, o Residencial Florença oferece lotes com infraestrutura completa de energia elétrica, rede de água, iluminação pública, galerias pluviais, além de contar com ruas com asfalto e meio-fio.",
   "loteInicio":"686",
   "loteFim":"255m2",
+  "linkConhecer": "/empreendimentoId"
 
 },
 {
@@ -21,6 +22,7 @@ const data = [
     "sobre":"Localizado em uma área estratégico do município, o Residencial Florença oferece lotes com infraestrutura completa de energia elétrica, rede de água, iluminação pública, galerias pluviais, além de contar com ruas com asfalto e meio-fio.",
   "loteInicio":"686",
   "loteFim":"255m2",
+  "linkConhecer": "/empreendimentoId2"
 
 },
 {
