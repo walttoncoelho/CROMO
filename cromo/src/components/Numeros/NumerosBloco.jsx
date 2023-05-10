@@ -31,9 +31,9 @@ export default function NumerosBloco() {
         return prevFamilias + increment;
       });
     }, 70);
-  
+
     return () => clearInterval(interval);
-  }, []);  
+  }, []);
 
   return (
     <>
@@ -59,4 +59,4 @@ export default function NumerosBloco() {
       </ContainerNumeros>
     </>
   );
-}
+};
