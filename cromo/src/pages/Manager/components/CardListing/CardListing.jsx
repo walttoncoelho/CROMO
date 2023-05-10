@@ -1,15 +1,16 @@
-import { TableList,
-         Cabecalho,
-         CabecalhoLabel,
-         CabecalhoInput,
-         TableConfig,
-         TableOverflow,
-         TBody,
-         THead,
-         TableHead,
-         TableData,
-         TableRow } 
-from './style/CardListing'
+import { 
+    TableList,
+    Cabecalho,
+    CabecalhoLabel,
+    CabecalhoInput,
+    TableConfig,
+    TableOverflow,
+    TBody,
+    THead,
+    TableHead,
+    TableData,
+    TableRow 
+} from './style/CardListing'
 
 export default CardListing
 function CardListing({ dados = [] }) {
