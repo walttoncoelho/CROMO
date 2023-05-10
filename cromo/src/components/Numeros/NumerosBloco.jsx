@@ -33,6 +33,7 @@ export default function NumerosBloco({ numerosIniciais }) {
     }, 70);
   
     return () => clearInterval(interval);
+  });
 
   return (
     <>
