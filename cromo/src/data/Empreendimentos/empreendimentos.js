@@ -4,8 +4,9 @@ const empreendimentos = [
     tipo: "Lotes comerciais & residenciais",
     slug: "exemplo-de-titulo-casa",
     status: "Em construção",
-    logo:"../images/empreendimentosId/LogoFlorenca.png",
-    plantaBaixa: "../images/empreendimentosId/mapa1.png",
+    logo: "../images/empreendimentosId/LogoFlorenca.png",
+    plantaBaixa: "../images/empreendimentosId/florenca01/mapa/mapa.png",
+
     descricao:
       "O primeiro loteamento a gente nunca esquece. E o Florença Primeira Etapa marcou o início de uma nova fase da história da Cromo e de Balsas. São 742 lotes de ate 255m², com infraestrutura completa para você construir sua casa ou ponto comercial. As obras estão avançando, com ruas já abertas e recebendo asfalto      e perfuração de poços.",
     loteInicio: "724",
@@ -43,41 +44,39 @@ const empreendimentos = [
     },
     galeria: [
       {
-        url: "../images/empreendimentosId/galeria/Destaque-1.png",
+        url: "../images/empreendimentosId/florenca01/foto01.JPG",
         legenda: "Legenda da imagem 1"
       },
       {
-        url: "../images/empreendimentosId/galeria/Destaque-2.png",
-        legenda: "Legenda da imagem 2"
+        url: "../images/empreendimentosId/florenca01/foto02.JPG",
+        legenda: "Legenda da imagem 1"
       },
       {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
+        url: "../images/empreendimentosId/florenca01/foto03.JPG",
+        legenda: "Legenda da imagem 1"
       },
-         {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
+      {
+        url: "../images/empreendimentosId/florenca01/foto04.JPG",
+        legenda: "Legenda da imagem 1"
       },
-         {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
+      {
+        url: "../images/empreendimentosId/florenca01/foto05.JPG",
+        legenda: "Legenda da imagem 1"
       },
-         {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
+      {
+        url: "../images/empreendimentosId/florenca01/foto06.JPG",
+        legenda: "Legenda da imagem 1"
       },
-              {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
+
+      {
+        url: "../images/empreendimentosId/florenca01/foto07.JPG",
+        legenda: "Legenda da imagem 1"
       },
-              {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
-      },
-              {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
-      },
+      {
+        url: "../images/empreendimentosId/florenca01/foto08.JPG",
+        legenda: "Legenda da imagem 1"
+      }
+  
     ]
   }
 ];

@@ -39,7 +39,7 @@ export function CardEmpreend() {
                 <br/>
                 <ButtonSaibaMais>
                   <a
-                    href={item.linkConhecer}
+                    href={item.linkUrl}
                     rel="noopener noreferrer"
                   >
                     {" "}

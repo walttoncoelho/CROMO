@@ -101,8 +101,9 @@ export const CardImg = styled.div`
 
 display: flex;
 width: 60%;
-height: 100%;
+max-height: 450px;
 img{
+
 
   @media (max-width: 550px){
     width:100%;   
