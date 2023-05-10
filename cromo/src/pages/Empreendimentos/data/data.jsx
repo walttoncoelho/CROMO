@@ -1,7 +1,7 @@
 const data = [
     {
   "id": 1,
-  "title": "Residencial Florença 2 Etapa",
+  "title": "Residencial Florença 1 Etapa",
   "descricao":"Lotes comerciais & residenciais",
   "imageUrl": "../images/pageEmpreendimentos/img1.png",
   "linkUrl": "https://example.com/",
@@ -14,7 +14,7 @@ const data = [
 },
 {
   "id": 2,
-  "title": "Residencial Florença 1 Etapa",
+  "title": "Residencial Florença 2 Etapa",
   "descricao":"Lotes comerciais & residenciais",
   "imageUrl": "../images/pageEmpreendimentos/img2.png",
   "linkUrl": "https://example.com/",

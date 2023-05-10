@@ -8,7 +8,6 @@ import Painel from "../pages/Manager/Painel/Painel/Painel";
 import Templates from "../pages/Templates/Templates";
 import Empreendimentos from "../pages/Empreendimentos/SectionEmpreend";
 import EmpreendimentoId from "../pages/EmpreendimentosInterna/EmpreendimentoId";
-import FormularioTeste from "../components/Formulario/FormTest";
 import Perfil from "../pages/Manager/Painel/Perfil/Perfil";
 import Servicos from "../pages/Manager/Painel/Servicos/Servicos";
 import Configuracoes from "../pages/Manager/Painel/Configuracoes/Configuracoes";
@@ -31,7 +30,7 @@ export function AppRoutes() {
       <Route path="/templates" element={<Templates />} />
       <Route path="/empreendimentoId" element={<EmpreendimentoId />} />
       <Route path="/empreendimentoId2" element={<EmpreendimentoId2 />} />
-      <Route path="/form" element={<FormularioTeste />} />
+
 
       {/* Página Login */}
       <Route path="/manager" element={<Login />} />
