@@ -162,7 +162,7 @@ export const SectionGalery = styled.div`
   padding: 2px;
 
   img{
-    width: 100px;
+    max-width: 100px;
     height: 96px;
   }
   
@@ -184,6 +184,8 @@ gap:10px;
     margin: auto;  
     padding: 2px;
     max-width: 400px;
+    min-height: 300px;
+    border-radius: 8px;
   }
 `;
 

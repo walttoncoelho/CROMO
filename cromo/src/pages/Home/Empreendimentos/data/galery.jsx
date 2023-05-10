@@ -27,7 +27,7 @@ export function CardEmpreend() {
               <h3>{item.title}</h3>
               <h4>{item.descricao}</h4>
               <a
-                href={item.linkConhecer}                
+                href={item.linkUrl}                
                 rel="noopener noreferrer"
               >
                 {" "}

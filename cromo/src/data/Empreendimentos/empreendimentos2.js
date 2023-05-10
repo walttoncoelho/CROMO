@@ -5,7 +5,7 @@ const empreendimentos = [
     slug: "exemplo-de-titulo-casa",
     status: "Em construção",
     logo:"../images/empreendimentosId/LogoFlorenca.png",
-    plantaBaixa: "../images/empreendimentosId/mapa1.png",
+    plantaBaixa: "./images/empreendimentosId/florenca02/mapa/mapa.png",
     descricao:
       "Depois do sucesso na primeira etapa, o melhor loteamento de Balsas ganhou uma nova etapa, com 355 lotes de até 255m² com a mesma infraestrutura completa da primeira etapa. As primeiras etapas das obras já estão em andamento, com ruas sendo abertas para receber meio-fio e asfalto em breve.",
     loteInicio: "724",
@@ -43,41 +43,22 @@ const empreendimentos = [
     },
     galeria: [
       {
-        url: "../images/empreendimentosId/galeria/Destaque-1.png",
+        url: "../images/empreendimentosId/florenca02/foto01.JPG",
         legenda: "Legenda da imagem 1"
       },
       {
-        url: "../images/empreendimentosId/galeria/Destaque-2.png",
-        legenda: "Legenda da imagem 2"
+        url: "../images/empreendimentosId/florenca02/foto02.JPG",
+        legenda: "Legenda da imagem 1"
       },
       {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
+        url: "../images/empreendimentosId/florenca02/foto03.JPG",
+        legenda: "Legenda da imagem 1"
       },
-         {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
+      {
+        url: "../images/empreendimentosId/florenca02/foto04.JPG",
+        legenda: "Legenda da imagem 1"
       },
-         {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
-      },
-         {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
-      },
-              {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
-      },
-              {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
-      },
-              {
-        url: "../images/empreendimentosId/galeria/Destaque-3.png",
-        legenda: "Legenda da imagem 3"
-      },
+      
     ]
   }
 ];
