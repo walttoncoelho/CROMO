@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import api from "../../../services/api";
 import data from "../../../data/pageSobre/sobre";
+import numeros from "../../../data/componentNumeros/numeros";
+import NumerosBloco from "../../../components/Numeros/NumerosBloco";
 
 import controleQualidade from "../../../data/pageSobre/controleQualidade";
 import {
@@ -8,9 +11,18 @@ import {
   ContainerQualidade,
   ContainerSobre
 } from "./Style.jsx";
-import Numeros from "../../../components/Numeros/NumerosBloco";
 
 export default function SobreContent() {
+  let [numerosIniciais, setNumerosIniciais] = useState(null);
+
+  useEffect(() => {
+    async function obterNumerosIniciais() {
+      let { data: numeros } = await api.get("/numeros");
+      setNumerosIniciais(numeros);
+    };
+    obterNumerosIniciais().catch(error => setNumerosIniciais(numeros));
+  }, []);
+
   return (
     <>
       <ContainerSobre>
@@ -23,8 +35,7 @@ export default function SobreContent() {
       </ContainerSobre>
       <ContainerNumererosQualidade>
         <ContainerNumerero>
-          {/* Componente Números */}
-          <Numeros />
+          {numerosIniciais && <NumerosBloco numerosIniciais={numerosIniciais} />}
         </ContainerNumerero>
         <ContainerQualidade>
           {controleQualidade.map((item) => (
