@@ -153,13 +153,17 @@ export const ButtonFaleConosco = styled.button`
   
 
   p {
-    a {
-      margin: auto;
+    display: flex;
+    margin: auto;
+    a {      
+
+      margin-top: 15px;
       font-weight: 700;
       font-size: 14px;
       line-height: 120%;
       letter-spacing: 0.05em;
       text-decoration: none;
+      align-items: center;
     }
   }
 
@@ -188,8 +192,9 @@ margin-left: 35px;
 align-items: center;
 
 p{
+  margin-top: 17px;
   display: flex;
-  margin: auto;
+
   align-items: center;
 
 }
