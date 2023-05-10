@@ -1,7 +1,6 @@
-export default SwitchButtonComponent
 import { SwitchLabelComponent, InputComponent, SliderComponent} from "./style/Switch"
-import './style/Switch.css'
 
+export default SwitchButtonComponent
 function SwitchButtonComponent() {
     return (
         <>

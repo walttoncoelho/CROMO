@@ -1,8 +1,6 @@
-export default SwitchButton
 import { SwitchLabel, Input, Slider, SpanArquivar} from "./style/Switch"
-import './style/Switch.css'
 
-
+export default SwitchButton
 function SwitchButton() {
     function changeOpacity(event) {
         const checkbox = event.currentTarget.querySelector(".input");
