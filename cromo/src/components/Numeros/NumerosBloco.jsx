@@ -33,7 +33,6 @@ export default function NumerosBloco({ numerosIniciais }) {
     }, 70);
   
     return () => clearInterval(interval);
-  });
 
   return (
     <>
@@ -49,11 +48,11 @@ export default function NumerosBloco({ numerosIniciais }) {
           </StyleNumbers>
           <StyleNumbers>
             <h1>+{rua}</h1>
-            <p>Opções de ruas</p>
+            <p>casas construidas</p>
           </StyleNumbers>
           <StyleNumbers>
             <h1>+{familias}</h1>
-            <p>Famílias instaladas</p>
+            <p>sonhos realizados</p>
           </StyleNumbers>
         </BlocoNumbers>
       </ContainerNumeros>

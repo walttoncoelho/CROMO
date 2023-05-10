@@ -39,8 +39,7 @@ export function CardEmpreend() {
                 <br/>
                 <ButtonSaibaMais>
                   <a
-                    href="/empreendimentoId"
-                    target="_blank"
+                    href={item.linkConhecer}
                     rel="noopener noreferrer"
                   >
                     {" "}

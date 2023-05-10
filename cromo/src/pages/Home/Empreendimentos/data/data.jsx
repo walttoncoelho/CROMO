@@ -1,7 +1,7 @@
 const data = [
     {
   "id": 1,
-  "title": "Residencial Florença 2 Etapa",
+  "title": "Residencial Florença 1 Etapa",
   "descricao":"Lotes comerciais & residenciais",
   "imageUrl": "../images/empreendimentos/img1.png",
   "linkUrl": "https://example.com/",
@@ -9,11 +9,12 @@ const data = [
   "status": "Em contrução",
   "startDate": "2023-05-01",
   "endDate": "2023-05-31",
-  "isActive": true
+  "isActive": true,
+  "linkConhecer": "/empreendimentoId"
 },
 {
   "id": 2,
-  "title": "Residencial Florença 1 Etapa",
+  "title": "Residencial Florença 2 Etapa",
   "descricao":"Lotes comerciais & residenciais",
   "imageUrl": "../images/empreendimentos/img2.png",
   "linkUrl": "https://example.com/",
@@ -21,7 +22,8 @@ const data = [
     "status": "Em contrução",
   "startDate": "2023-05-01",
   "endDate": "2023-05-31",
-  "isActive": true
+  "isActive": true,
+  "linkConhecer": "/empreendimentoId2"
 },
 {
   "id": 3,

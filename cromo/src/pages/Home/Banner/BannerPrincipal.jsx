@@ -5,17 +5,17 @@ import BtnExplorar from './ButtonExplorar/BtnExplorar';
 
 export default function BannerPrincipal() {
   return (
-   <>
-   <ContainerBanner>
-     <BtnExplorar/>
+    <>
+      <ContainerBanner>
+        <BtnExplorar />
 
-   {data.map((item) => (
-       <div key={item.id}>
-        <img src={item.imageUrl} alt={item.linkUrl} />
-    </div>
-   ))}
-   </ContainerBanner>
-   
-   </>
+        {data.map((item) => (
+          <div key={item.id}>
+            <img src={item.imageUrl} alt={item.linkUrl} />
+          </div>
+        ))}
+      </ContainerBanner>
+
+    </>
   )
 }

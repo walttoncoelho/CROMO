@@ -9,7 +9,7 @@ import {
   ContainerPlanta,
   SectionMap
 } from "./Style";
-import empreendimentos from "../../data/Empreendimentos/empreendimentos";
+import empreendimentos from "../../data/Empreendimentos/empreendimentos2";
 import {
   ContainerSobre,
   SobreStyleText,
@@ -18,7 +18,7 @@ import {
 } from "./Style";
 import ButtonContact from "../../components/ButtonContact/ButtonContact";
 
-export default function EmpreendimentoId() {
+export default function EmpreendimentoId2() {
   const data = empreendimentos;
   return (
     <>

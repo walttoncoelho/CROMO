@@ -149,9 +149,7 @@ export const ButtonFaleConosco = styled.button`
   border: 1px solid #ffffff;
   margin-bottom: 20px;
   align-items: center;
-  transition: background-color 0.4s ease-out, color 0.3s ease-out, border-style 0.2s ease-out;
-
-  
+  transition: background-color 0.4s ease-out, color 0.3s ease-out, border-style 0.2s ease-out; 
   
 
   p {
@@ -201,19 +199,12 @@ svg{
   width: 20px;
   fill: #ffffff;      
   height: 20px;
-
-
-
-
     }
-
 
 
 &:hover {
     svg{
       fill: #118faa;   
-
-
 
     }
   }
