@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { ButtonSucess } from '../../../components/Bottons/Bottons';
+import api from '../../../services/api';
 import PopupSenha from './PopUpSenha';
 import { Container, Form } from './Style';
+import { Navigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -20,16 +22,34 @@ export default function Login() {
     event.preventDefault();  
  
     const { formIsValid, errors } = validateForm();
-    setErrors(errors);
-  
-    if (formIsValid) {
-      console.log(`Email: ${email} Password: ${password}`);
-      // adicione aqui o código para enviar o email e a senha para a API de login
-    } else {
-      console.log(errors);
+    
+    if (!formIsValid) {
+      setErrors(errors);
+      console.error(errors);
+      return;
     }
+    let extractToken = response => { 
+      let { data: { accessToken } } = response; 
+      return accessToken;
+    };
+    let persistIntoLocalStorage = token => {
+      localStorage.setItem("token", token);
+    };
+    let redirectToManager = () => {
+      return <Navigate to="/manager/painel" />;
+    };
+    let responseErrors = (response) => {
+      let { response: { data: { message } } } = response;
+      setErrors({ message });
+      console.error(message);
+    }
+    let data = { email, password }; 
+    api.post("/auth/login", data)
+      .then(extractToken)
+      .then(persistIntoLocalStorage)
+      .then(redirectToManager)
+      .catch(responseErrors);
   };
-  ;
 
   function validateForm() {
     let errors = {};

@@ -1,16 +1,13 @@
 import React from 'react'
 
-import data from "../../../components/Numeros/data/data";
+export default function BigNumeros({ detalhes }) {
 
-export default function BigNumeros() {
-return (
-<>
-        {data.map((item) => (
-            <div key={item.id}>
-            <h2>{item.title}</h2>
-            <p>{item.descricao}</p>
+    return (
+        <>
+            <div>
+                <h2>{detalhes.titulo}</h2>
+                <p>{detalhes.descricao}</p>
             </div>
-        ))}    
-</>
-)
+        </>
+    )
 }
