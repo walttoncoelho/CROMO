@@ -91,6 +91,7 @@ export const ButtonVerMais = styled.button`
   border-radius: 10px;
   background-color: #ffffff;
   border: 2px solid #0a0a0a;
+  cursor: pointer;
 
   p {
     margin: auto;
@@ -100,8 +101,8 @@ export const ButtonVerMais = styled.button`
     letter-spacing: 0.05em;
 
     a {
-    text-decoration: none;
-    color: #0a0a0a;
+      text-decoration: none;
+      color: #0a0a0a;
     }
   }
 
@@ -109,12 +110,14 @@ export const ButtonVerMais = styled.button`
     background-color: #118faa;
     color: #fff;
     border-style: none;
+    transition: background-color 0.3s ease-in-out;
 
     a {
-    color: #ffffff;
+      color: #ffffff;
     }
   }
 `;
+
 
 export const ButtonSaibaMais = styled.button`
   box-sizing: border-box;
