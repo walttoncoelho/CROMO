@@ -57,8 +57,7 @@ const empreendimentos = [
       {
         url: "../images/empreendimentosId/florenca02/foto04.JPG",
         legenda: "Legenda da imagem 1"
-      },
-      
+      },      
     ]
   }
 ];
