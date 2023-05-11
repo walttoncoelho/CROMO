@@ -36,27 +36,25 @@ export default function NumerosBloco({ numerosIniciais }) {
   }, []);
 
   return (
-    <>
-      <ContainerNumeros>
-        <BlocoNumbers>
-          <StyleNumbers>
-            <h1>+{lotes}</h1>
-            <p>lotes vendidos</p>
-          </StyleNumbers>
-          <StyleNumbers>
-            <h1>+{asfalto}Km</h1>
-            <p>de asfalto</p>
-          </StyleNumbers>
-          <StyleNumbers>
-            <h1>+{rua}</h1>
-            <p>casas construidas</p>
-          </StyleNumbers>
-          <StyleNumbers>
-            <h1>+{familias}</h1>
-            <p>sonhos realizados</p>
-          </StyleNumbers>
-        </BlocoNumbers>
-      </ContainerNumeros>
-    </>
+    <ContainerNumeros>
+      <BlocoNumbers>
+        <StyleNumbers>
+          <h1>+{lotes}</h1>
+          <p>lotes vendidos</p>
+        </StyleNumbers>
+        <StyleNumbers>
+          <h1>+{asfalto}Km</h1>
+          <p>de asfalto</p>
+        </StyleNumbers>
+        <StyleNumbers>
+          <h1>+{rua}</h1>
+          <p>casas construidas</p>
+        </StyleNumbers>
+        <StyleNumbers>
+          <h1>+{familias}</h1>
+          <p>sonhos realizados</p>
+        </StyleNumbers>
+      </BlocoNumbers>
+    </ContainerNumeros>
   );
-};
+}
