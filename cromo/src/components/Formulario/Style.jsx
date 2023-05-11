@@ -97,24 +97,31 @@ export const Button = styled.button`
 
 export const Popup = styled.div`
   display: flex;
+  margin: auto;
   padding: 20px;
   top: 50%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-  background-color: #fafafa;
+
+/*   transform: translate(-50%, -50%); */
+  background-color: #ffffff;
+  margin-top: -80px;
   padding: 20px;
-  margin: auto;
   position: fixed;
-  max-width: 300px;
+  width: 300px;
   height: 270px;
   text-align: center;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  color: #ca1e1e;
+  color: #383838;
   font-weight: 700;
   flex-direction: column;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  svg{
+    width: 40px;
+    height: 40px;
+    fill: #06aacf;
+  }
 
   p {
   display: flex;
@@ -123,12 +130,8 @@ export const Popup = styled.div`
   justify-content: center;
   font-weight: 7000;
   font-size: 30px;
-  height: 10px;
-  width: 10px;
-  border: solid 2px #098ba8;
-  background-color: #0d92bb;
-  color: #fff;
-  border-radius: 150px;
+  color: #06aacf;
+
   animation: size-animation 1s ease forwards;
 }
 
