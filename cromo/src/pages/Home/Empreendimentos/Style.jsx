@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
-export const ContainerEmpreend = styled.div`
+export const ContainerEmpreend = styled.section`
   display: flex;
   margin: auto;
   max-width: 1248px;
   margin-bottom: 50px;
   width: 100%;
-/*   background-color: #9c2690; */
+  scroll-behavior: smooth;
+  html {
+  scroll-behavior: smooth;
+}
+
 `;
 
 export const ContainerVermais = styled.div`

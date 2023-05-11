@@ -11,20 +11,18 @@ export default function BtnExplorar() {
   return (
     <>
       <BtnExplorarContatiner>
-        <BtnExplorarPosition>           
-          <BtnExplorarRetangulo>               
-            <div className="barra"> </div>
-          </BtnExplorarRetangulo>   
-          <BtnExplorarText>
-            
-            <a href="#secao-abaixo"><h3>CONTINUAR EXPLORANDO</h3></a>
-            
-          </BtnExplorarText>
+        <BtnExplorarPosition>
+          <a href="#secao-abaixo">
+            <BtnExplorarRetangulo>
+              <div className="barra"> </div>
+            </BtnExplorarRetangulo>
+            <BtnExplorarText>
+              <h3>CONTINUAR EXPLORANDO</h3>
+            </BtnExplorarText>
+          </a>
         </BtnExplorarPosition>
       </BtnExplorarContatiner>
-      <div id="secao-abaixo">
-        {/* Conteúdo da seção */}
-      </div>
+
     </>
   );
 }

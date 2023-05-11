@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerBanner = styled.div`
-
-background-color: #0872ce;
 @media (max-width: 900px) {
     display: none;    
 }
@@ -20,7 +18,6 @@ img{
 `
 
 export const ContainerChamada = styled.div`
-background-color: #0872ce;
 display: flex;
 margin-right: 50%;
 padding-left: 10px;

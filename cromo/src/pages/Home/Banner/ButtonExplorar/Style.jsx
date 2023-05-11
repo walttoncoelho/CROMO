@@ -8,13 +8,18 @@ export const BtnExplorarContatiner = styled.div`
   `;
 
 export const BtnExplorarPosition = styled.div`
-
+flex-direction: column;
   display: flex;
   margin-top: 400px;
   width: 212;
   align-items: center;
   margin-left: 125px;
   cursor: pointer;
+
+  a{
+    display: flex;
+    text-decoration: none;
+  }
 
     @media (max-width: 1680px) {
     margin-top: 330px;
@@ -86,13 +91,6 @@ export const BtnExplorarRetangulo = styled.div`
     width: 6px;
     background-color: #ffffffb2;
   }
-
-
-
-
-
-
-
 `;
 
 export const BtnExplorarText = styled.div`
@@ -110,5 +108,5 @@ export const BtnExplorarText = styled.div`
     line-height: 18px;
     letter-spacing: 5%;
     color: #fff;
-   }
+}
 `;
