@@ -10,14 +10,21 @@ export default AdministrativePanel
 function AdministrativePanel() {
     const [isBannerOpen, setIsBannerOpen] = useState(false);
     const [isEmpreendimentosOpen, setIsEmpreendimentosOpen] = useState(false);
+    const [isNumerosOpen, setIsNumerosOpen] = useState(false);
 
     const handleBannerClick = () => {
         setIsBannerOpen(!isBannerOpen);
         setIsEmpreendimentosOpen(false);
+        setIsNumerosOpen(false);
     };
-
     const handleEmpreendimentosClick = () => {
         setIsEmpreendimentosOpen(!isEmpreendimentosOpen);
+        setIsBannerOpen(false);
+        setIsNumerosOpen(false);
+    };
+    const handleNumerosClick = () => {
+        setIsNumerosOpen(!isNumerosOpen);
+        setIsEmpreendimentosOpen(false);
         setIsBannerOpen(false);
     };
     return (
@@ -48,6 +55,12 @@ function AdministrativePanel() {
                             <DropdownContent isOpen={isEmpreendimentosOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/empreendimentolist">Listar</a></li></DropdownLink>
                                 <DropdownLink> <li className='styleList'><a href="/manager/empreendimentocreate">Adicionar</a></li></DropdownLink>
+                            </DropdownContent>
+                        </BannerMenuItem>
+                        <BannerMenuItem>
+                            <BannerMenuLink onClick={handleNumerosClick}>Números</BannerMenuLink>
+                            <DropdownContent isOpen={isNumerosOpen}>
+                                <DropdownLink> <li className='styleList'><a href="/manager/numeroedit">Editar</a></li></DropdownLink>
                             </DropdownContent>
                         </BannerMenuItem>
                     </ol>
