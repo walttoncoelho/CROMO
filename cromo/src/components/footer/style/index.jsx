@@ -13,14 +13,6 @@ export const FaleConosco = styled.div`
 
 `;
 
-
-// export const IconSocial = styled.div`
-// margin-top: 10px;
-// display: flex;
-// justify-content: space-between;
-// max-width: 65px;
-// `;
-
 export const Colum = styled.div`
 
 @media (max-width:900px) {
@@ -48,20 +40,27 @@ export const Colum = styled.div`
 export const Grid1 = styled.div`  
 
 
+h2{
+  font-size: 26px;
+  font-weight: 600px;
+}
+
+
 @media (max-width: 900px){
 margin-top: 30px;
 }
 
 @media (max-width: 550px){
+  h2{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  
+  }
 margin-top: 50px;
 align-items: center;
 justify-content: center;
-h2{
-display: flex;
-justify-content: center;
-text-align: center;
-margin: auto;
-}
 p{
   display: flex;
   align-items: center;

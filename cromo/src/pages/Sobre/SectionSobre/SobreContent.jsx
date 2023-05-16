@@ -27,9 +27,9 @@ export default function SobreContent() {
     <>
       <ContainerSobre>
         {data.map((item) => (
-          <div key={item.id}>
-            <h1>{item.title}</h1>
-            <p>{item.descricao}</p>
+          <div key={item.id}><br/>
+            <h1>{item.title}</h1><br/>
+            <p>{item.descricao}</p><br/>
           </div>
         ))}
       </ContainerSobre>
@@ -40,7 +40,7 @@ export default function SobreContent() {
         <ContainerQualidade>
           {controleQualidade.map((item) => (
             <div key={item.id}>
-              <h2>{item.title}</h2>
+              <h1>{item.title}</h1><br/>
               <p>{item.descricao}</p>
             </div>
           ))}

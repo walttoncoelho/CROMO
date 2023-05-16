@@ -5,7 +5,7 @@ export default function BigNumeros({ detalhes }) {
     return (
         <>
             <div>
-                <h2>{detalhes.titulo}</h2>
+                <h1>{detalhes.titulo}</h1><br/>
                 <p>{detalhes.descricao}</p>
             </div>
         </>
