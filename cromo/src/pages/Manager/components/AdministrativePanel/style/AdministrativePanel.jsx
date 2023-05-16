@@ -1,5 +1,5 @@
-import styled from "styled-components";
-
+import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
 // Container dos Menus
 
 export const PainelAdministrativo = styled.nav`
@@ -39,30 +39,35 @@ flex-direction: column;
     padding: 21px 0px 23px 51px;
     font-weight: 400;    
     margin-bottom: 1px;
+    color: #ffffff;
     cursor: pointer;
-
-    .styleList {     
-        display: flex;
-        margin:auto ;      
-        width: 100%;       
-        height: 48px;
-        align-items: center;
-        justify-content: center;
-        border-bottom: solid 0.5px #17417D;
-
-        :hover{
-            background-color: #17417D;
-        }
-    }
     
-    a{
-        width: 100%;      
-        color: #ffffff;         
-        text-decoration: none;
-    
-    }
+    `;
+export const NavLinkStyled = styled(NavLink)`
+align-items: center; 
+&:hover{
+  background-color: #17417D;
+}
 
-`
+
+p{
+  display: flex;
+  align-items: center; 
+  margin-left: 30px;
+
+}
+
+  text-decoration: none;
+  margin-left: -50px;
+  color: #ffffff;                
+  height: 60px;
+  border-bottom: solid 0.5px #3479da;
+  ${({ theme }) => css`
+    &.${"active"} {
+      color: ${theme.colors.primary};
+    }
+  `}
+  `;
 
 // Menu Conteúdo
 

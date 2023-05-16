@@ -2,7 +2,7 @@ const controleQualidade = [
     {
   "id": 1,
   "title":"Controle de qualidade",
-   "descricao":"Lorem ipsum dolor sit amet consectetur. Mauris ultrices aliquam justo id cras. Tristique elit orci vitae tellus at massa amet. Etiam quis tincidunt non nisl mi nisl pretium consectetur pretium. Sit nulla scelerisque varius volutpat nam a quam bibendum. Tellus vehicula tortor ac commodo. Ac venenatis a potenti pellentesque tincidunt lacus. Cursus tristique ultricies consequat elementum morbi pulvinar.",
+   "descricao":"Um dos diferenciais das obras e empreendimentos da Cromo Construtora é o rígido controle de qualidade, dos insumos aos serviços de construção e infraestrutura. Adquirir um produto Cromo é garantia de investimento confiável, rentável e para a vida toda. ",
 },
 
 ];

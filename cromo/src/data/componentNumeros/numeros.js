@@ -1,7 +1,7 @@
 const numeros = {
   id: 1,
   titulo: "Nossos Big Numbers",  
-  descricao: "Lorem ipsum dolor sit amet consectetur. Mauris ultrices aliquam justo id cras. Tristique elit orci vitae tellus at massa amet. Etiam quis tincidunt non nisl mi nisl pretium consectetur pretium. Sit nulla scelerisque varius volutpat nam a quam bibendum. Tellus vehicula tortor ac commodo. Ac venenatis a potenti pellentesque tincidunt lacus. Cursus tristique ultricies consequat elementum morbi pulvinar.", 
+  descricao: "Em mais de 30 anos de história, a Cromo vem ajudando milhares de balsenses a realizar o sonho de seu lote ou casa própria e contribuindo no desenvolvimento do Sul do Maranhão..", 
 
   lotes: 0,
   asfalto: 0,
