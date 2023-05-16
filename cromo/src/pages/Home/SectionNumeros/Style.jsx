@@ -2,6 +2,11 @@ import styled from "styled-components";
 export const ContainerNumeros = styled.div`
 display: flex;
 margin: auto;
+margin-top: 80px;
+margin-bottom: 80px;
+align-items: center;
+justify-content: center;
+
 width:100%;
 max-width: 1200px;
 
@@ -16,9 +21,13 @@ max-width: 1200px;
 `
 
 export const BlocoDesc = styled.div`
+
 display: flex;
 width: 100%;
 padding: 5px;
+h1{
+    color: #181818;
+}
 p{
     max-width: 510px;
 }
@@ -58,6 +67,8 @@ flex-wrap: wrap;
 flex-direction: row;
 width: 800px;
 gap: 10px;
+
+
 ;
 `
 

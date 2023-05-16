@@ -7,7 +7,7 @@ export const Container = styled.nav`
   justify-content: center;
 `;
 export const MenuContainer = styled.div` 
-  color: red;
+
 @media (max-width: 750px) {
   width: 100%;
   height: 100%;

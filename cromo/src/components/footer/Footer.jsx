@@ -10,7 +10,7 @@ export default function Footer() {
       <Container>
         <Colum>
           <Grid1>
-            <h2>Fale conosco</h2>
+            <h2>Fale conosco</h2><br/>
             <p>
               Deseja receber contato para conhecer melhor nossas ofertas
               comerciais e novidades? Preencha nosso formulário.

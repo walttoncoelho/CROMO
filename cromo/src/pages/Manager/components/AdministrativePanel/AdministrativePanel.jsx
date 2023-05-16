@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 
-import { PainelConteudo, BannerMenuItem, BannerMenuLink, DropdownContent, DropdownLink, PainelAdministrativo, PainelMenu, PainelListaMenu } from './style/AdministrativePanel'
+import { PainelConteudo, BannerMenuItem, BannerMenuLink, DropdownContent, DropdownLink, PainelAdministrativo, PainelMenu, PainelListaMenu, NavLinkStyled } from './style/AdministrativePanel'
 
 import './AdministrativePanel.css'
 
@@ -33,10 +33,20 @@ function AdministrativePanel() {
                 <div>
                     <PainelMenu>Painel</PainelMenu>
                     <PainelListaMenu>
-                        <li className='styleList'><a href="/manager/perfil">Perfil</a></li>
-                        <li className='styleList'><a href="/manager/servicos">Serviços</a></li>
-                        <li className='styleList'><a href="/manager/configuracoes">Configurações</a></li>
-                        <li className='styleList'><a href="/manager/suporte">Suporte</a></li>
+                        <NavLinkStyled to="/manager/perfil" activeClassName="active">
+                            <p>Perfil</p>
+                        </NavLinkStyled >
+                        <NavLinkStyled to="/manager/servicos" activeClassName="active">
+                            <p>Serviços</p>
+                        </NavLinkStyled>
+
+                        <NavLinkStyled to="/manager/configuracoes" activeClassName="active">
+                            <p>Configurações</p>
+                        </NavLinkStyled>
+                        <NavLinkStyled to="/manager/suporte" activeClassName="active">
+                            <p>Configurações</p>
+                        </NavLinkStyled>
+
                     </PainelListaMenu>
 
                 </div>

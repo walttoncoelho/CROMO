@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
   colors: {
-    primary: "#0077FF",
+    primary: "#ffffff",
     secondary: "#FF7F00"
   }
 };

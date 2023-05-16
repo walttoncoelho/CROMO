@@ -34,8 +34,10 @@ export const ContainerSobre = styled.div`
 `;
 
 export const ContainerNumererosQualidade = styled.div`
-  display: flex;
-  margin: auto;
+display: flex;
+justify-content: center;
+margin: auto;
+
   width: 100%;
   max-width: 1000px;
   height: 100%;
@@ -66,13 +68,15 @@ export const ContainerNumererosQualidade = styled.div`
 `;
 
 export const ContainerNumerero = styled.div`
+
+margin-top: 100px;
   display: flex;
   flex-direction: row;
   margin: auto;
   width: 100%;
   
   @media (max-width: 550px) {
-     
+
     order: 2;
 
     h2{
@@ -94,9 +98,9 @@ export const ContainerQualidade = styled.div`
     order: 1;
   }
 
-  h2 {
+  h1 {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 35px;
     color: #0A0A0A;
   }
 `;
