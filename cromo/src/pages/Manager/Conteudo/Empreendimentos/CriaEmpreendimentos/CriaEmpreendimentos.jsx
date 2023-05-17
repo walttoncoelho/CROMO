@@ -8,6 +8,14 @@ import api from "../../../../../services/api"
 export default function CriaEmpreendimentos() {
   let [opcoes, setOpcoes] = useState(null);
 
+  let [infraestruturas, setInfraestruturas] = useState([]);
+  let handleInfraestruturaCheck = function (event) {
+    let updatedList = (event.target.checked)
+      ? [...infraestruturas, `${event.target.value}`]
+      : [...infraestruturas].splice(infraestruturas.indexOf("1"), 1);
+    setInfraestruturas(updatedList);
+  };
+
   useEffect(() => {
     async function obterOpcoes() {
       let { data } = await api.get("/manager/empreendimento/create-options", {
@@ -19,8 +27,8 @@ export default function CriaEmpreendimentos() {
       statusDaConstrucao: [],
       infraestruturas: [],
     }));
-  });
-  let handleSubmit = console.log
+  }, []);
+  let handleSubmit = () => console.log(infraestruturas)
   return (
     <>
     <NavBar />
@@ -50,7 +58,7 @@ export default function CriaEmpreendimentos() {
             {opcoes?.infraestruturas.map(infraestrutura => (
               <React.Fragment key={infraestrutura.id} >
                 <img src={`http://localhost:3000/infraestruturas/${infraestrutura.id}/icone`} />
-                <input type="checkbox" name="infraestruturas" value={infraestrutura.id} />
+                <input type="checkbox" name="infraestruturas" value={infraestrutura.id} onChange={handleInfraestruturaCheck} />
                 <label>{infraestrutura.titulo}</label>
               </React.Fragment>
             ))}
