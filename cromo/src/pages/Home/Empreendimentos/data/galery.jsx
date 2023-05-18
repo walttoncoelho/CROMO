@@ -18,7 +18,7 @@ export function CardEmpreend({ empreendimentos }) {
       <CardContainer>
         {empreendimentos.map((empreendimento) => (
           <CardGalery key={empreendimento.id}>
-            <img src={empreendimento.logoEmpreendimento} />
+            <img src={empreendimento.logoEmpreendimento} alt={empreendimento.altText ?? "Imagem do empreendimento"} />
             <ContainerStatus
               className={
                 empreendimento.statusDaConstrucao === "Obra entregue" ? "orange" : "green"
