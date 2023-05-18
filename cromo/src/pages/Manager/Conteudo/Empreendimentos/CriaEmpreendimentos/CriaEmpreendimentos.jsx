@@ -10,10 +10,12 @@ export default function CriaEmpreendimentos() {
 
   let [infraestruturas, setInfraestruturas] = useState([]);
   let handleInfraestruturaCheck = function (event) {
-    let updatedList = (event.target.checked)
-      ? [...infraestruturas, `${event.target.value}`]
-      : [...infraestruturas].splice(infraestruturas.indexOf("1"), 1);
-    setInfraestruturas(updatedList);
+    let { value, checked } = event.target;
+    let updatedInfraestrutura = [...infraestruturas];
+    (checked)
+      ? updatedInfraestrutura.push(value)
+      : updatedInfraestrutura.splice(infraestruturas.indexOf(value), 1)
+    setInfraestruturas(updatedInfraestrutura);
   };
 
   useEffect(() => {
