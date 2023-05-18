@@ -11,12 +11,12 @@ export default function ListaEmpreendimentos() {
 
   useEffect(() => {
     async function obterEmpreendimentos() {
-      let { data: empreendimentos } = await api.get("/manager/empreendimentos", {
+      let { data } = await api.get("/manager/empreendimentos", {
         headers: { "Authorization": `Bearer ${ localStorage.getItem("token") }` }
       });
-      setEmpreendimentos(empreendimentos);
+      setEmpreendimentos(data);
     };
-    obterEmpreendimentos().catch(error => setEmpreendimentos([]));
+    obterEmpreendimentos().catch(error => setEmpreendimentos({}));
   }, []);
   return (
     <>

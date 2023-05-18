@@ -17,6 +17,7 @@ import CriaBanner from "../pages/Manager/Conteudo/Banner/CriaBanner/CriaBanner";
 import CriaEmpreendimentos from "../pages/Manager/Conteudo/Empreendimentos/CriaEmpreendimentos/CriaEmpreendimentos";
 import ListaEmpreendimentos from "../pages/Manager/Conteudo/Empreendimentos/ListaEmpreendimentos/ListaEmpreendimentos";
 import EmpreendimentoId2 from "../pages/EmpreendimentosInterna/EmpreendimentoId02";
+import EditaNumeros from "../pages/Manager/Conteudo/Numeros/EditaNumeros/EditaNumeros";
 
 export function AppRoutes() {
   return (
@@ -48,6 +49,7 @@ export function AppRoutes() {
       <Route path="/manager/bannercreate" element={<CriaBanner />} />
       <Route path="/manager/empreendimentolist" element={<ListaEmpreendimentos />} />
       <Route path="/manager/empreendimentocreate" element={<CriaEmpreendimentos />} />
+      <Route path="/manager/numeroedit" element={<EditaNumeros />} />
 
     </Routes>
   );

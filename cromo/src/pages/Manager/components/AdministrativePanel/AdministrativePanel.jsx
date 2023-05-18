@@ -94,27 +94,35 @@ function AdministrativePanel() {
                             </DropdownContent>
                         </BannerMenuItem>
                         <BannerMenuItem>
+
                             <BannerMenuLink onClick={handleInfraestruturasClick}><p>Infraestruturas</p></BannerMenuLink>
+
                             <DropdownContent isOpen={isInfraestruturasOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/infraestruturalist">Listar</a></li></DropdownLink>
                                 <DropdownLink> <li className='styleList'><a href="/manager/infraestruturacreate">Adicionar</a></li></DropdownLink>
                             </DropdownContent>
                         </BannerMenuItem>
                         <BannerMenuItem>
+
                             <BannerMenuLink onClick={handleNumerosClick}><p>Números</p></BannerMenuLink>
+
                             <DropdownContent isOpen={isNumerosOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/numeroedit">Editar</a></li></DropdownLink>
                             </DropdownContent>
                         </BannerMenuItem>
                         <BannerMenuItem>
+
                             <BannerMenuLink onClick={handleUsuariosClick}><p>Usuários</p></BannerMenuLink>
+
                             <DropdownContent isOpen={isUsuariosOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/usuariolist">Listar</a></li></DropdownLink>
                                 <DropdownLink> <li className='styleList'><a href="/manager/usuariocreate">Adicionar</a></li></DropdownLink>
                             </DropdownContent>
                         </BannerMenuItem>
                         <BannerMenuItem>
+
                             <BannerMenuLink onClick={handleContatosClick}><p>Contatos</p></BannerMenuLink>
+
                             <DropdownContent isOpen={isContatosOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/contatolist">Listar</a></li></DropdownLink>
                             </DropdownContent>

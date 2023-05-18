@@ -15,7 +15,7 @@ import SwitchStatusButton from '../SwitchStatusButton/Switch'
 import api from "../../../../services/api"
 
 export default CardListEmpreendimento
-function CardListEmpreendimento({ dados = [] }) {
+function CardListEmpreendimento({ dados = {} }) {
     function toggleStatus(id) {
         return () => api.patch(`/manager/empreendimento/${id}/toggle-status`, {}, {
             headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` }
@@ -42,7 +42,7 @@ function CardListEmpreendimento({ dados = [] }) {
                         {/* <TableHead>Ações</TableHead> */}
                     </THead>
                     <TBody>
-                        {dados.map(dado => (
+                        {dados.empreendimentos?.map(dado => (
                         <TableRow key={dado.id}>
                             <TableData>{dado.id}</TableData>
                             <TableData><SwitchStatusButton callback={ toggleStatus(dado.id) } checked={ dado.status } /></TableData>

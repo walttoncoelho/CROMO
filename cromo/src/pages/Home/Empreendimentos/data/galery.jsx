@@ -9,25 +9,28 @@ import {
 import Arrow from "./img/arrow.svg";
 import "./styles.css"; // importa o arquivo CSS
 
-export function CardEmpreend() {
+export function CardEmpreend({ empreendimentos }) {
+  if (!empreendimentos.length) {
+    empreendimentos = data;
+  }
   return (
     <>
       <CardContainer>
-        {data.map((item) => (
-          <CardGalery key={item.id}>
-            <img src={item.imageUrl} alt={item.linkUrl} />
+        {empreendimentos.map((empreendimento) => (
+          <CardGalery key={empreendimento.id}>
+            <img src={empreendimento.logoEmpreendimento} alt={empreendimento.altText ?? "Imagem do empreendimento"} />
             <ContainerStatus
               className={
-                item.status === "Obra entregue" ? "orange" : "green"
+                empreendimento.statusDaConstrucao === "Obra entregue" ? "orange" : "green"
               }
             >
-              <p>{item.status}</p>
+              <p>{empreendimento.statusDaConstrucao}</p>
             </ContainerStatus>
             <CardDescription>
-              <h3>{item.title}</h3>
-              <h4>{item.descricao}</h4>
+              <h3>{empreendimento.titulo}</h3>
+              <h4>{empreendimento.tipoEmpreendimento}</h4>
               <a
-                href={item.linkUrl}                
+                href={`empreendimentos/${empreendimento.slug}`}                
                 rel="noopener noreferrer"
               >
                 {" "}
