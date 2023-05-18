@@ -168,7 +168,7 @@ export default function CriaEmpreendimentos() {
 
             {opcoes?.infraestruturas.map(infraestrutura => (
               <React.Fragment key={infraestrutura.id} >
-                <img src={`http://localhost:3000/infraestruturas/${infraestrutura.id}/icone`} />
+                <img src={infraestrutura.icone} />
                 <input required type="checkbox" name="infraestruturas" value={infraestrutura.id} onChange={handleInfraestruturaCheck} />
                 <label>{infraestrutura.titulo}</label>
               </React.Fragment>
