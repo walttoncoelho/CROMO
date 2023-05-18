@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from 'react';
 
-import { PainelConteudo, BannerMenuItem, BannerMenuLink, DropdownContent, DropdownLink, PainelAdministrativo, PainelMenu, PainelListaMenu, NavLinkStyled } from './style/AdministrativePanel'
+import { PainelConteudo, BannerMenuItem, BannerMenuLink, DropdownContent, DropdownLink, PainelAdministrativo, PainelMenu, PainelListaMenu, NavLinkStyled, PainelListaConteudo } from './style/Style'
 
-import './AdministrativePanel.css'
+
 
 export default AdministrativePanel
 
@@ -53,6 +53,8 @@ function AdministrativePanel() {
             <PainelAdministrativo>
                 <div>
                     <PainelMenu>Painel</PainelMenu>
+                    <ol>
+
                     <PainelListaMenu>
                         <NavLinkStyled to="/manager/perfil" activeClassName="active">
                             <p>Perfil</p>
@@ -70,51 +72,63 @@ function AdministrativePanel() {
 
                     </PainelListaMenu>
 
+                    </ol>
                 </div>
                 <div>
                     <PainelConteudo>Conteúdo</PainelConteudo>
+                    <PainelListaConteudo>
+
                     <ol>
                         <BannerMenuItem>
-                            <BannerMenuLink onClick={handleBannerClick}>Banner</BannerMenuLink>
+                            <BannerMenuLink onClick={handleBannerClick}><p>Banner</p></BannerMenuLink>
                             <DropdownContent isOpen={isBannerOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/bannerlist">Listar</a></li></DropdownLink>
                                 <DropdownLink> <li className='styleList'><a href="/manager/bannercreate">Adicionar</a></li></DropdownLink>
                             </DropdownContent>
                         </BannerMenuItem>
                         <BannerMenuItem>
-                            <BannerMenuLink onClick={handleEmpreendimentosClick}>Empreendimentos</BannerMenuLink>
+                            <BannerMenuLink onClick={handleEmpreendimentosClick}><p>Empreendimentos</p></BannerMenuLink>
                             <DropdownContent isOpen={isEmpreendimentosOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/empreendimentolist">Listar</a></li></DropdownLink>
                                 <DropdownLink> <li className='styleList'><a href="/manager/empreendimentocreate">Adicionar</a></li></DropdownLink>
                             </DropdownContent>
                         </BannerMenuItem>
                         <BannerMenuItem>
-                            <BannerMenuLink onClick={handleInfraestruturasClick}>Infraestruturas</BannerMenuLink>
+
+                            <BannerMenuLink onClick={handleInfraestruturasClick}><p>Infraestruturas</p></BannerMenuLink>
+
                             <DropdownContent isOpen={isInfraestruturasOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/infraestruturalist">Listar</a></li></DropdownLink>
                                 <DropdownLink> <li className='styleList'><a href="/manager/infraestruturacreate">Adicionar</a></li></DropdownLink>
                             </DropdownContent>
                         </BannerMenuItem>
                         <BannerMenuItem>
-                            <BannerMenuLink onClick={handleNumerosClick}>Números</BannerMenuLink>
+
+                            <BannerMenuLink onClick={handleNumerosClick}><p>Números</p></BannerMenuLink>
+
                             <DropdownContent isOpen={isNumerosOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/numeroedit">Editar</a></li></DropdownLink>
                             </DropdownContent>
                         </BannerMenuItem>
                         <BannerMenuItem>
-                            <BannerMenuLink onClick={handleUsuariosClick}>Usuários</BannerMenuLink>
+
+                            <BannerMenuLink onClick={handleUsuariosClick}><p>Usuários</p></BannerMenuLink>
+
                             <DropdownContent isOpen={isUsuariosOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/usuariolist">Listar</a></li></DropdownLink>
                                 <DropdownLink> <li className='styleList'><a href="/manager/usuariocreate">Adicionar</a></li></DropdownLink>
                             </DropdownContent>
                         </BannerMenuItem>
                         <BannerMenuItem>
-                            <BannerMenuLink onClick={handleContatosClick}>Contatos</BannerMenuLink>
+
+                            <BannerMenuLink onClick={handleContatosClick}><p>Contatos</p></BannerMenuLink>
+
                             <DropdownContent isOpen={isContatosOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/contatolist">Listar</a></li></DropdownLink>
                             </DropdownContent>
                         </BannerMenuItem>
                     </ol>
+                    </PainelListaConteudo>
                 </div>
             </PainelAdministrativo>
         </>
