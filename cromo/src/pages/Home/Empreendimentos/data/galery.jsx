@@ -30,7 +30,7 @@ export function CardEmpreend({ empreendimentos }) {
               <h3>{empreendimento.titulo}</h3>
               <h4>{empreendimento.tipoEmpreendimento}</h4>
               <a
-                href={`${empreendimento.slug}`}                
+                href={`empreendimentos/${empreendimento.slug}`}                
                 rel="noopener noreferrer"
               >
                 {" "}
