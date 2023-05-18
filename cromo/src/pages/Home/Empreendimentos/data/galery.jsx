@@ -9,7 +9,10 @@ import {
 import Arrow from "./img/arrow.svg";
 import "./styles.css"; // importa o arquivo CSS
 
-export function CardEmpreend({ empreendimentos = data }) {
+export function CardEmpreend({ empreendimentos }) {
+  if (!empreendimentos.length) {
+    empreendimentos = data;
+  }
   return (
     <>
       <CardContainer>
