@@ -10,22 +10,43 @@ export default AdministrativePanel
 function AdministrativePanel() {
     const [isBannerOpen, setIsBannerOpen] = useState(false);
     const [isEmpreendimentosOpen, setIsEmpreendimentosOpen] = useState(false);
+    const [isInfraestruturasOpen, setIsInfraestruturasOpen] = useState(false);
     const [isNumerosOpen, setIsNumerosOpen] = useState(false);
+    const [isUsuariosOpen, setIsUsuariosOpen] = useState(false);
+    const [isContatosOpen, setIsContatosOpen] = useState(false);
+
+    let resetAllStates = () => [
+        setIsBannerOpen,
+        setIsEmpreendimentosOpen,
+        setIsInfraestruturasOpen,
+        setIsNumerosOpen,
+        setIsUsuariosOpen,
+        setIsContatosOpen
+    ].forEach(setState => setState(false));
 
     const handleBannerClick = () => {
+        resetAllStates();
         setIsBannerOpen(!isBannerOpen);
-        setIsEmpreendimentosOpen(false);
-        setIsNumerosOpen(false);
     };
     const handleEmpreendimentosClick = () => {
+        resetAllStates();
         setIsEmpreendimentosOpen(!isEmpreendimentosOpen);
-        setIsBannerOpen(false);
-        setIsNumerosOpen(false);
+    };
+    const handleInfraestruturasClick = () => {
+        resetAllStates();
+        setIsInfraestruturasOpen(!isInfraestruturasOpen);
     };
     const handleNumerosClick = () => {
+        resetAllStates();
         setIsNumerosOpen(!isNumerosOpen);
-        setIsEmpreendimentosOpen(false);
-        setIsBannerOpen(false);
+    };
+    const handleUsuariosClick = () => {
+        resetAllStates();
+        setIsUsuariosOpen(!isUsuariosOpen);
+    };
+    const handleContatosClick = () => {
+        resetAllStates();
+        setIsContatosOpen(!isContatosOpen);
     };
     return (
         <>
@@ -44,7 +65,7 @@ function AdministrativePanel() {
                             <p>Configurações</p>
                         </NavLinkStyled>
                         <NavLinkStyled to="/manager/suporte" activeClassName="active">
-                            <p>Configurações</p>
+                            <p>Suporte</p>
                         </NavLinkStyled>
 
                     </PainelListaMenu>
@@ -68,9 +89,29 @@ function AdministrativePanel() {
                             </DropdownContent>
                         </BannerMenuItem>
                         <BannerMenuItem>
+                            <BannerMenuLink onClick={handleInfraestruturasClick}>Infraestruturas</BannerMenuLink>
+                            <DropdownContent isOpen={isInfraestruturasOpen}>
+                                <DropdownLink> <li className='styleList'><a href="/manager/infraestruturalist">Listar</a></li></DropdownLink>
+                                <DropdownLink> <li className='styleList'><a href="/manager/infraestruturacreate">Adicionar</a></li></DropdownLink>
+                            </DropdownContent>
+                        </BannerMenuItem>
+                        <BannerMenuItem>
                             <BannerMenuLink onClick={handleNumerosClick}>Números</BannerMenuLink>
                             <DropdownContent isOpen={isNumerosOpen}>
                                 <DropdownLink> <li className='styleList'><a href="/manager/numeroedit">Editar</a></li></DropdownLink>
+                            </DropdownContent>
+                        </BannerMenuItem>
+                        <BannerMenuItem>
+                            <BannerMenuLink onClick={handleUsuariosClick}>Usuários</BannerMenuLink>
+                            <DropdownContent isOpen={isUsuariosOpen}>
+                                <DropdownLink> <li className='styleList'><a href="/manager/usuariolist">Listar</a></li></DropdownLink>
+                                <DropdownLink> <li className='styleList'><a href="/manager/usuariocreate">Adicionar</a></li></DropdownLink>
+                            </DropdownContent>
+                        </BannerMenuItem>
+                        <BannerMenuItem>
+                            <BannerMenuLink onClick={handleContatosClick}>Contatos</BannerMenuLink>
+                            <DropdownContent isOpen={isContatosOpen}>
+                                <DropdownLink> <li className='styleList'><a href="/manager/contatolist">Listar</a></li></DropdownLink>
                             </DropdownContent>
                         </BannerMenuItem>
                     </ol>
