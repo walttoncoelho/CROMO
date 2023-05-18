@@ -18,19 +18,19 @@ export function CardEmpreend({ empreendimentos }) {
       <CardContainer>
         {empreendimentos.map((empreendimento) => (
           <CardGalery key={empreendimento.id}>
-            <img src={`http://localhost:3000/empreendimentos/${empreendimento.id}/imagem/${empreendimento.logoEmpreendimento}`} />
+            <img src={empreendimento.logoEmpreendimento} />
             <ContainerStatus
               className={
-                empreendimento.statusDaObra === "Obra entregue" ? "orange" : "green"
+                empreendimento.statusDaConstrucao === "Obra entregue" ? "orange" : "green"
               }
             >
-              <p>{empreendimento.statusDaObra}</p>
+              <p>{empreendimento.statusDaConstrucao}</p>
             </ContainerStatus>
             <CardDescription>
               <h3>{empreendimento.titulo}</h3>
-              <h4>{empreendimento.descricao}</h4>
+              <h4>{empreendimento.tipoEmpreendimento}</h4>
               <a
-                href={`empreendimentoId/${empreendimento.slug}`}                
+                href={`${empreendimento.slug}`}                
                 rel="noopener noreferrer"
               >
                 {" "}
