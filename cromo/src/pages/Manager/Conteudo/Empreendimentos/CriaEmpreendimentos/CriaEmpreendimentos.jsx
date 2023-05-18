@@ -7,17 +7,6 @@ import api from "../../../../../services/api"
 
 export default function CriaEmpreendimentos() {
   let [opcoes, setOpcoes] = useState(null);
-
-  let [infraestruturas, setInfraestruturas] = useState([]);
-  let handleInfraestruturaCheck = function (event) {
-    let { value, checked } = event.target;
-    let updatedInfraestrutura = [...infraestruturas];
-    (checked)
-      ? updatedInfraestrutura.push(value)
-      : updatedInfraestrutura.splice(infraestruturas.indexOf(value), 1)
-    setInfraestruturas(updatedInfraestrutura);
-  };
-
   useEffect(() => {
     async function obterOpcoes() {
       let { data } = await api.get("/manager/empreendimento/create-options", {
@@ -30,7 +19,101 @@ export default function CriaEmpreendimentos() {
       infraestruturas: [],
     }));
   }, []);
-  let handleSubmit = () => console.log(infraestruturas)
+
+  let [infraestruturas, setInfraestruturas] = useState([]);
+  let handleInfraestruturaCheck = function (event) {
+    let { value, checked } = event.target;
+    let updatedInfraestrutura = [...infraestruturas];
+    (checked)
+      ? updatedInfraestrutura.push(value)
+      : updatedInfraestrutura.splice(infraestruturas.indexOf(value), 1)
+    setInfraestruturas(updatedInfraestrutura);
+  };
+
+  let [statusDaConstrucao, setStatusDaConstrucao] = useState(null);
+  let handleStatusDaConstrucaoSelect = function (event) {
+    let { value } = event.target;
+    setStatusDaConstrucao(value);
+  };
+
+  let [status, setStatus] = useState(null);
+  let handleStatusCheck = function (event) {
+    let { checked } = event.target;
+    setStatus(checked);
+  };
+
+  let [titulo, setTitulo] = useState(null);
+  let handleTituloInput = function (event) {
+    let { value } = event.target;
+    setTitulo(value);
+  };
+
+  let [descricao, setDescricao] = useState(null);
+  let handleDescricaoInput = function (event) {
+    let { value } = event.target;
+    setDescricao(value);
+  };
+
+  let [tipoEmpreendimento, setTipoEmpreendimento] = useState(null);
+  let handleTipoEmpreendimentoInput = function (event) {
+    let { value } = event.target;
+    setTipoEmpreendimento(value);
+  };
+
+  let [slug, setSlug] = useState(null);
+  let handleSlugInput = function (event) {
+    let { value } = event.target;
+    setSlug(value);
+  };
+
+  let [lotes, setLotes] = useState(null);
+  let handleLotesInput = function (event) {
+    let { value } = event.target;
+    setLotes(value);
+  };
+
+  let [areaLote, setAreaLote] = useState(null);
+  let handleAreaLoteInput = function (event) {
+    let { value } = event.target;
+    setAreaLote(value);
+  };
+
+  let [logoEmpreendimento, setLogoEmpreendimento] = useState(null);
+  let handleLogoEmpreendimentoUpload = function (event) {
+    let { files } = event.target;
+    setLogoEmpreendimento(files[0]);
+  };
+
+  let [imagemPlantaBaixa, setImagemPlantaBaixa] = useState(null);
+  let handleImagemPlantaBaixaUpload = function (event) {
+    let { files } = event.target;
+    setImagemPlantaBaixa(files[0]);
+  };
+
+  let handleSubmit = () => {
+    let formIsValid = true;
+    if (!formIsValid) {
+      return;
+    }
+    let formData = new FormData;
+    formData.append("status", status);
+    formData.append("statusDaConstrucao", statusDaConstrucao);
+    formData.append("titulo", titulo);
+    formData.append("descricao", descricao);
+    formData.append("tipoEmpreendimento", tipoEmpreendimento);
+    formData.append("slug", slug);
+    formData.append("lotes", lotes);
+    formData.append("areaLote", areaLote);
+    formData.append("logoEmpreendimento", logoEmpreendimento);
+    formData.append("imagemPlantaBaixa", imagemPlantaBaixa);
+    infraestruturas.forEach(infraestrutura => formData.append("infraestruturas[]", infraestrutura));
+
+    api.post("/manager/empreendimentos", formData, {
+      headers: { "Authorization": `Bearer ${localStorage.getItem("token")}` }
+    })
+    .then(_ => window.location.href = "/manager/empreendimentolist")
+    .catch(console.error);
+  }
   return (
     <>
     <NavBar />
@@ -39,16 +122,42 @@ export default function CriaEmpreendimentos() {
         <AdministrativePanel />
       </ContainerSidebar>
       <ContainerStage>
-        <form>
-          <label for="status">Em exibição</label>
-          <input value="false" type="checkbox" id="status" name="status" />
+        <form style={{display: "flex", flexDirection: "column"}}>
+          <div>
+            <input onChange={handleStatusCheck} value="false" type="checkbox" id="status" name="status" />
+            <label for="status">Em exibição</label>
+          </div>
+
+          <label for="titulo">Título do Empreendimento</label>
+          <input onChange={handleTituloInput} type="text" id="titulo" name="titulo" />
+
+          <label for="descricao">Descrição</label>
+          <textarea onChange={handleDescricaoInput} type="text" id="descricao" name="descricao" />
+
+          <label for="tipoEmpreendimento">Tipo do Empreendimento</label>
+          <input onChange={handleTipoEmpreendimentoInput} type="text" id="tipoEmpreendimento" name="tipoEmpreendimento" />
+
+          <label for="slug">Slug</label>
+          <input onChange={handleSlugInput} type="text" id="slug" name="slug" />
+
+          <label for="lotes">Quantidade de lotes</label>
+          <input onChange={handleLotesInput} type="number" min="0" id="lotes" name="lotes" />
+
+          <label for="areaLote">Área de cada lote</label>
+          <input onChange={handleAreaLoteInput} type="number" min="0" id="areaLote" name="areaLote" />
+
+          <label for="logoEmpreendimento">Logo</label>
+          <input onChange={handleLogoEmpreendimentoUpload} type="file" id="logoEmpreendimento" name="logoEmpreendimento" />
+
+          <label for="imagemPlantaBaixa">Planta baixa</label>
+          <input onChange={handleImagemPlantaBaixaUpload} type="file" id="imagemPlantaBaixa" name="imagemPlantaBaixa" />
 
           <fieldset>
             <legend>Status da Construção</legend>
 
             {opcoes?.statusDaConstrucao.map(status => (
               <React.Fragment key={status.valor}>
-                <input type="radio" name="statusDaConstrucao" value={status.valor} />
+                <input required type="radio" name="statusDaConstrucao" value={status.valor} onChange={handleStatusDaConstrucaoSelect} />
                 <label>{status.texto}</label>
               </React.Fragment>
             ))}
@@ -60,7 +169,7 @@ export default function CriaEmpreendimentos() {
             {opcoes?.infraestruturas.map(infraestrutura => (
               <React.Fragment key={infraestrutura.id} >
                 <img src={`http://localhost:3000/infraestruturas/${infraestrutura.id}/icone`} />
-                <input type="checkbox" name="infraestruturas" value={infraestrutura.id} onChange={handleInfraestruturaCheck} />
+                <input required type="checkbox" name="infraestruturas" value={infraestrutura.id} onChange={handleInfraestruturaCheck} />
                 <label>{infraestrutura.titulo}</label>
               </React.Fragment>
             ))}
