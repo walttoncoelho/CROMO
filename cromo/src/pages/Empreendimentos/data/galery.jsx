@@ -11,35 +11,38 @@ import {
 import "./styles.css"; // importa o arquivo CSS
 import { ButtonSaibaMais } from "../../../components/Bottons/Bottons";
 
-export function CardEmpreend() {
+export function CardEmpreend({ empreendimentos }) {
+  if (!empreendimentos.length) {
+    empreendimentos = data;
+  }
   return (
     <>
       <CardContainer>
         <h1>Nossos empreendimentos</h1>
-        {data.map((item) => (
-          <CardGalery key={item.id}>
+        {empreendimentos.map((empreendimento) => (
+          <CardGalery key={empreendimento.id}>
             <CardImg>
-              <img src={item.imageUrl} alt={item.linkUrl} />
+              <img src={empreendimento.logoEmpreendimento} alt={empreendimento.altText ?? "Imagem do empreendimento"} />
               <ContainerStatus
-                className={item.status === "Obra entregue" ? "orange" : "green"}
+                className={empreendimento.statusDaConstrucao === "Obra entregue" ? "orange" : "green"}
               >
-                <p>{item.status}</p>
+                <p>{empreendimento.statusDaConstrucao}</p>
               </ContainerStatus>
             </CardImg>
             <CardDescription>
-              <h2>{item.title}</h2>
-              <p>{item.sobre}</p>
+              <h2>{empreendimento.titulo}</h2>
+              <p>{empreendimento.descricao}</p>
               <ContainerLoteButton>
                 <br/>
                 <p>
                   {" "}
-                  <strong>{item.loteInicio}</strong> Lote com até{" "}
-                  <strong>{item.loteFim}</strong>
+                  <strong>{empreendimento.lotes}</strong> Lote com até{" "}
+                  <strong>{empreendimento.areaLote}</strong>
                 </p>
                 <br/>
                 <ButtonSaibaMais>
                   <a
-                    href={item.linkUrl}
+                    href={`empreendimentos/${empreendimento.slug}`}
                     rel="noopener noreferrer"
                   >
                     {" "}
