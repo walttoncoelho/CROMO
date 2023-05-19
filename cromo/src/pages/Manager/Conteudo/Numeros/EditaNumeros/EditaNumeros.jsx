@@ -88,7 +88,7 @@ export default function EditaNumeros() {
         <AdministrativePanel />
       </ContainerSidebar>
       <ContainerStage>
-        <form>
+        <form style={{ display: "flex", flexDirection: "column" }}>
           <label for="titulo">Título</label>
           <input value={titulo} onChange={handleTituloChange} type="text" id="titulo" name="titulo" />
 
