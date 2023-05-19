@@ -35,7 +35,8 @@ export default function Formulario() {
     
     try {
       setIsLoading(true); // Ativa o loading
-      await axios.post('https://walrus-app-4twgg.ondigitalocean.app/send-email', state);
+      await axios.post('https://sea-turtle-app-zydld.ondigitalocean.app/send-email', state);
+  
       setState((prevState) => ({ ...prevState, status: 'success' }));
       setStatusMessage("Obrigado, rececbemos o seu contato, retornaremos o mais breve possível.");
     } catch (error) {
