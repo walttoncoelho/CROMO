@@ -95,7 +95,7 @@ export default function CriaEmpreendimentos() {
     if (!formIsValid) {
       return;
     }
-    let formData = new FormData;
+    let formData = new FormData();
     formData.append("status", status);
     formData.append("statusDaConstrucao", statusDaConstrucao);
     formData.append("titulo", titulo);
@@ -168,7 +168,7 @@ export default function CriaEmpreendimentos() {
 
             {opcoes?.infraestruturas.map(infraestrutura => (
               <React.Fragment key={infraestrutura.id} >
-                <img src={infraestrutura.icone} />
+                <img src={infraestrutura.icone} alt={"Ícone da infraestrutura"} />
                 <input required type="checkbox" name="infraestruturas" value={infraestrutura.id} onChange={handleInfraestruturaCheck} />
                 <label>{infraestrutura.titulo}</label>
               </React.Fragment>
