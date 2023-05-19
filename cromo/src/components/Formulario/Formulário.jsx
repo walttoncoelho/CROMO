@@ -14,6 +14,8 @@ export default function Formulario() {
 
   const [statusMessage, setStatusMessage] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
 
   const handleChange = (e) => {
     const { name, value, checked } = e.target;
@@ -32,6 +34,7 @@ export default function Formulario() {
     }
     
     try {
+      setIsLoading(true); // Ativa o loading
       await axios.post('https://walrus-app-4twgg.ondigitalocean.app/send-email', state);
       setState((prevState) => ({ ...prevState, status: 'success' }));
       setStatusMessage("Obrigado, rececbemos o seu contato, retornaremos o mais breve possível.");
@@ -39,6 +42,9 @@ export default function Formulario() {
       console.log(error);
       setState((prevState) => ({ ...prevState, status: 'error' }));
       setError("Ocorreu um erro ao enviar o e-mail.");
+    }
+    finally {
+      setIsLoading(false); // Desativa o loading
     }
   };
   
@@ -119,8 +125,8 @@ export default function Formulario() {
         </label>
       </Radio>
   
-      <Button type="submit" disabled={state.name === '' || state.email === '' || state.phone === '' || state.mensagem === ''}>
-        Enviar
+      <Button type="submit" disabled={isLoading || state.name === '' || state.email === '' || state.phone === '' || state.mensagem === ''}>
+      {isLoading ? 'Enviando...' : 'Enviar'}
       </Button> 
   
     </Form>
