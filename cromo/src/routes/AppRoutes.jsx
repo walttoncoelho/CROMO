@@ -18,6 +18,8 @@ import CriaEmpreendimentos from "../pages/Manager/Conteudo/Empreendimentos/CriaE
 import ListaEmpreendimentos from "../pages/Manager/Conteudo/Empreendimentos/ListaEmpreendimentos/ListaEmpreendimentos";
 import EmpreendimentoId2 from "../pages/EmpreendimentosInterna/EmpreendimentoId02";
 import EditaNumeros from "../pages/Manager/Conteudo/Numeros/EditaNumeros/EditaNumeros";
+import CriaInfraestruturas from "../pages/Manager/Conteudo/Infraestruturas/CriaInfraestruturas/CriaInfraestruturas";
+import ListaInfraestruturas from "../pages/Manager/Conteudo/Infraestruturas/ListaInfraestruturas/ListaInfraestruturas";
 
 export function AppRoutes() {
   return (
@@ -49,6 +51,8 @@ export function AppRoutes() {
       <Route path="/manager/bannercreate" element={<CriaBanner />} />
       <Route path="/manager/empreendimentolist" element={<ListaEmpreendimentos />} />
       <Route path="/manager/empreendimentocreate" element={<CriaEmpreendimentos />} />
+      <Route path="/manager/infraestruturalist" element={<ListaInfraestruturas />} />
+      <Route path="/manager/infraestruturacreate" element={<CriaInfraestruturas />} />
       <Route path="/manager/numeroedit" element={<EditaNumeros />} />
 
     </Routes>
