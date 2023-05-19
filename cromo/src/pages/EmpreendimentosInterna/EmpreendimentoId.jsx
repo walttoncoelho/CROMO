@@ -79,8 +79,7 @@ export default function EmpreendimentoId() {
         </SectionGalery>
       ))}
       <SectionMap>
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KIoSD0CPfXDs611VV2PNC9zyMastOYY&ehbc=2E312F" ></iframe>
-
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KIoSD0CPfXDs611VV2PNC9zyMastOYY&ehbc=2E312F" ></iframe>
       </SectionMap>
 
       <ButtonContact />

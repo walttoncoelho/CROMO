@@ -7,7 +7,6 @@ import Login from "../pages/Manager/Login/Login";
 import Painel from "../pages/Manager/Painel/Painel/Painel";
 import Templates from "../pages/Templates/Templates";
 import Empreendimentos from "../pages/Empreendimentos/SectionEmpreend";
-import EmpreendimentoId from "../pages/EmpreendimentosInterna/EmpreendimentoId";
 import Perfil from "../pages/Manager/Painel/Perfil/Perfil";
 import Servicos from "../pages/Manager/Painel/Servicos/Servicos";
 import Configuracoes from "../pages/Manager/Painel/Configuracoes/Configuracoes";
@@ -16,6 +15,8 @@ import ListaBanners from "../pages/Manager/Conteudo/Banner/ListaBanner/ListaBann
 import CriaBanner from "../pages/Manager/Conteudo/Banner/CriaBanner/CriaBanner";
 import CriaEmpreendimentos from "../pages/Manager/Conteudo/Empreendimentos/CriaEmpreendimentos/CriaEmpreendimentos";
 import ListaEmpreendimentos from "../pages/Manager/Conteudo/Empreendimentos/ListaEmpreendimentos/ListaEmpreendimentos";
+import EmpreendimentoInterna from "../pages/EmpreendimentosInterna/EmpreendimentoInterna";
+import EmpreendimentoId from "../pages/EmpreendimentosInterna/EmpreendimentoId";
 import EmpreendimentoId2 from "../pages/EmpreendimentosInterna/EmpreendimentoId02";
 import EditaNumeros from "../pages/Manager/Conteudo/Numeros/EditaNumeros/EditaNumeros";
 import CriaInfraestruturas from "../pages/Manager/Conteudo/Infraestruturas/CriaInfraestruturas/CriaInfraestruturas";
@@ -29,10 +30,11 @@ export function AppRoutes() {
       <Route path="/home" element={<Home />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/empreendimentos" element={<Empreendimentos />} />
+      <Route path="/empreendimentos/:empreendimentoSlug" element={<EmpreendimentoInterna />} />
       <Route path="/faleconosco" element={<FaleConosco />} />
       <Route path="/templates" element={<Templates />} />
-      <Route path="/empreendimentoId" element={<EmpreendimentoId />} />
-      <Route path="/empreendimentoId2" element={<EmpreendimentoId2 />} />
+      {/* <Route path="/empreendimentoId" element={<EmpreendimentoId />} />
+      <Route path="/empreendimentoId2" element={<EmpreendimentoId2 />} /> */}
 
 
       {/* Página Login */}
