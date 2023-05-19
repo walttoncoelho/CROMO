@@ -1,39 +1,39 @@
 import React, { useState, useEffect } from "react";
-import numeros from "./data/data";
 import { BlocoNumbers, ContainerNumeros, StyleNumbers } from "./Style";
 
-export default function NumerosBloco() {
+export default function NumerosBloco({ numerosIniciais }) {
+
   const [lotes, setLotes] = useState(0);
   const [asfalto, setAsfalto] = useState(0);
   const [rua, setRua] = useState(0);
   const [familias, setFamilias] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    let interval = setInterval(() => {
       setLotes((prevLotes) => {
-        const diff = numeros[0].lotes - prevLotes;
+        const diff = numerosIniciais.lotes - prevLotes;
         const increment = diff < 10 ? diff : Math.ceil(diff / 10);
         return prevLotes + increment;
       });
       setAsfalto((prevAsfalto) => {
-        const diff = numeros[0].asfalto - prevAsfalto;
+        const diff = numerosIniciais.asfalto - prevAsfalto;
         const increment = diff < 10 ? diff : Math.ceil(diff / 10);
         return prevAsfalto + increment;
       });
       setRua((prevRua) => {
-        const diff = numeros[0].rua - prevRua;
+        const diff = numerosIniciais.rua - prevRua;
         const increment = diff < 10 ? diff : Math.ceil(diff / 10);
         return prevRua + increment;
       });
       setFamilias((prevFamilias) => {
-        const diff = numeros[0].familias - prevFamilias;
+        const diff = numerosIniciais.familias - prevFamilias;
         const increment = diff < 10 ? diff : Math.ceil(diff / 10);
         return prevFamilias + increment;
       });
     }, 70);
 
     return () => clearInterval(interval);
-  }, []);
+  });
 
   return (
     <ContainerNumeros>

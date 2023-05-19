@@ -12,8 +12,8 @@ export default function Numeros() {
 
   useEffect(() => {
     async function obterNumerosIniciais() {
-      let { data: numeros } = await api.get("/numeros");
-      setNumerosIniciais(numeros);
+      let { data } = await api.get("/numeros");
+      setNumerosIniciais(data);
     };
     obterNumerosIniciais().catch(error => setNumerosIniciais(numeros));
   }, []);
