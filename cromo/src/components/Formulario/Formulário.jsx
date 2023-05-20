@@ -76,13 +76,16 @@ export default function Formulario() {
       <label htmlFor="name" title="Digite seu nome completo">  
       </label>
       <Input
+      
         type="text"
         id="name"
         name="name"
         placeholder="  Qual o seu nome"
         value={state.name}
         onChange={handleChange} 
+        required
       />
+      
       <br />
   
       <label htmlFor="email" title="Digite seu e-mail">   
@@ -94,6 +97,7 @@ export default function Formulario() {
         placeholder="  Digite seu e-mail"
         value={state.email}
         onChange={handleChange} 
+        required
       />
       <br />
   
@@ -106,6 +110,7 @@ export default function Formulario() {
         placeholder="  Digite seu melhor telefone"
         value={state.phone}
         onChange={handleChange} 
+        required
       />
       <br />
   
@@ -121,7 +126,7 @@ export default function Formulario() {
   
       <Radio>
         <label style={{ margin: '10px 0', fontWeight: 'bold' }}>
-          <input type="checkbox" name="subscription" checked={state.subscription} onChange={handleChange} style={{ marginRight: '5px' }} />
+          <input type="checkbox" name="subscription" checked={state.subscription} onChange={handleChange} required style={{ marginRight: '5px' }} />
           Quero receber conteúdo.
         </label>
       </Radio>
