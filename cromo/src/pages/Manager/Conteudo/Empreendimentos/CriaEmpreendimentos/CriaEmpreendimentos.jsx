@@ -55,7 +55,6 @@ export default function CriaEmpreendimentos() {
   let [titulo, setTitulo] = useState(null);
   let handleTituloInput = function (event) {
     let { value } = event.target;
-    console.log(value);
     setTitulo(value);
     setSlug(slugify(value))
   };
