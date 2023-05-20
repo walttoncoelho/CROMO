@@ -3,9 +3,11 @@ import { ButtonSucess } from '../../../components/Bottons/Bottons';
 import api from '../../../services/api';
 import PopupSenha from './PopUpSenha';
 import { Container, Form } from './Style';
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 export default function Login() {
+  let navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [errors, setErrors] = useState({});
   const [password, setPassword] = useState('');
@@ -36,7 +38,8 @@ export default function Login() {
       localStorage.setItem("token", token);
     };
     let redirectToManager = () => {
-      return <Navigate to="/manager/painel" />;
+      // return <Navigate to="/manager/painel" />;
+      navigate("/manager/painel")
     };
     let responseErrors = (response) => {
       let { response: { data: { message } } } = response;

@@ -29,7 +29,9 @@ export default function EmpreendimentoInterna() {
       let { data } = await api.get(`/empreendimentos/${empreendimentoSlug}`);
       setEmpreendimento(data);
     };
-    obterEmpreendimento().catch(error => setEmpreendimento(empreendimentos));
+    obterEmpreendimento().catch(error => setEmpreendimento(
+      empreendimentos.find(empreendimento => empreendimento.slug === empreendimentoSlug)
+    ));
   }, []);
   return empreendimento && (
     <>

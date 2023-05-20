@@ -7,9 +7,24 @@ import {
     ContainerBotoes
 } from './style/NavBar'
 import { BotaoNormal, BotaoTransparente } from '../Buttons/Buttons'
-export default NavBar
+import { useNavigate } from "react-router-dom";
 
+export default NavBar
 function NavBar() {
+    let navigate = useNavigate();
+
+    let logout = function (event) {
+        event.preventDefault();
+        localStorage.clear("token");
+        navigate("/manager");
+    }
+    let redirectToSite = function (event) {
+        event.preventDefault();
+        navigate("/");
+    }
+    let { nome } = {
+        nome: "Waltton Coelho",
+    };
     return (
         <>
             <ContainerNavBar>
@@ -17,11 +32,11 @@ function NavBar() {
                     <img src="./logo.svg" alt="" />
                 </DivLogo>
                 <DivSaudacao>
-                    <NomePessoa>Olá, <strong>Wallton Coelho</strong></NomePessoa>
+                    <NomePessoa>Olá, <strong>{nome}</strong></NomePessoa>
                 </DivSaudacao>
                 <ContainerBotoes>
-                    <BotaoTransparente>Sair</BotaoTransparente>
-                    <BotaoNormal>Ir para o site</BotaoNormal>
+                    <BotaoTransparente onClick={logout}>Sair</BotaoTransparente>
+                    <BotaoNormal onClick={redirectToSite}>Ir para o site</BotaoNormal>
                 </ContainerBotoes>
             </ContainerNavBar>
         </>
