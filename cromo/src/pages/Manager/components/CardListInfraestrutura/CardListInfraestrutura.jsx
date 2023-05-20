@@ -11,7 +11,7 @@ import {
     TableData,
     TableRow 
 } from './style/CardListing'
-import SwitchStatusButton from '../SwitchStatusButton/Switch'
+/* import SwitchStatusButton from '../SwitchStatusButton/Switch' */
 
 export default CardListInfraestrutura
 function CardListInfraestrutura({ dados = [] }) {
