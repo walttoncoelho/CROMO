@@ -28,7 +28,7 @@ const data = [
     "titulo": "Residencial Veneza",
     "tipoEmpreendimento": "Lotes comerciais & residenciais",
     "logoEmpreendimento": "../images/empreendimentos/veneza01.png",
-    "slug": "/empreendimentoId3",
+    "slug": "empreendimentoId3",
     "altText": "Lotes comerciais & residenciais",
     "statusDaConstrucao": "Obra entregue",
     "startDate": "2023-05-01",
