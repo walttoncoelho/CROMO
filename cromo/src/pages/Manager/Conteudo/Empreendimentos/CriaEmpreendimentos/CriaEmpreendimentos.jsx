@@ -4,6 +4,16 @@ import AdministrativePanel from '../../../components/AdministrativePanel/Adminis
 import { Container, ContainerSidebar, ContainerStage } from './Style/Style'
 import api from "../../../../../services/api"
 
+let slugify = function (string = "", separator = "-") {
+  return string
+    .toString()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9- ]/g, '')
+    .replace(/\s+/g, separator);
+};
 
 export default function CriaEmpreendimentos() {
   let [opcoes, setOpcoes] = useState(null);
@@ -45,7 +55,9 @@ export default function CriaEmpreendimentos() {
   let [titulo, setTitulo] = useState(null);
   let handleTituloInput = function (event) {
     let { value } = event.target;
+    console.log(value);
     setTitulo(value);
+    setSlug(slugify(value))
   };
 
   let [descricao, setDescricao] = useState(null);
@@ -63,7 +75,7 @@ export default function CriaEmpreendimentos() {
   let [slug, setSlug] = useState(null);
   let handleSlugInput = function (event) {
     let { value } = event.target;
-    setSlug(value);
+    setSlug(slugify(value));
   };
 
   let [lotes, setLotes] = useState(null);
@@ -138,7 +150,7 @@ export default function CriaEmpreendimentos() {
           <input onChange={handleTipoEmpreendimentoInput} type="text" id="tipoEmpreendimento" name="tipoEmpreendimento" />
 
           <label for="slug">Slug</label>
-          <input onChange={handleSlugInput} type="text" id="slug" name="slug" />
+          <input onChange={handleSlugInput} value={slug} type="text" id="slug" name="slug" />
 
           <label for="lotes">Quantidade de lotes</label>
           <input onChange={handleLotesInput} type="number" min="0" id="lotes" name="lotes" />

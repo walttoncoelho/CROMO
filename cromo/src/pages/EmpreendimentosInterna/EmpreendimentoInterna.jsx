@@ -32,7 +32,7 @@ export default function EmpreendimentoInterna() {
     obterEmpreendimento().catch(error => setEmpreendimento(
       empreendimentos.find(empreendimento => empreendimento.slug === empreendimentoSlug)
     ));
-  }, []);
+  }, [empreendimentoSlug]);
   return empreendimento && (
     <>
       <Navbar />
