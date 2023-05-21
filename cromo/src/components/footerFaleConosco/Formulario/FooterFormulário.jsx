@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Button, Form,   Input, InputArea, Popup, Radio } from "./Style";
+import api from "../../../services/api";
 
 export default function FooterFormulario() {
   const [state, setState] = useState({
@@ -29,6 +30,20 @@ export default function FooterFormulario() {
     if (state.name === '' || state.email === '' || state.phone === '' || state.mensagem === '') {
       setError("Por favor, preencha todos os campos.");
       return;
+    }
+
+    try {
+      let data = {
+        nome: state.name,
+        email: state.email,
+        telefone: state.phone.replace(["(", ")", "-", " "], ""),
+        mensagem: state.mensagem,
+        newsletter: state.subscription
+      };
+      await api.post("/manager/leads", data);
+    }
+    catch (error) {
+      console.error(error)
     }
     
     try {
