@@ -141,7 +141,7 @@ export default function Formulario() {
   
       <Radio>
         <label style={{ margin: '10px 0', fontWeight: 'bold' }}>
-          <input type="checkbox" name="subscription" checked={state.subscription} onChange={handleChange} required style={{ marginRight: '5px' }} />
+          <input type="checkbox" name="subscription" checked={state.subscription} onChange={handleChange} style={{ marginRight: '5px' }} />
           Quero receber conteúdo.
         </label>
       </Radio>
