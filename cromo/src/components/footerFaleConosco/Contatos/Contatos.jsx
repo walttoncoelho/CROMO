@@ -38,9 +38,9 @@ export default function Contatos() {
     };
     obterEmail().catch(error => {
       setEmail({
-        link: "contabilidade@lavronorte.com.br",
+        link: "mailto:contabilidade@lavronorte.com.br",
         titulo: "Email",
-        endereco: "mailto:contabilidade@lavronorte.com.br",
+        endereco: "contabilidade@lavronorte.com.br",
       });
     });
   }, []);
