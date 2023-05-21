@@ -15,22 +15,22 @@ export default function Navbar() {
 
             <ul >
               <NavItem>
-                <NavLinkStyled exact to="/" activeClassName="active">
+                <NavLinkStyled exact="true" to="/" activeclassname="active">
                   Home
                 </NavLinkStyled>
               </NavItem>
               <NavItem>
-                <NavLinkStyled to="/empreendimentos" activeClassName="active">
+                <NavLinkStyled to="/empreendimentos" activeclassname="active">
                   Empreendimentos
                 </NavLinkStyled>
               </NavItem>
               <NavItem>
-                <NavLinkStyled to="/sobre" activeClassName="active">
+                <NavLinkStyled to="/sobre" activeclassname="active">
                   Sobre
                 </NavLinkStyled>
               </NavItem>
               <NavItem>
-                <NavLinkStyled to="/faleconosco" activeClassName="active">
+                <NavLinkStyled to="/faleconosco" activeclassname="active">
                   Fale conosco
                 </NavLinkStyled>
               </NavItem>

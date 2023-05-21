@@ -5,15 +5,13 @@ import Facebook from "./img/facebook.svg";
 
 export default function RedesSociais() {
   return (
-                   <IconSocial>
-
-                  <a href="/">
-                    <img src={Instagram} alt="Instagram" />
-                  </a>
-                   <a href="/">
-                    <img src={Facebook} alt="Facebook" />
-                  </a>
-                   </IconSocial>
-               
+    <IconSocial>
+      <a href="/" target="_blank" rel="noopener noreferrer">
+        <img src={Instagram} alt="Instagram" />
+      </a>
+      <a href="/" target="_blank" rel="noopener noreferrer">
+        <img src={Facebook} alt="Facebook" />
+      </a>
+    </IconSocial>
   )
 }

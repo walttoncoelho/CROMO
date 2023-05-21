@@ -15,13 +15,7 @@ export default function Footer() {
               Deseja receber contato para conhecer melhor nossas ofertas
               comerciais e novidades? Preencha nosso formulário.
             </p>
-
-            <a href="##" target="_blank" rel="noopener noreferrer">
-              <RedesSociais />
-            </a>
-
-            <a href="##" target="_blank" rel="noopener noreferrer">              
-            </a>
+            <RedesSociais />
           </Grid1>
           <Grid2>
             <>
