@@ -101,6 +101,12 @@ export default function CriaEmpreendimentos() {
     setImagemPlantaBaixa(files[0]);
   };
 
+  let [imagemDestaque, setImagemDestaque] = useState(null);
+  let handleImagemDestaqueUpload = function (event) {
+    let { files } = event.target;
+    setImagemDestaque(files[0]);
+  };
+
   let handleSubmit = () => {
     let formIsValid = true;
     if (!formIsValid) {
@@ -117,6 +123,7 @@ export default function CriaEmpreendimentos() {
     formData.append("areaLote", areaLote);
     formData.append("logoEmpreendimento", logoEmpreendimento);
     formData.append("imagemPlantaBaixa", imagemPlantaBaixa);
+    formData.append("imagemDestaque", imagemDestaque);
     infraestruturas.forEach(infraestrutura => formData.append("infraestruturas[]", infraestrutura));
 
     api.post("/manager/empreendimentos", formData, {
@@ -162,6 +169,9 @@ export default function CriaEmpreendimentos() {
 
           <label for="imagemPlantaBaixa">Planta baixa</label>
           <input onChange={handleImagemPlantaBaixaUpload} type="file" id="imagemPlantaBaixa" name="imagemPlantaBaixa" />
+
+          <label for="imagemDestaque">Imagem de Destaque</label>
+          <input onChange={handleImagemDestaqueUpload} type="file" id="imagemDestaque" name="imagemDestaque" />
 
           <fieldset>
             <legend>Status da Construção</legend>
