@@ -22,7 +22,7 @@ export function CardEmpreend({ empreendimentos }) {
         {empreendimentos.map((empreendimento) => (
           <CardGalery key={empreendimento.id}>
             <CardImg>
-              <img src={empreendimento.logoEmpreendimento} alt={empreendimento.altText ?? "Imagem do empreendimento"} />
+              <img src={empreendimento.imagemDestaque} alt={empreendimento.altText ?? "Imagem do empreendimento"} />
               <ContainerStatus
                 className={empreendimento.statusDaConstrucao === "Obra entregue" ? "orange" : "green"}
               >
@@ -36,7 +36,7 @@ export function CardEmpreend({ empreendimentos }) {
                 <br/>
                 <p>
                   {" "}
-                  <strong>{empreendimento.lotes}</strong> Lote com até{" "}
+                  <strong>{empreendimento.lotes}</strong> Lotes com até{" "}
                   <strong>{empreendimento.areaLote}</strong>
                 </p>
                 <br/>
