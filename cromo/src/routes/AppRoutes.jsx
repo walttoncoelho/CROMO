@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Redirect } from "react-router-dom";
 
 import Sobre from "../pages/Sobre/Sobre";
 import FaleConosco from "../pages/FaleConosco/FaleConosco";
@@ -25,13 +25,10 @@ export function AppRoutes() {
   return (
     /* Páginas públicas */
     <Routes>
-            <Route
-        path="/"
-        element={<Navigate to="https://cromoconstrutora.com.br/" replace />}
-      />
+           <Route path="/*" element={<Redirect to="https://cromoconstrutora.com.br/" />} />
                   <Route
         path="/home"
-        element={<Navigate to="https://cromoconstrutora.com.br/" replace />}
+        element={<Redirect to="https://cromoconstrutora.com.br/" replace />}
       />
       
       <Route path="/sobre" element={<Sobre />} />
