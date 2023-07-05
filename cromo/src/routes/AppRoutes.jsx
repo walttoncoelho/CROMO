@@ -1,6 +1,6 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home/Home";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import Sobre from "../pages/Sobre/Sobre";
 import FaleConosco from "../pages/FaleConosco/FaleConosco";
 import Login from "../pages/Manager/Login/Login";
@@ -25,8 +25,15 @@ export function AppRoutes() {
   return (
     /* Páginas públicas */
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/home" element={<Home />} />
+            <Route
+        path="/"
+        element={<Navigate to="https://cromoconstrutora.com.br/" replace />}
+      />
+                  <Route
+        path="/home"
+        element={<Navigate to="https://cromoconstrutora.com.br/" replace />}
+      />
+      
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/empreendimentos" element={<Empreendimentos />} />
       <Route path="/empreendimentos/:empreendimentoSlug" element={<EmpreendimentoInterna />} />
