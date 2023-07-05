@@ -1,9 +1,9 @@
 import React from "react";
-import { Routes, Route, Redirect } from "react-router-dom";
+import { Routes, Route, useNavigate, RouteRedirect } from "react-router-dom";
 
 import Sobre from "../pages/Sobre/Sobre";
 import FaleConosco from "../pages/FaleConosco/FaleConosco";
-import Login from "../pages/Manager/Login/Login";
+
 import Painel from "../pages/Manager/Painel/Painel/Painel";
 import Templates from "../pages/Templates/Templates";
 import Empreendimentos from "../pages/Empreendimentos/SectionEmpreend";
@@ -22,13 +22,14 @@ import ListaInfraestruturas from "../pages/Manager/Conteudo/Infraestruturas/List
 import ProtectedRoute from "./ProtectedRoute";
 
 export function AppRoutes() {
+  const navigate = useNavigate();
+
   return (
     /* Páginas públicas */
     <Routes>
-           <Route path="/*" element={<Redirect to="https://cromoconstrutora.com.br/" />} />
-                  <Route
-        path="/home"
-        element={<Redirect to="https://cromoconstrutora.com.br/" replace />}
+      <Route
+        path="/*"
+        element={<RouteRedirect navigate={navigate} to="https://cromoconstrutora.com.br/" />}
       />
       
       <Route path="/sobre" element={<Sobre />} />
@@ -36,9 +37,6 @@ export function AppRoutes() {
       <Route path="/empreendimentos/:empreendimentoSlug" element={<EmpreendimentoInterna />} />
       <Route path="/faleconosco" element={<FaleConosco />} />
       <Route path="/templates" element={<Templates />} />
-
-      {/* Página Login */}
-      <Route path="/manager" element={<Login />} />
 
       {/* Páginas privadas */}
       <Route path="/manager/painel" element={<ProtectedRoute><Painel /></ProtectedRoute>} />
