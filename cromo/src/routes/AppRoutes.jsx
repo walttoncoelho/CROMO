@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, useNavigate, Redirect } from "react-router-dom";
+import { Routes, Route,  Redirect } from "react-router-dom";
 
 import Sobre from "../pages/Sobre/Sobre";
 import FaleConosco from "../pages/FaleConosco/FaleConosco";
@@ -22,7 +22,7 @@ import ListaInfraestruturas from "../pages/Manager/Conteudo/Infraestruturas/List
 import ProtectedRoute from "./ProtectedRoute";
 
 export function AppRoutes() {
-  const navigate = useNavigate();
+ 
 
   return (
     /* Páginas públicas */
